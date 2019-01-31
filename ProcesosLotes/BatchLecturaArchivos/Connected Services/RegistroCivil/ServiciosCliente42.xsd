@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiciosCliente.Servicios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiciosCliente.Servicios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" />
+  <xs:complexType name="Respuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Actualizado" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" minOccurs="0" name="Cliente" nillable="true" type="q1:Cliente" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" minOccurs="0" name="Contratos" nillable="true" type="q2:ArrayOfContrato" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" minOccurs="0" name="ContratosPersona" nillable="true" type="q3:ArrayOfContratoPersona" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" minOccurs="0" name="MediosContacto" nillable="true" type="q4:MediosContacto" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NuevoId" type="xs:long" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" minOccurs="0" name="Personas" nillable="true" type="q5:ArrayOfPersona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Respuesta" nillable="true" type="tns:Respuesta" />
+</xs:schema>

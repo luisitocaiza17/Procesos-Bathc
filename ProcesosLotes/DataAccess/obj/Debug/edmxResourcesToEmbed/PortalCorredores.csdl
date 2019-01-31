@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Salud_CorredoresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NOT_Categoria">
+    <Key>
+      <PropertyRef Name="IDCategoria" />
+    </Key>
+    <Property Name="IDCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCategoria" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UsuarioMod" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="NOT_Destinatario">
+    <Key>
+      <PropertyRef Name="IDDestinatario" />
+    </Key>
+    <Property Name="IDDestinatario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDEnvio" Type="Int32" Nullable="false" />
+    <Property Name="IDEmpresa" Type="Int32" />
+    <Property Name="IDUsuario" Type="Int32" />
+    <Property Name="Mail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NumIntentos" Type="Int32" />
+    <Property Name="Estado" Type="Int32" />
+    <NavigationProperty Name="NOT_Envio" Relationship="Self.FK_NOT_Destinatario_NOT_Envio" FromRole="NOT_Destinatario" ToRole="NOT_Envio" />
+  </EntityType>
+  <EntityType Name="NOT_Envio">
+    <Key>
+      <PropertyRef Name="IDEnvio" />
+    </Key>
+    <Property Name="IDEnvio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IDCategoria" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioCreacion" Type="Int32" />
+    <Property Name="NumDestinatarios" Type="Int16" />
+    <Property Name="Estado" Type="Int32" />
+    <NavigationProperty Name="NOT_Destinatario" Relationship="Self.FK_NOT_Destinatario_NOT_Envio" FromRole="NOT_Envio" ToRole="NOT_Destinatario" />
+    <NavigationProperty Name="NOT_EnvioAdjuntos" Relationship="Self.FK_NOT_EnvioAdjuntos_NOT_Envio" FromRole="NOT_Envio" ToRole="NOT_EnvioAdjuntos" />
+  </EntityType>
+  <EntityType Name="NOT_EnvioAdjuntos">
+    <Key>
+      <PropertyRef Name="IDArchivo" />
+    </Key>
+    <Property Name="IDArchivo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDEnvio" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Contenido" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="NOT_Envio" Relationship="Self.FK_NOT_EnvioAdjuntos_NOT_Envio" FromRole="NOT_EnvioAdjuntos" ToRole="NOT_Envio" />
+  </EntityType>
+  <EntityType Name="PC_Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCorredor" Type="Int32" Nullable="false" />
+    <Property Name="Cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NombreApellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contrasena" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TelefonoFijo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RUCEmpresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="TerminosCondicionesAprobado" Type="Int32" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PermisoPlan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="fechaNacimiento2" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_NOT_Destinatario_NOT_Envio">
+    <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="1" />
+    <End Role="NOT_Destinatario" Type="Self.NOT_Destinatario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NOT_Envio">
+        <PropertyRef Name="IDEnvio" />
+      </Principal>
+      <Dependent Role="NOT_Destinatario">
+        <PropertyRef Name="IDEnvio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NOT_EnvioAdjuntos_NOT_Envio">
+    <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="0..1" />
+    <End Role="NOT_EnvioAdjuntos" Type="Self.NOT_EnvioAdjuntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NOT_Envio">
+        <PropertyRef Name="IDEnvio" />
+      </Principal>
+      <Dependent Role="NOT_EnvioAdjuntos">
+        <PropertyRef Name="IDEnvio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PortalCorredores" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NOT_Categoria" EntityType="Self.NOT_Categoria" />
+    <EntitySet Name="NOT_Destinatario" EntityType="Self.NOT_Destinatario" />
+    <EntitySet Name="NOT_Envio" EntityType="Self.NOT_Envio" />
+    <EntitySet Name="NOT_EnvioAdjuntos" EntityType="Self.NOT_EnvioAdjuntos" />
+    <EntitySet Name="PC_Usuario" EntityType="Self.PC_Usuario" />
+    <AssociationSet Name="FK_NOT_Destinatario_NOT_Envio" Association="Self.FK_NOT_Destinatario_NOT_Envio">
+      <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+      <End Role="NOT_Destinatario" EntitySet="NOT_Destinatario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NOT_EnvioAdjuntos_NOT_Envio" Association="Self.FK_NOT_EnvioAdjuntos_NOT_Envio">
+      <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+      <End Role="NOT_EnvioAdjuntos" EntitySet="NOT_EnvioAdjuntos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

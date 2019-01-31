@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Salud_CorredoresModelStoreContainer" CdmEntityContainer="PortalCorredores">
+    <EntitySetMapping Name="NOT_Categoria">
+      <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_Categoria">
+        <MappingFragment StoreEntitySet="NOT_Categoria">
+          <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+          <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+          <ScalarProperty Name="UsuarioMod" ColumnName="UsuarioMod" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOT_Destinatario">
+      <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_Destinatario">
+        <MappingFragment StoreEntitySet="NOT_Destinatario">
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="NumIntentos" ColumnName="NumIntentos" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOT_Envio">
+      <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_Envio">
+        <MappingFragment StoreEntitySet="NOT_Envio">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+          <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="NumDestinatarios" ColumnName="NumDestinatarios" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOT_EnvioAdjuntos">
+      <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_EnvioAdjuntos">
+        <MappingFragment StoreEntitySet="NOT_EnvioAdjuntos">
+          <ScalarProperty Name="IDArchivo" ColumnName="IDArchivo" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_Usuario">
+      <EntityTypeMapping TypeName="Salud_CorredoresModel.PC_Usuario">
+        <MappingFragment StoreEntitySet="PC_Usuario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCorredor" ColumnName="IdCorredor" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreApellido" ColumnName="NombreApellido" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="TelefonoFijo" ColumnName="TelefonoFijo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="RUCEmpresa" ColumnName="RUCEmpresa" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TerminosCondicionesAprobado" ColumnName="TerminosCondicionesAprobado" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="PermisoPlan" ColumnName="PermisoPlan" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="fechaNacimiento2" ColumnName="fechaNacimiento2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

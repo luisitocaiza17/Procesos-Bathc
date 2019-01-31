@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaludCorporativoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BrokerID" />
+      <PropertyRef Name="EmpresaID" />
+    </Key>
+    <Property Name="CompanyID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BrokerID" Type="int" Nullable="false" />
+    <Property Name="EmpresaID" Type="int" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ManejaCOR" Type="bit" />
+    <Property Name="ManejaDEN" Type="bit" />
+    <Property Name="ManejaEXE" Type="bit" />
+    <Property Name="ManejaCPO" Type="bit" />
+    <Property Name="FechaMaximaInclusion" Type="int" />
+    <Property Name="FechaMaximaExclusion" Type="int" />
+    <Property Name="FechaMaximaCambioCobertura" Type="int" />
+    <Property Name="ManejaUsuarioFinal" Type="bit" />
+    <Property Name="BrokerName" Type="varchar" MaxLength="500" />
+    <Property Name="EmpresaName" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Mailing">
+    <Key>
+      <PropertyRef Name="MailingID" />
+    </Key>
+    <Property Name="MailingID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="50" />
+    <Property Name="To" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="Subject" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="UserCreated" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateShipping" Type="datetime" />
+    <Property Name="StateID" Type="int" />
+  </EntityType>
+  <EntityType Name="MailingAttachment">
+    <Key>
+      <PropertyRef Name="MailingAttachmentID" />
+    </Key>
+    <Property Name="MailingAttachmentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailingID" Type="bigint" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Attachment" Type="varbinary(max)" />
+    <Property Name="ContentType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PostalBox">
+    <Key>
+      <PropertyRef Name="PostalBoxID" />
+    </Key>
+    <Property Name="PostalBoxID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="Data" Type="varchar(max)" />
+    <Property Name="Result" Type="varchar(max)" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="EmpresaId" />
+    </Key>
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="BrokerId" Type="int" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="EmpresaId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="PersonaId" Type="int" />
+    <Property Name="IsAuthorizator" Type="bit" />
+    <Property Name="IsSelfService" Type="bit" />
+  </EntityType>
+  <Association Name="FK_MailingAttachment_Mailing">
+    <End Role="Mailing" Type="Self.Mailing" Multiplicity="1" />
+    <End Role="MailingAttachment" Type="Self.MailingAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mailing">
+        <PropertyRef Name="MailingID" />
+      </Principal>
+      <Dependent Role="MailingAttachment">
+        <PropertyRef Name="MailingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SaludCorporativoModelStoreContainer">
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mailing" EntityType="Self.Mailing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailingAttachment" EntityType="Self.MailingAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PostalBox" EntityType="Self.PostalBox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MailingAttachment_Mailing" Association="Self.FK_MailingAttachment_Mailing">
+      <End Role="Mailing" EntitySet="Mailing" />
+      <End Role="MailingAttachment" EntitySet="MailingAttachment" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="539ec5701ea2411dbac0ceb5d9f54ee1" Name="Diagram1">
+        <EntityTypeShape EntityType="Salud_CorredoresModel.NOT_Categoria" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salud_CorredoresModel.NOT_Destinatario" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salud_CorredoresModel.NOT_Envio" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salud_CorredoresModel.NOT_EnvioAdjuntos" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salud_CorredoresModel.PC_Usuario" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="Salud_CorredoresModel.FK_NOT_Destinatario_NOT_Envio" ManuallyRouted="false" />
+        <AssociationConnector Association="Salud_CorredoresModel.FK_NOT_EnvioAdjuntos_NOT_Envio" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

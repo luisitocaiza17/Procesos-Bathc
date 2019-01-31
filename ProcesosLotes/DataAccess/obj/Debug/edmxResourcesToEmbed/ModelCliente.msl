@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="clienteModelStoreContainer" CdmEntityContainer="clienteEntities">
+    <EntitySetMapping Name="Persona_n">
+      <EntityTypeMapping TypeName="clienteModel.Persona_n">
+        <MappingFragment StoreEntitySet="Persona_n">
+          <ScalarProperty Name="persona_cedula" ColumnName="persona_cedula" />
+          <ScalarProperty Name="persona_pasaporte" ColumnName="persona_pasaporte" />
+          <ScalarProperty Name="persona_tipo_documento" ColumnName="persona_tipo_documento" />
+          <ScalarProperty Name="persona_numero" ColumnName="persona_numero" />
+          <ScalarProperty Name="persona_nombres" ColumnName="persona_nombres" />
+          <ScalarProperty Name="persona_apellido_pater" ColumnName="persona_apellido_pater" />
+          <ScalarProperty Name="persona_apellido_mater" ColumnName="persona_apellido_mater" />
+          <ScalarProperty Name="persona_sexo" ColumnName="persona_sexo" />
+          <ScalarProperty Name="persona_fecha_nacimiento" ColumnName="persona_fecha_nacimiento" />
+          <ScalarProperty Name="persona_estado_civil" ColumnName="persona_estado_civil" />
+          <ScalarProperty Name="domicilio_ciudad" ColumnName="domicilio_ciudad" />
+          <ScalarProperty Name="domicilio_principal" ColumnName="domicilio_principal" />
+          <ScalarProperty Name="domicilio_transversal" ColumnName="domicilio_transversal" />
+          <ScalarProperty Name="domiciliio_numero" ColumnName="domiciliio_numero" />
+          <ScalarProperty Name="domicilio_referencia" ColumnName="domicilio_referencia" />
+          <ScalarProperty Name="domicilio_latitud" ColumnName="domicilio_latitud" />
+          <ScalarProperty Name="domicilio_longitud" ColumnName="domicilio_longitud" />
+          <ScalarProperty Name="domicilio_georeferenciada" ColumnName="domicilio_georeferenciada" />
+          <ScalarProperty Name="domicilio_email" ColumnName="domicilio_email" />
+          <ScalarProperty Name="domicilio_telefono" ColumnName="domicilio_telefono" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="nom_emp_trabajo" ColumnName="nom_emp_trabajo" />
+          <ScalarProperty Name="trabajo_email" ColumnName="trabajo_email" />
+          <ScalarProperty Name="trabajo_telefono" ColumnName="trabajo_telefono" />
+          <ScalarProperty Name="trabajo_ciudad" ColumnName="trabajo_ciudad" />
+          <ScalarProperty Name="trabajo_principal" ColumnName="trabajo_principal" />
+          <ScalarProperty Name="trabajo_transversal" ColumnName="trabajo_transversal" />
+          <ScalarProperty Name="trabajo_numero_edificio" ColumnName="trabajo_numero_edificio" />
+          <ScalarProperty Name="trabajo_referencia" ColumnName="trabajo_referencia" />
+          <ScalarProperty Name="trabajo_latitud" ColumnName="trabajo_latitud" />
+          <ScalarProperty Name="trabajo_longitud" ColumnName="trabajo_longitud" />
+          <ScalarProperty Name="trabajo_georeferenciada" ColumnName="trabajo_georeferenciada" />
+          <ScalarProperty Name="contacto_nombres" ColumnName="contacto_nombres" />
+          <ScalarProperty Name="contacto_telefono" ColumnName="contacto_telefono" />
+          <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
+          <ScalarProperty Name="hora_modificacion" ColumnName="hora_modificacion" />
+          <ScalarProperty Name="usuario_modificacion" ColumnName="usuario_modificacion" />
+          <ScalarProperty Name="persona_codigo" ColumnName="persona_codigo" />
+          <ScalarProperty Name="cliente_salud" ColumnName="cliente_salud" />
+          <ScalarProperty Name="registro_principal" ColumnName="registro_principal" />
+          <ScalarProperty Name="log_cambios" ColumnName="log_cambios" />
+          <ScalarProperty Name="direccion_correspondencia" ColumnName="direccion_correspondencia" />
+          <ScalarProperty Name="operadora_celular" ColumnName="operadora_celular" />
+          <ScalarProperty Name="hora_contacto" ColumnName="hora_contacto" />
+          <ScalarProperty Name="telefono_alterno" ColumnName="telefono_alterno" />
+          <ScalarProperty Name="estado_modificacion" ColumnName="estado_modificacion" />
+          <ScalarProperty Name="rango_ingresos_anual" ColumnName="rango_ingresos_anual" />
+          <ScalarProperty Name="ocupacion" ColumnName="ocupacion" />
+          <ScalarProperty Name="profesion" ColumnName="profesion" />
+          <ScalarProperty Name="vehiculo" ColumnName="vehiculo" />
+          <ScalarProperty Name="codicion_laboral" ColumnName="codicion_laboral" />
+          <ScalarProperty Name="antiguedad_laboral" ColumnName="antiguedad_laboral" />
+          <ScalarProperty Name="hobby" ColumnName="hobby" />
+          <ScalarProperty Name="domicilio_barrio" ColumnName="domicilio_barrio" />
+          <ScalarProperty Name="trabajo_barrio" ColumnName="trabajo_barrio" />
+          <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+          <ScalarProperty Name="migrado" ColumnName="migrado" />
+          <ScalarProperty Name="persona_his" ColumnName="persona_his" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudad">
+      <EntityTypeMapping TypeName="clienteModel.Ciudad">
+        <MappingFragment StoreEntitySet="Ciudad">
+          <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
+          <ScalarProperty Name="codigo_provincia" ColumnName="codigo_provincia" />
+          <ScalarProperty Name="codigo_ciudad" ColumnName="codigo_ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincia">
+      <EntityTypeMapping TypeName="clienteModel.Provincia">
+        <MappingFragment StoreEntitySet="Provincia">
+          <ScalarProperty Name="nombre_provincia" ColumnName="nombre_provincia" />
+          <ScalarProperty Name="codigo_provincia" ColumnName="codigo_provincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

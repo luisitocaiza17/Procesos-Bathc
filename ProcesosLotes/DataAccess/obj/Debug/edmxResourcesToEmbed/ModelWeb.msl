@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdd_websaludsaModelStoreContainer" CdmEntityContainer="bdd_websaludsaEntities">
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="bdd_websaludsaModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nro_cedula" ColumnName="nro_cedula" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido_paterno" ColumnName="apellido_paterno" />
+          <ScalarProperty Name="apellido_materno" ColumnName="apellido_materno" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="estado_civil" ColumnName="estado_civil" />
+          <ScalarProperty Name="nacionalidad_ecuatoriana" ColumnName="nacionalidad_ecuatoriana" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="direccion_calle" ColumnName="direccion_calle" />
+          <ScalarProperty Name="direccion_calle_transversal" ColumnName="direccion_calle_transversal" />
+          <ScalarProperty Name="direccion_numero" ColumnName="direccion_numero" />
+          <ScalarProperty Name="direccion_piso" ColumnName="direccion_piso" />
+          <ScalarProperty Name="direccion_depto" ColumnName="direccion_depto" />
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+          <ScalarProperty Name="telefono_1" ColumnName="telefono_1" />
+          <ScalarProperty Name="telefono_2" ColumnName="telefono_2" />
+          <ScalarProperty Name="telefono_3" ColumnName="telefono_3" />
+          <ScalarProperty Name="trabajo_nombre" ColumnName="trabajo_nombre" />
+          <ScalarProperty Name="trabajo_direccion_calle" ColumnName="trabajo_direccion_calle" />
+          <ScalarProperty Name="trabajo_direccion_calle_transversal" ColumnName="trabajo_direccion_calle_transversal" />
+          <ScalarProperty Name="trabajo_direccion_numero" ColumnName="trabajo_direccion_numero" />
+          <ScalarProperty Name="trabajo_id_ciudad" ColumnName="trabajo_id_ciudad" />
+          <ScalarProperty Name="trabajo_telefono_1" ColumnName="trabajo_telefono_1" />
+          <ScalarProperty Name="trabajo_telefono_2" ColumnName="trabajo_telefono_2" />
+          <ScalarProperty Name="trabajo_telefono_3" ColumnName="trabajo_telefono_3" />
+          <ScalarProperty Name="recibir_correspondencia" ColumnName="recibir_correspondencia" />
+          <ScalarProperty Name="cambiar_password" ColumnName="cambiar_password" />
+          <ScalarProperty Name="last_login" ColumnName="last_login" />
+          <ScalarProperty Name="bloqueado" ColumnName="bloqueado" />
+          <ScalarProperty Name="intento_login" ColumnName="intento_login" />
+          <ScalarProperty Name="logueado" ColumnName="logueado" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="verificar_datos" ColumnName="verificar_datos" />
+          <ScalarProperty Name="fecha_verificacion" ColumnName="fecha_verificacion" />
+          <ScalarProperty Name="datos_extra" ColumnName="datos_extra" />
+          <ScalarProperty Name="token_activacion" ColumnName="token_activacion" />
+          <ScalarProperty Name="estado_activacion" ColumnName="estado_activacion" />
+          <ScalarProperty Name="tipo_documento" ColumnName="tipo_documento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="brk_broker">
+      <EntityTypeMapping TypeName="bdd_websaludsaModel.brk_broker">
+        <MappingFragment StoreEntitySet="brk_broker">
+          <ScalarProperty Name="email_cc_ventas" ColumnName="email_cc_ventas" />
+          <ScalarProperty Name="texto_inicial" ColumnName="texto_inicial" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+          <ScalarProperty Name="nombre_comercial" ColumnName="nombre_comercial" />
+          <ScalarProperty Name="ruc" ColumnName="ruc" />
+          <ScalarProperty Name="cod_agente_venta" ColumnName="cod_agente_venta" />
+          <ScalarProperty Name="cod_vendedor" ColumnName="cod_vendedor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="brk_usuario_broker">
+      <EntityTypeMapping TypeName="bdd_websaludsaModel.brk_usuario_broker">
+        <MappingFragment StoreEntitySet="brk_usuario_broker">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="broker_id" ColumnName="broker_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="legacy_contrato">
+      <EntityTypeMapping TypeName="bdd_websaludsaModel.legacy_contrato">
+        <MappingFragment StoreEntitySet="legacy_contrato">
+          <ScalarProperty Name="EnrolamientoCorp" ColumnName="EnrolamientoCorp" />
+          <ScalarProperty Name="fechaEnrolamientoCorp" ColumnName="fechaEnrolamientoCorp" />
+          <ScalarProperty Name="codBase64" ColumnName="codBase64" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="duenioCuenta" ColumnName="duenioCuenta" />
+          <ScalarProperty Name="codigoProducto" ColumnName="codigoProducto" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="nroPersona" ColumnName="nroPersona" />
+          <ScalarProperty Name="nroContrato" ColumnName="nroContrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="legacy_usuario">
+      <EntityTypeMapping TypeName="bdd_websaludsaModel.legacy_usuario">
+        <MappingFragment StoreEntitySet="legacy_usuario">
+          <ScalarProperty Name="password_original" ColumnName="password_original" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="nroPersona" ColumnName="nroPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

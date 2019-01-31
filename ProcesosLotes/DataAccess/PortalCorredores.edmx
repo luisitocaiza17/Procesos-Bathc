@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Salud_CorredoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NOT_Categoria">
+          <Key>
+            <PropertyRef Name="IDCategoria" />
+          </Key>
+          <Property Name="IDCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCategoria" Type="varchar" MaxLength="255" />
+          <Property Name="UsuarioMod" Type="int" />
+          <Property Name="FechaRegistro" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NOT_Destinatario">
+          <Key>
+            <PropertyRef Name="IDDestinatario" />
+          </Key>
+          <Property Name="IDDestinatario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDEnvio" Type="int" Nullable="false" />
+          <Property Name="IDEmpresa" Type="int" />
+          <Property Name="IDUsuario" Type="int" />
+          <Property Name="Mail" Type="varchar" MaxLength="255" />
+          <Property Name="NumIntentos" Type="int" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="NOT_Envio">
+          <Key>
+            <PropertyRef Name="IDEnvio" />
+          </Key>
+          <Property Name="IDEnvio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" MaxLength="255" />
+          <Property Name="Mensaje" Type="varchar(max)" />
+          <Property Name="IDCategoria" Type="int" />
+          <Property Name="FechaRegistro" Type="datetime" />
+          <Property Name="FechaEnvio" Type="datetime" />
+          <Property Name="UsuarioCreacion" Type="int" />
+          <Property Name="NumDestinatarios" Type="smallint" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="NOT_EnvioAdjuntos">
+          <Key>
+            <PropertyRef Name="IDArchivo" />
+          </Key>
+          <Property Name="IDArchivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDEnvio" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="255" />
+          <Property Name="Contenido" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="PC_Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCorredor" Type="int" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="50" />
+          <Property Name="NombreApellido" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="NombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="varchar" MaxLength="20" />
+          <Property Name="Extension" Type="varchar" MaxLength="10" />
+          <Property Name="RUCEmpresa" Type="varchar" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="TerminosCondicionesAprobado" Type="int" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="PermisoPlan" Type="varchar" MaxLength="50" />
+          <Property Name="TipoDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="fechaNacimiento" Type="datetime" />
+          <Property Name="fechaNacimiento2" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_NOT_Destinatario_NOT_Envio">
+          <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="1" />
+          <End Role="NOT_Destinatario" Type="Self.NOT_Destinatario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NOT_Envio">
+              <PropertyRef Name="IDEnvio" />
+            </Principal>
+            <Dependent Role="NOT_Destinatario">
+              <PropertyRef Name="IDEnvio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NOT_EnvioAdjuntos_NOT_Envio">
+          <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="0..1" />
+          <End Role="NOT_EnvioAdjuntos" Type="Self.NOT_EnvioAdjuntos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NOT_Envio">
+              <PropertyRef Name="IDEnvio" />
+            </Principal>
+            <Dependent Role="NOT_EnvioAdjuntos">
+              <PropertyRef Name="IDEnvio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Salud_CorredoresModelStoreContainer">
+          <EntitySet Name="NOT_Categoria" EntityType="Self.NOT_Categoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOT_Destinatario" EntityType="Self.NOT_Destinatario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOT_Envio" EntityType="Self.NOT_Envio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOT_EnvioAdjuntos" EntityType="Self.NOT_EnvioAdjuntos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PC_Usuario" EntityType="Self.PC_Usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NOT_Destinatario_NOT_Envio" Association="Self.FK_NOT_Destinatario_NOT_Envio">
+            <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+            <End Role="NOT_Destinatario" EntitySet="NOT_Destinatario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NOT_EnvioAdjuntos_NOT_Envio" Association="Self.FK_NOT_EnvioAdjuntos_NOT_Envio">
+            <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+            <End Role="NOT_EnvioAdjuntos" EntitySet="NOT_EnvioAdjuntos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Salud_CorredoresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NOT_Categoria">
+          <Key>
+            <PropertyRef Name="IDCategoria" />
+          </Key>
+          <Property Name="IDCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCategoria" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioMod" Type="Int32" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="NOT_Destinatario">
+          <Key>
+            <PropertyRef Name="IDDestinatario" />
+          </Key>
+          <Property Name="IDDestinatario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDEnvio" Type="Int32" Nullable="false" />
+          <Property Name="IDEmpresa" Type="Int32" />
+          <Property Name="IDUsuario" Type="Int32" />
+          <Property Name="Mail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NumIntentos" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <NavigationProperty Name="NOT_Envio" Relationship="Self.FK_NOT_Destinatario_NOT_Envio" FromRole="NOT_Destinatario" ToRole="NOT_Envio" />
+        </EntityType>
+        <EntityType Name="NOT_Envio">
+          <Key>
+            <PropertyRef Name="IDEnvio" />
+          </Key>
+          <Property Name="IDEnvio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Titulo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IDCategoria" Type="Int32" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+          <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="Int32" />
+          <Property Name="NumDestinatarios" Type="Int16" />
+          <Property Name="Estado" Type="Int32" />
+          <NavigationProperty Name="NOT_Destinatario" Relationship="Self.FK_NOT_Destinatario_NOT_Envio" FromRole="NOT_Envio" ToRole="NOT_Destinatario" />
+          <NavigationProperty Name="NOT_EnvioAdjuntos" Relationship="Self.FK_NOT_EnvioAdjuntos_NOT_Envio" FromRole="NOT_Envio" ToRole="NOT_EnvioAdjuntos" />
+        </EntityType>
+        <EntityType Name="NOT_EnvioAdjuntos">
+          <Key>
+            <PropertyRef Name="IDArchivo" />
+          </Key>
+          <Property Name="IDArchivo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDEnvio" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Contenido" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="NOT_Envio" Relationship="Self.FK_NOT_EnvioAdjuntos_NOT_Envio" FromRole="NOT_EnvioAdjuntos" ToRole="NOT_Envio" />
+        </EntityType>
+        <EntityType Name="PC_Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCorredor" Type="Int32" Nullable="false" />
+          <Property Name="Cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreApellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RUCEmpresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <Property Name="TerminosCondicionesAprobado" Type="Int32" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PermisoPlan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="fechaNacimiento2" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_NOT_Destinatario_NOT_Envio">
+          <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="1" />
+          <End Role="NOT_Destinatario" Type="Self.NOT_Destinatario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NOT_Envio">
+              <PropertyRef Name="IDEnvio" />
+            </Principal>
+            <Dependent Role="NOT_Destinatario">
+              <PropertyRef Name="IDEnvio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NOT_EnvioAdjuntos_NOT_Envio">
+          <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="0..1" />
+          <End Role="NOT_EnvioAdjuntos" Type="Self.NOT_EnvioAdjuntos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NOT_Envio">
+              <PropertyRef Name="IDEnvio" />
+            </Principal>
+            <Dependent Role="NOT_EnvioAdjuntos">
+              <PropertyRef Name="IDEnvio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PortalCorredores" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NOT_Categoria" EntityType="Self.NOT_Categoria" />
+          <EntitySet Name="NOT_Destinatario" EntityType="Self.NOT_Destinatario" />
+          <EntitySet Name="NOT_Envio" EntityType="Self.NOT_Envio" />
+          <EntitySet Name="NOT_EnvioAdjuntos" EntityType="Self.NOT_EnvioAdjuntos" />
+          <EntitySet Name="PC_Usuario" EntityType="Self.PC_Usuario" />
+          <AssociationSet Name="FK_NOT_Destinatario_NOT_Envio" Association="Self.FK_NOT_Destinatario_NOT_Envio">
+            <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+            <End Role="NOT_Destinatario" EntitySet="NOT_Destinatario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NOT_EnvioAdjuntos_NOT_Envio" Association="Self.FK_NOT_EnvioAdjuntos_NOT_Envio">
+            <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+            <End Role="NOT_EnvioAdjuntos" EntitySet="NOT_EnvioAdjuntos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Salud_CorredoresModelStoreContainer" CdmEntityContainer="PortalCorredores">
+          <EntitySetMapping Name="NOT_Categoria">
+            <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_Categoria">
+              <MappingFragment StoreEntitySet="NOT_Categoria">
+                <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+                <ScalarProperty Name="UsuarioMod" ColumnName="UsuarioMod" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOT_Destinatario">
+            <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_Destinatario">
+              <MappingFragment StoreEntitySet="NOT_Destinatario">
+                <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+                <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+                <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="NumIntentos" ColumnName="NumIntentos" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOT_Envio">
+            <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_Envio">
+              <MappingFragment StoreEntitySet="NOT_Envio">
+                <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+                <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="NumDestinatarios" ColumnName="NumDestinatarios" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOT_EnvioAdjuntos">
+            <EntityTypeMapping TypeName="Salud_CorredoresModel.NOT_EnvioAdjuntos">
+              <MappingFragment StoreEntitySet="NOT_EnvioAdjuntos">
+                <ScalarProperty Name="IDArchivo" ColumnName="IDArchivo" />
+                <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PC_Usuario">
+            <EntityTypeMapping TypeName="Salud_CorredoresModel.PC_Usuario">
+              <MappingFragment StoreEntitySet="PC_Usuario">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdCorredor" ColumnName="IdCorredor" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="NombreApellido" ColumnName="NombreApellido" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="TelefonoFijo" ColumnName="TelefonoFijo" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="RUCEmpresa" ColumnName="RUCEmpresa" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="TerminosCondicionesAprobado" ColumnName="TerminosCondicionesAprobado" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="PermisoPlan" ColumnName="PermisoPlan" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="fechaNacimiento2" ColumnName="fechaNacimiento2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

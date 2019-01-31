@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc0d63af681d470c88474b6bda7318cf" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="bdd_websaludsaModel.usuario" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_websaludsaModel.brk_broker" Width="1.5" PointX="5.375" PointY="1" />
+        <EntityTypeShape EntityType="bdd_websaludsaModel.brk_usuario_broker" Width="1.5" PointX="8.25" PointY="1.75" />
+        <AssociationConnector Association="bdd_websaludsaModel.FK_brk_usuario_broker_brk_broker" />
+        <EntityTypeShape EntityType="bdd_websaludsaModel.legacy_contrato" Width="1.5" PointX="5.375" PointY="5" />
+        <EntityTypeShape EntityType="bdd_websaludsaModel.legacy_usuario" Width="1.5" PointX="8.25" PointY="5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

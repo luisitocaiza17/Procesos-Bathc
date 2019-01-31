@@ -1,0 +1,193 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchLecturaArchivos", "BatchLecturaArchivos\BatchLecturaArchivos.csproj", "{BF2E25E2-EDF3-44FC-B6CC-25E8D36E1ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A212C447-0FD0-41BD-BAA5-F3A360A811BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{6AAED4A7-52A4-474B-B62E-C5206E20C198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B0D6B51A-70C9-4FBA-8251-DEA6F9E8917C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchInclusionMasiva", "BatchInclusionMasiva\BatchInclusionMasiva.csproj", "{B2CC2D7E-F52B-44DD-B129-C83D74A9B2C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePublisher", "ServicePublisher\ServicePublisher.csproj", "{6236138D-1B41-45C2-8CF5-2EFACBC90D6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchNotificacionPrefactura", "BatchNotificacionPrefactura\BatchNotificacionPrefactura.csproj", "{6482009E-BAE0-49B8-9A4B-0369C0465585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchCentroCostos", "BatchCentroCostos\BatchCentroCostos.csproj", "{55D22D0D-6F59-4524-9381-5720B648BD55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchBloqueoEnrolamiento", "BatchBloqueoEnrolamiento\BatchBloqueoEnrolamiento.csproj", "{F3A6EB08-D4BE-4E92-A581-32368DFA4038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchNotificacionCarga", "BatchNotificacionCarga\BatchNotificacionCarga.csproj", "{B98DE4EA-EDD0-4DD8-A5B5-7AEBD120917B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchNotificacionEnrolamiento", "BatchNotificacionEnrolamiento\BatchNotificacionEnrolamiento.csproj", "{09E3C995-400A-47F9-BB2D-6F9CD9854FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchGruposNotificacion", "BatchGruposNotificacion\BatchGruposNotificacion.csproj", "{750232F7-0B2B-4E4F-A756-A675CED1F17F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchGenerarPrefactura", "BatchGenerarPrefactura\BatchGenerarPrefactura.csproj", "{C6D6F6AC-84BB-46C3-A109-93F1BEDB5800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchCoPagosPendientes", "BatchCoPagosPendientes\BatchCoPagosPendientes.csproj", "{75FDCD45-5A26-406B-83A7-9E12EA55A6CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchNotPagoInteligente", "BatchNotPagoInteligente\BatchNotPagoInteligente.csproj", "{FFD4E6EF-FBB6-49A2-9393-F1848831B9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchNotificacionFinMaternidadEnrolamiento", "BatchNotificacionFinMaternidadEnrolamiento\BatchNotificacionFinMaternidadEnrolamiento.csproj", "{D45947DB-C3F4-47E1-80E6-63CEF8FE0499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchFaltaPagoFacturas", "BatchFaltaPagoFacturas\BatchFaltaPagoFacturas.csproj", "{D730C652-9D37-4BEA-A648-6E087CEA180E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchNotificacionesCorredoresArmx", "BatchCentroNotificacionesArmonix\BatchNotificacionesCorredoresArmx.csproj", "{4BC40ED5-1673-41EF-B339-257D4CCB438E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchSiniestralidad", "BatchSiniestralidad\BatchSiniestralidad.csproj", "{1E023960-03CA-4BE2-AC1A-BAB46CA62CFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF2E25E2-EDF3-44FC-B6CC-25E8D36E1ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2E25E2-EDF3-44FC-B6CC-25E8D36E1ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2E25E2-EDF3-44FC-B6CC-25E8D36E1ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2E25E2-EDF3-44FC-B6CC-25E8D36E1ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A212C447-0FD0-41BD-BAA5-F3A360A811BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A212C447-0FD0-41BD-BAA5-F3A360A811BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A212C447-0FD0-41BD-BAA5-F3A360A811BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A212C447-0FD0-41BD-BAA5-F3A360A811BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AAED4A7-52A4-474B-B62E-C5206E20C198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AAED4A7-52A4-474B-B62E-C5206E20C198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AAED4A7-52A4-474B-B62E-C5206E20C198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AAED4A7-52A4-474B-B62E-C5206E20C198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D6B51A-70C9-4FBA-8251-DEA6F9E8917C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D6B51A-70C9-4FBA-8251-DEA6F9E8917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D6B51A-70C9-4FBA-8251-DEA6F9E8917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D6B51A-70C9-4FBA-8251-DEA6F9E8917C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2CC2D7E-F52B-44DD-B129-C83D74A9B2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CC2D7E-F52B-44DD-B129-C83D74A9B2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CC2D7E-F52B-44DD-B129-C83D74A9B2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CC2D7E-F52B-44DD-B129-C83D74A9B2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6236138D-1B41-45C2-8CF5-2EFACBC90D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6236138D-1B41-45C2-8CF5-2EFACBC90D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6236138D-1B41-45C2-8CF5-2EFACBC90D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6236138D-1B41-45C2-8CF5-2EFACBC90D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6482009E-BAE0-49B8-9A4B-0369C0465585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6482009E-BAE0-49B8-9A4B-0369C0465585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6482009E-BAE0-49B8-9A4B-0369C0465585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6482009E-BAE0-49B8-9A4B-0369C0465585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D22D0D-6F59-4524-9381-5720B648BD55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D22D0D-6F59-4524-9381-5720B648BD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D22D0D-6F59-4524-9381-5720B648BD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D22D0D-6F59-4524-9381-5720B648BD55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A6EB08-D4BE-4E92-A581-32368DFA4038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A6EB08-D4BE-4E92-A581-32368DFA4038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A6EB08-D4BE-4E92-A581-32368DFA4038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A6EB08-D4BE-4E92-A581-32368DFA4038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98DE4EA-EDD0-4DD8-A5B5-7AEBD120917B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98DE4EA-EDD0-4DD8-A5B5-7AEBD120917B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98DE4EA-EDD0-4DD8-A5B5-7AEBD120917B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98DE4EA-EDD0-4DD8-A5B5-7AEBD120917B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E3C995-400A-47F9-BB2D-6F9CD9854FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E3C995-400A-47F9-BB2D-6F9CD9854FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E3C995-400A-47F9-BB2D-6F9CD9854FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E3C995-400A-47F9-BB2D-6F9CD9854FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750232F7-0B2B-4E4F-A756-A675CED1F17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750232F7-0B2B-4E4F-A756-A675CED1F17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750232F7-0B2B-4E4F-A756-A675CED1F17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750232F7-0B2B-4E4F-A756-A675CED1F17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D6F6AC-84BB-46C3-A109-93F1BEDB5800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D6F6AC-84BB-46C3-A109-93F1BEDB5800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D6F6AC-84BB-46C3-A109-93F1BEDB5800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D6F6AC-84BB-46C3-A109-93F1BEDB5800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FDCD45-5A26-406B-83A7-9E12EA55A6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FDCD45-5A26-406B-83A7-9E12EA55A6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FDCD45-5A26-406B-83A7-9E12EA55A6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FDCD45-5A26-406B-83A7-9E12EA55A6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD4E6EF-FBB6-49A2-9393-F1848831B9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD4E6EF-FBB6-49A2-9393-F1848831B9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD4E6EF-FBB6-49A2-9393-F1848831B9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD4E6EF-FBB6-49A2-9393-F1848831B9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45947DB-C3F4-47E1-80E6-63CEF8FE0499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45947DB-C3F4-47E1-80E6-63CEF8FE0499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45947DB-C3F4-47E1-80E6-63CEF8FE0499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45947DB-C3F4-47E1-80E6-63CEF8FE0499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D730C652-9D37-4BEA-A648-6E087CEA180E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D730C652-9D37-4BEA-A648-6E087CEA180E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D730C652-9D37-4BEA-A648-6E087CEA180E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D730C652-9D37-4BEA-A648-6E087CEA180E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC40ED5-1673-41EF-B339-257D4CCB438E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC40ED5-1673-41EF-B339-257D4CCB438E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC40ED5-1673-41EF-B339-257D4CCB438E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC40ED5-1673-41EF-B339-257D4CCB438E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E023960-03CA-4BE2-AC1A-BAB46CA62CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E023960-03CA-4BE2-AC1A-BAB46CA62CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E023960-03CA-4BE2-AC1A-BAB46CA62CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E023960-03CA-4BE2-AC1A-BAB46CA62CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BB8E9DC-5306-4BA1-B0C4-C3AAB8478E19}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 19
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://srvtfpro.saludsa.com.ec:8080/tfs/solucionespuntonetcelulacomercial
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BatchBloqueoEnrolamiento\\BatchBloqueoEnrolamiento.csproj
+		SccProjectName1 = BatchBloqueoEnrolamiento
+		SccLocalPath1 = BatchBloqueoEnrolamiento
+		SccProjectUniqueName2 = BatchCentroCostos\\BatchCentroCostos.csproj
+		SccProjectName2 = BatchCentroCostos
+		SccLocalPath2 = BatchCentroCostos
+		SccProjectUniqueName3 = BatchCoPagosPendientes\\BatchCoPagosPendientes.csproj
+		SccProjectName3 = BatchCoPagosPendientes
+		SccLocalPath3 = BatchCoPagosPendientes
+		SccProjectUniqueName4 = BatchGenerarPrefactura\\BatchGenerarPrefactura.csproj
+		SccProjectName4 = BatchGenerarPrefactura
+		SccLocalPath4 = BatchGenerarPrefactura
+		SccProjectUniqueName5 = BatchGruposNotificacion\\BatchGruposNotificacion.csproj
+		SccProjectName5 = BatchGruposNotificacion
+		SccLocalPath5 = BatchGruposNotificacion
+		SccProjectUniqueName6 = BatchInclusionMasiva\\BatchInclusionMasiva.csproj
+		SccProjectName6 = BatchInclusionMasiva
+		SccLocalPath6 = BatchInclusionMasiva
+		SccProjectUniqueName7 = BatchLecturaArchivos\\BatchLecturaArchivos.csproj
+		SccProjectName7 = BatchLecturaArchivos
+		SccLocalPath7 = BatchLecturaArchivos
+		SccProjectUniqueName8 = BatchNotificacionCarga\\BatchNotificacionCarga.csproj
+		SccProjectName8 = BatchNotificacionCarga
+		SccLocalPath8 = BatchNotificacionCarga
+		SccProjectUniqueName9 = BatchNotificacionEnrolamiento\\BatchNotificacionEnrolamiento.csproj
+		SccProjectName9 = BatchNotificacionEnrolamiento
+		SccLocalPath9 = BatchNotificacionEnrolamiento
+		SccProjectUniqueName10 = BatchNotificacionPrefactura\\BatchNotificacionPrefactura.csproj
+		SccProjectName10 = BatchNotificacionPrefactura
+		SccLocalPath10 = BatchNotificacionPrefactura
+		SccProjectUniqueName11 = BatchNotPagoInteligente\\BatchNotPagoInteligente.csproj
+		SccProjectName11 = BatchNotPagoInteligente
+		SccLocalPath11 = BatchNotPagoInteligente
+		SccProjectUniqueName12 = Common\\Common.csproj
+		SccProjectName12 = Common
+		SccLocalPath12 = Common
+		SccProjectUniqueName13 = DataAccess\\DataAccess.csproj
+		SccProjectName13 = DataAccess
+		SccLocalPath13 = DataAccess
+		SccProjectUniqueName14 = ServicePublisher\\ServicePublisher.csproj
+		SccProjectName14 = ServicePublisher
+		SccLocalPath14 = ServicePublisher
+		SccProjectUniqueName15 = Services\\Services.csproj
+		SccProjectName15 = Services
+		SccLocalPath15 = Services
+		SccProjectUniqueName16 = BatchNotificacionFinMaternidadEnrolamiento\\BatchNotificacionFinMaternidadEnrolamiento.csproj
+		SccProjectName16 = BatchNotificacionFinMaternidadEnrolamiento
+		SccLocalPath16 = BatchNotificacionFinMaternidadEnrolamiento
+		SccProjectUniqueName17 = BatchFaltaPagoFacturas\\BatchFaltaPagoFacturas.csproj
+		SccProjectName17 = BatchFaltaPagoFacturas
+		SccLocalPath17 = BatchFaltaPagoFacturas
+		SccProjectUniqueName18 = BatchSiniestralidad\\BatchSiniestralidad.csproj
+		SccProjectName18 = BatchSiniestralidad
+		SccLocalPath18 = BatchSiniestralidad
+	EndGlobalSection
+EndGlobal

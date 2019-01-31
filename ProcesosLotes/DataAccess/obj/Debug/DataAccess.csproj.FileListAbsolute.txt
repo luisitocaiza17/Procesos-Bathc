@@ -1,0 +1,11 @@
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\SW.DataAccess.dll.config
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\SW.DataAccess.dll
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\SW.DataAccess.pdb
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\EntityFramework.dll
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\EntityFramework.xml
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\obj\Debug\SW.DataAccess.dll
+D:\WorkSpace\SaludAntiguo\Smart Empresas\desarrolloSmartE\ProcesosLotes\DataAccess\obj\Debug\SW.DataAccess.pdb

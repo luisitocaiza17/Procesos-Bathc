@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Salud_SigmepModelStoreContainer" CdmEntityContainer="PortalContratante">
+    <EntitySetMapping Name="CORP_Registro">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_Registro">
+        <MappingFragment StoreEntitySet="CORP_Registro">
+          <ScalarProperty Name="ServicioAdicionalesFechaAceptacion" ColumnName="ServicioAdicionalesFechaAceptacion" />
+          <ScalarProperty Name="ServiciosAdicionales" ColumnName="ServiciosAdicionales" />
+          <ScalarProperty Name="AceptaServiciosAdicionales" ColumnName="AceptaServiciosAdicionales" />
+          <ScalarProperty Name="FechaInclusion" ColumnName="FechaInclusion" />
+          <ScalarProperty Name="IdRegistro" ColumnName="IdRegistro" />
+          <ScalarProperty Name="IdArchivo" ColumnName="IdArchivo" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdCobertura" ColumnName="IdCobertura" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Datos" ColumnName="Datos" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="RC_Celular" ColumnName="RC_Celular" />
+          <ScalarProperty Name="RC_CondicionCedulado" ColumnName="RC_CondicionCedulado" />
+          <ScalarProperty Name="RC_EmailPersonal" ColumnName="RC_EmailPersonal" />
+          <ScalarProperty Name="RC_EmailTrabajo" ColumnName="RC_EmailTrabajo" />
+          <ScalarProperty Name="RC_EstadoCivil" ColumnName="RC_EstadoCivil" />
+          <ScalarProperty Name="RC_FechaNacimiento" ColumnName="RC_FechaNacimiento" />
+          <ScalarProperty Name="RC_Genero" ColumnName="RC_Genero" />
+          <ScalarProperty Name="RC_TelefonoDomicilio" ColumnName="RC_TelefonoDomicilio" />
+          <ScalarProperty Name="RC_TelefonoTrabajo" ColumnName="RC_TelefonoTrabajo" />
+          <ScalarProperty Name="CompletadoEnrolamiento" ColumnName="CompletadoEnrolamiento" />
+          <ScalarProperty Name="BloqueadoServicio" ColumnName="BloqueadoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEG_Usuario">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.SEG_Usuario">
+        <MappingFragment StoreEntitySet="SEG_Usuario">
+          <ScalarProperty Name="ADUsuario" ColumnName="ADUsuario" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="TerminosCondicionesAprobado" ColumnName="TerminosCondicionesAprobado" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreApellido" ColumnName="NombreApellido" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="TelefonoFijo" ColumnName="TelefonoFijo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="RUCEmpresa" ColumnName="RUCEmpresa" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioAdmin_VTA">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.UsuarioAdmin_VTA">
+        <MappingFragment StoreEntitySet="UsuarioAdmin_VTA">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreApellido" ColumnName="NombreApellido" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="TelefonoFijo" ColumnName="TelefonoFijo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="RUCEmpresa" ColumnName="RUCEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORP_FileMasivos">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_FileMasivos">
+        <MappingFragment StoreEntitySet="CORP_FileMasivos">
+          <ScalarProperty Name="PorcentajeAvance" ColumnName="PorcentajeAvance" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="FileResult" ColumnName="FileResult" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="FileMasivosID" ColumnName="FileMasivosID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORP_ArchivoCentroCostos">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_ArchivoCentroCostos">
+        <MappingFragment StoreEntitySet="CORP_ArchivoCentroCostos">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="UsuarioCarga" ColumnName="UsuarioCarga" />
+          <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+          <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+          <ScalarProperty Name="ContenidoProcesado" ColumnName="ContenidoProcesado" />
+          <ScalarProperty Name="ContenidoCargado" ColumnName="ContenidoCargado" />
+          <ScalarProperty Name="NombreArchivo" ColumnName="NombreArchivo" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDArchivoCentroCostos" ColumnName="IDArchivoCentroCostos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORP_GrupoNotificacion">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_GrupoNotificacion">
+        <MappingFragment StoreEntitySet="CORP_GrupoNotificacion">
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+          <ScalarProperty Name="FechaGeneracion" ColumnName="FechaGeneracion" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Listado" ColumnName="Listado" />
+          <ScalarProperty Name="IdGrupoNotificacion" ColumnName="IdGrupoNotificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORP_SolicitudPrefactura">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_SolicitudPrefactura">
+        <MappingFragment StoreEntitySet="CORP_SolicitudPrefactura">
+          <ScalarProperty Name="Listas" ColumnName="Listas" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+          <ScalarProperty Name="FechaProcesamiento" ColumnName="FechaProcesamiento" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IDSolicitudPrefactura" ColumnName="IDSolicitudPrefactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEG_PermisoUsuario">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.SEG_PermisoUsuario">
+        <MappingFragment StoreEntitySet="SEG_PermisoUsuario">
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDPermiso" ColumnName="IDPermiso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORP_NotificacionMaternidad">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_NotificacionMaternidad">
+        <MappingFragment StoreEntitySet="CORP_NotificacionMaternidad">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaEnrolamientoBebe" ColumnName="FechaEnrolamientoBebe" />
+          <ScalarProperty Name="EnrolamientoBebeCompleto" ColumnName="EnrolamientoBebeCompleto" />
+          <ScalarProperty Name="DocumentoAdjunto" ColumnName="DocumentoAdjunto" />
+          <ScalarProperty Name="FechaFUM" ColumnName="FechaFUM" />
+          <ScalarProperty Name="AliasLista" ColumnName="AliasLista" />
+          <ScalarProperty Name="IdLista" ColumnName="IdLista" />
+          <ScalarProperty Name="Tarifa" ColumnName="Tarifa" />
+          <ScalarProperty Name="IdentificacionTitular" ColumnName="IdentificacionTitular" />
+          <ScalarProperty Name="NombreTitular" ColumnName="NombreTitular" />
+          <ScalarProperty Name="IdTitular" ColumnName="IdTitular" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdNotificacionMaternidad" ColumnName="IdNotificacionMaternidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORP_CopagoPendiente">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_CopagoPendiente">
+        <MappingFragment StoreEntitySet="CORP_CopagoPendiente">
+          <ScalarProperty Name="IdentificacionTitular" ColumnName="IdentificacionTitular" />
+          <ScalarProperty Name="NombreTitular" ColumnName="NombreTitular" />
+          <ScalarProperty Name="NombreSucursal" ColumnName="NombreSucursal" />
+          <ScalarProperty Name="TipoPendiente" ColumnName="TipoPendiente" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaDesbloqueo" ColumnName="FechaDesbloqueo" />
+          <ScalarProperty Name="FechaBloqueo" ColumnName="FechaBloqueo" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="NumeroContrato" ColumnName="NumeroContrato" />
+          <ScalarProperty Name="NumeroSucursal" ColumnName="NumeroSucursal" />
+          <ScalarProperty Name="NumeroEmpresa" ColumnName="NumeroEmpresa" />
+          <ScalarProperty Name="CopagoPendienteID" ColumnName="CopagoPendienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioRol">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.UsuarioRol">
+        <MappingFragment StoreEntitySet="UsuarioRol">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEG_Siniestralidad">
+      <EntityTypeMapping TypeName="Salud_SigmepModel.SEG_Siniestralidad">
+        <MappingFragment StoreEntitySet="SEG_Siniestralidad">
+          <ScalarProperty Name="ValorBonificadoIBNR" ColumnName="ValorBonificadoIBNR" />
+          <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+          <ScalarProperty Name="ValorIBNR" ColumnName="ValorIBNR" />
+          <ScalarProperty Name="MesIBNR" ColumnName="MesIBNR" />
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="SiniestralidadIBNR" ColumnName="SiniestralidadIBNR" />
+          <ScalarProperty Name="Siniestralidad" ColumnName="Siniestralidad" />
+          <ScalarProperty Name="TotalTarifa" ColumnName="TotalTarifa" />
+          <ScalarProperty Name="ValorBonificado" ColumnName="ValorBonificado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="IdSucursalEmpresa" ColumnName="IdSucursalEmpresa" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

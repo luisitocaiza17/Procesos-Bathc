@@ -1,0 +1,1543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Sigmep" targetNamespace="http://tempuri.org/Sigmep.xsd" xmlns:mstns="http://tempuri.org/Sigmep.xsd" xmlns="http://tempuri.org/Sigmep.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.SW.Salud.DataAccess.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cl01-empresasTableAdapter" GeneratorDataComponentClassName="cl01_empresasTableAdapter" Name="cl01-empresas" UserDataComponentName="cl01-empresasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "empresa-numero", "codigo-agente-venta", "codigo-actividad", "razon-social", "ruc-empresa", "tipo-sociedad", "nombre-grupo", "codigo-ciudad", "empresa-barrio", "empresa-calle", "empresa-zona", 
+                         "empresa-casilla", "empresa-telefono", "empresa-fax", "empresa-email", "representante-nombres", "representante-apellidos", "representante-cargo", "representante-cedula", "representante-relacion", 
+                         "financiero-nombres", "financiero-cargo", "financiero-apellidos", "financiero-cedula", "fecha-digitacion-empresa", "porcentaje-comision-broker", digitador, "a-favor", estado, "codigo-tecni", "pago-inteligente", 
+                         "email-rrhh", "email-broker", "grupo-numero", "pertenece-grupo", "empresa-telefono1", "empresa-telefono2", "empresa-fax1", "digitador-creacion", "fecha-creacion", "hora-creacion", "fecha-modificacion", 
+                         "digitador-modificacion", "hora-modificacion", "fecha-anulacion", "digitador-anulacion", "hora-anulacion", "codigo-unidad-agente", claveweb, "codigo-agente-contacto", "pi-rrhh", "pi-broker", "pi-contrato", 
+                         "notificacion-copago", "notificacion-prefactura", "periodo-pago", "periodo-copago"
+FROM            PUB."cl01-empresas"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="empresa-numero" DataSetColumn="empresa-numero" />
+              <Mapping SourceColumn="codigo-agente-venta" DataSetColumn="codigo-agente-venta" />
+              <Mapping SourceColumn="codigo-actividad" DataSetColumn="codigo-actividad" />
+              <Mapping SourceColumn="razon-social" DataSetColumn="razon-social" />
+              <Mapping SourceColumn="ruc-empresa" DataSetColumn="ruc-empresa" />
+              <Mapping SourceColumn="tipo-sociedad" DataSetColumn="tipo-sociedad" />
+              <Mapping SourceColumn="nombre-grupo" DataSetColumn="nombre-grupo" />
+              <Mapping SourceColumn="codigo-ciudad" DataSetColumn="codigo-ciudad" />
+              <Mapping SourceColumn="empresa-barrio" DataSetColumn="empresa-barrio" />
+              <Mapping SourceColumn="empresa-calle" DataSetColumn="empresa-calle" />
+              <Mapping SourceColumn="empresa-zona" DataSetColumn="empresa-zona" />
+              <Mapping SourceColumn="empresa-casilla" DataSetColumn="empresa-casilla" />
+              <Mapping SourceColumn="empresa-telefono" DataSetColumn="empresa-telefono" />
+              <Mapping SourceColumn="empresa-fax" DataSetColumn="empresa-fax" />
+              <Mapping SourceColumn="empresa-email" DataSetColumn="empresa-email" />
+              <Mapping SourceColumn="representante-nombres" DataSetColumn="representante-nombres" />
+              <Mapping SourceColumn="representante-apellidos" DataSetColumn="representante-apellidos" />
+              <Mapping SourceColumn="representante-cargo" DataSetColumn="representante-cargo" />
+              <Mapping SourceColumn="representante-cedula" DataSetColumn="representante-cedula" />
+              <Mapping SourceColumn="representante-relacion" DataSetColumn="representante-relacion" />
+              <Mapping SourceColumn="financiero-nombres" DataSetColumn="financiero-nombres" />
+              <Mapping SourceColumn="financiero-cargo" DataSetColumn="financiero-cargo" />
+              <Mapping SourceColumn="financiero-apellidos" DataSetColumn="financiero-apellidos" />
+              <Mapping SourceColumn="financiero-cedula" DataSetColumn="financiero-cedula" />
+              <Mapping SourceColumn="fecha-digitacion-empresa" DataSetColumn="fecha-digitacion-empresa" />
+              <Mapping SourceColumn="porcentaje-comision-broker" DataSetColumn="porcentaje-comision-broker" />
+              <Mapping SourceColumn="digitador" DataSetColumn="digitador" />
+              <Mapping SourceColumn="a-favor" DataSetColumn="a-favor" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="codigo-tecni" DataSetColumn="codigo-tecni" />
+              <Mapping SourceColumn="pago-inteligente" DataSetColumn="pago-inteligente" />
+              <Mapping SourceColumn="email-rrhh" DataSetColumn="email-rrhh" />
+              <Mapping SourceColumn="email-broker" DataSetColumn="email-broker" />
+              <Mapping SourceColumn="grupo-numero" DataSetColumn="grupo-numero" />
+              <Mapping SourceColumn="pertenece-grupo" DataSetColumn="pertenece-grupo" />
+              <Mapping SourceColumn="empresa-telefono1" DataSetColumn="empresa-telefono1" />
+              <Mapping SourceColumn="empresa-telefono2" DataSetColumn="empresa-telefono2" />
+              <Mapping SourceColumn="empresa-fax1" DataSetColumn="empresa-fax1" />
+              <Mapping SourceColumn="digitador-creacion" DataSetColumn="digitador-creacion" />
+              <Mapping SourceColumn="fecha-creacion" DataSetColumn="fecha-creacion" />
+              <Mapping SourceColumn="hora-creacion" DataSetColumn="hora-creacion" />
+              <Mapping SourceColumn="fecha-modificacion" DataSetColumn="fecha-modificacion" />
+              <Mapping SourceColumn="digitador-modificacion" DataSetColumn="digitador-modificacion" />
+              <Mapping SourceColumn="hora-modificacion" DataSetColumn="hora-modificacion" />
+              <Mapping SourceColumn="fecha-anulacion" DataSetColumn="fecha-anulacion" />
+              <Mapping SourceColumn="digitador-anulacion" DataSetColumn="digitador-anulacion" />
+              <Mapping SourceColumn="hora-anulacion" DataSetColumn="hora-anulacion" />
+              <Mapping SourceColumn="codigo-unidad-agente" DataSetColumn="codigo-unidad-agente" />
+              <Mapping SourceColumn="claveweb" DataSetColumn="claveweb" />
+              <Mapping SourceColumn="codigo-agente-contacto" DataSetColumn="codigo-agente-contacto" />
+              <Mapping SourceColumn="pi-rrhh" DataSetColumn="pi-rrhh" />
+              <Mapping SourceColumn="pi-broker" DataSetColumn="pi-broker" />
+              <Mapping SourceColumn="pi-contrato" DataSetColumn="pi-contrato" />
+              <Mapping SourceColumn="notificacion-copago" DataSetColumn="notificacion-copago" />
+              <Mapping SourceColumn="notificacion-prefactura" DataSetColumn="notificacion-prefactura" />
+              <Mapping SourceColumn="periodo-pago" DataSetColumn="periodo-pago" />
+              <Mapping SourceColumn="periodo-copago" DataSetColumn="periodo-copago" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByHeader" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHeader" GeneratorSourceName="FillByHeader" GetMethodModifier="Public" GetMethodName="GetDataByHeader" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHeader" UserSourceName="FillByHeader">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        "empresa-numero", "razon-social", "ruc-empresa"
+                      FROM            PUB."cl01-empresas" 
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByHeaderName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHeaderName" GeneratorSourceName="FillByHeaderName" GetMethodModifier="Public" GetMethodName="GetDataByHeaderName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHeaderName" UserSourceName="FillByHeaderName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        "empresa-numero", "razon-social", "ruc-empresa"
+                      FROM            PUB."cl01-empresas"
+                      WHERE        ("razon-social" LIKE ?) ORDER BY "razon-social" 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="razon-social" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="razon_social" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="razon-social" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByHeaderName2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHeaderName2" GeneratorSourceName="FillByHeaderName2" GetMethodModifier="Public" GetMethodName="GetDataByHeaderName2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHeaderName2" UserSourceName="FillByHeaderName2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT cl01."empresa-numero", cl01."razon-social", cl01."ruc-empresa"
+FROM            PUB."cl01-empresas" cl01, PUB."cl02-empresa-sucursales" cl02
+WHERE        (cl01."razon-social" LIKE ?) AND (cl02.bloqueado = 0) AND (cl02."fecha-fin-sucursal" &gt; CURDATE())
+                      and (cl01."empresa-numero" = cl02."empresa-numero") ORDER BY cl01."razon-social" 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="razon-social" DataSourceName="salud.&quot;cl01-empresas&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="razon_social" Precision="0" Scale="0" Size="1024" SourceColumn="razon-social" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmpresaNumero" GetMethodModifier="Public" GetMethodName="GetDataByEmpresaNumero" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmpresaNumero" UserSourceName="GetDataByEmpresaNumero">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT "empresa-numero", "codigo-agente-venta", "codigo-actividad", "razon-social", "ruc-empresa", "tipo-sociedad", "nombre-grupo", "codigo-ciudad", "empresa-barrio", "empresa-calle", "empresa-zona", "empresa-casilla", "empresa-telefono", "empresa-fax", "empresa-email", "representante-nombres", "representante-apellidos", "representante-cargo", "representante-cedula", "representante-relacion", "financiero-nombres", "financiero-cargo", "financiero-apellidos", "financiero-cedula", "fecha-digitacion-empresa", "porcentaje-comision-broker", "digitador", "a-favor", "estado", "codigo-tecni", "pago-inteligente", "email-rrhh", "email-broker", "grupo-numero", "pertenece-grupo", "empresa-telefono1", "empresa-telefono2", "empresa-fax1", "digitador-creacion", "fecha-creacion", "hora-creacion", "fecha-modificacion", "digitador-modificacion", "hora-modificacion", "fecha-anulacion", "digitador-anulacion", "hora-anulacion", "codigo-unidad-agente", "claveweb", "codigo-agente-contacto", "pi-rrhh", "pi-broker", "pi-contrato","notificacion-copago", "notificacion-prefactura" FROM "PUB"."cl01-empresas"
+                      where  "empresa-numero" = ? 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl01-empresas&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHeaderNameNumeroEmpresa" GetMethodModifier="Public" GetMethodName="GetDataByHeaderNameNumeroEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHeaderNameNumeroEmpresa" UserSourceName="GetDataByHeaderNameNumeroEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT cl01."empresa-numero", cl01."razon-social", cl01."ruc-empresa"
+FROM            PUB."cl01-empresas" cl01, PUB."cl02-empresa-sucursales" cl02
+WHERE        (cl01."empresa-numero" = ?) AND (cl02.bloqueado = 0) AND (cl02."fecha-fin-sucursal" &gt; CURDATE())
+                      and (cl01."empresa-numero" = cl02."empresa-numero") ORDER BY cl01."razon-social" 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHeaderNameRuc" GetMethodModifier="Public" GetMethodName="GetDataByHeaderNameRuc" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHeaderNameRuc" UserSourceName="GetDataByHeaderNameRuc">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT cl01."empresa-numero", cl01."razon-social", cl01."ruc-empresa"
+FROM            PUB."cl01-empresas" cl01, PUB."cl02-empresa-sucursales" cl02
+WHERE        (cl01."ruc-empresa" LIKE ?) AND (cl02.bloqueado = 0) AND (cl02."fecha-fin-sucursal" &gt; CURDATE())
+                      and (cl01."empresa-numero" = cl02."empresa-numero") ORDER BY cl01."razon-social" 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="ruc-empresa" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="ruc_empresa" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="ruc-empresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataPortalCorp" GetMethodModifier="Public" GetMethodName="GetDataPortalCorp" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataPortalCorp" UserSourceName="GetDataPortalCorp">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "empresa-numero", "razon-social", "ruc-empresa"
+FROM            PUB."cl01-empresas"
+WHERE        ("empresa-portal" = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pr02-planesTableAdapter" GeneratorDataComponentClassName="pr02_planesTableAdapter" Name="pr02-planes" UserDataComponentName="pr02-planesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="salud.&quot;pr02-planes&quot;" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM "PUB"."pr02-planes" WHERE (("codigo-producto" = ?) AND ("codigo-plan" = ?) AND ("version-plan" = ?) AND ("region" = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="Original_codigo-producto" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="Original_codigo-plan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_version-plan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="Original_region" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "PUB"."pr02-planes" ("codigo-producto", "codigo-plan", "version-plan", "region") VALUES (?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="codigo-producto" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="codigo-plan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="version-plan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "codigo-producto", "precio-base", "monto-coaseguro", "porcentaje-coaseguro", "cubre-congenitas", "edad-tope", "porcentaje-edad-tope", "cubre-preexistencias", "fecha-inicio", "numero-beneficiarios", "nombre-plan", "dias-carencia-ambulatorio", "dias-reclamo", "dias-alcance", "empresa-numero", "sucursal-empresa", "edad-facturacion", "codigo-plan", "Codigo-Tarifario", "nivel-referencia", "version-plan", "region", "dias-carencia-hospitalario", "fecha-fin", "fecha-digitacion", "mat-nuevos-beneficios", "edad-dependientes", "cobertura", "digitador-creacion", "fecha-modificacion", "digitador-modificacion", "hora-creacion", "hora-modificacion", "prog-modificacion", "prog-creacion", "fecha-creacion", "monto-preexistencia", "cero-tramites", "codigo-homologacion", "Calcula-Precio", "Nombre-Tarjeta", "tipo-atencion-rct" FROM "PUB"."pr02-planes" </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE "PUB"."pr02-planes" SET "codigo-producto" = ?, "codigo-plan" = ?, "version-plan" = ?, "region" = ? WHERE (("codigo-producto" = ?) AND ("codigo-plan" = ?) AND ("version-plan" = ?) AND ("region" = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="codigo-producto" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="codigo-plan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="version-plan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="Original_codigo-producto" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="Original_codigo-plan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_version-plan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="Original_region" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo-producto" DataSetColumn="codigo-producto" />
+              <Mapping SourceColumn="precio-base" DataSetColumn="precio-base" />
+              <Mapping SourceColumn="monto-coaseguro" DataSetColumn="monto-coaseguro" />
+              <Mapping SourceColumn="porcentaje-coaseguro" DataSetColumn="porcentaje-coaseguro" />
+              <Mapping SourceColumn="cubre-congenitas" DataSetColumn="cubre-congenitas" />
+              <Mapping SourceColumn="edad-tope" DataSetColumn="edad-tope" />
+              <Mapping SourceColumn="porcentaje-edad-tope" DataSetColumn="porcentaje-edad-tope" />
+              <Mapping SourceColumn="cubre-preexistencias" DataSetColumn="cubre-preexistencias" />
+              <Mapping SourceColumn="fecha-inicio" DataSetColumn="fecha-inicio" />
+              <Mapping SourceColumn="numero-beneficiarios" DataSetColumn="numero-beneficiarios" />
+              <Mapping SourceColumn="nombre-plan" DataSetColumn="nombre-plan" />
+              <Mapping SourceColumn="dias-carencia-ambulatorio" DataSetColumn="dias-carencia-ambulatorio" />
+              <Mapping SourceColumn="dias-reclamo" DataSetColumn="dias-reclamo" />
+              <Mapping SourceColumn="dias-alcance" DataSetColumn="dias-alcance" />
+              <Mapping SourceColumn="empresa-numero" DataSetColumn="empresa-numero" />
+              <Mapping SourceColumn="sucursal-empresa" DataSetColumn="sucursal-empresa" />
+              <Mapping SourceColumn="edad-facturacion" DataSetColumn="edad-facturacion" />
+              <Mapping SourceColumn="codigo-plan" DataSetColumn="codigo-plan" />
+              <Mapping SourceColumn="Codigo-Tarifario" DataSetColumn="Codigo-Tarifario" />
+              <Mapping SourceColumn="nivel-referencia" DataSetColumn="nivel-referencia" />
+              <Mapping SourceColumn="version-plan" DataSetColumn="version-plan" />
+              <Mapping SourceColumn="region" DataSetColumn="region" />
+              <Mapping SourceColumn="dias-carencia-hospitalario" DataSetColumn="dias-carencia-hospitalario" />
+              <Mapping SourceColumn="fecha-fin" DataSetColumn="fecha-fin" />
+              <Mapping SourceColumn="fecha-digitacion" DataSetColumn="fecha-digitacion" />
+              <Mapping SourceColumn="mat-nuevos-beneficios" DataSetColumn="mat-nuevos-beneficios" />
+              <Mapping SourceColumn="edad-dependientes" DataSetColumn="edad-dependientes" />
+              <Mapping SourceColumn="cobertura" DataSetColumn="cobertura" />
+              <Mapping SourceColumn="digitador-creacion" DataSetColumn="digitador-creacion" />
+              <Mapping SourceColumn="fecha-modificacion" DataSetColumn="fecha-modificacion" />
+              <Mapping SourceColumn="digitador-modificacion" DataSetColumn="digitador-modificacion" />
+              <Mapping SourceColumn="hora-creacion" DataSetColumn="hora-creacion" />
+              <Mapping SourceColumn="hora-modificacion" DataSetColumn="hora-modificacion" />
+              <Mapping SourceColumn="prog-modificacion" DataSetColumn="prog-modificacion" />
+              <Mapping SourceColumn="prog-creacion" DataSetColumn="prog-creacion" />
+              <Mapping SourceColumn="fecha-creacion" DataSetColumn="fecha-creacion" />
+              <Mapping SourceColumn="monto-preexistencia" DataSetColumn="monto-preexistencia" />
+              <Mapping SourceColumn="cero-tramites" DataSetColumn="cero-tramites" />
+              <Mapping SourceColumn="codigo-homologacion" DataSetColumn="codigo-homologacion" />
+              <Mapping SourceColumn="Calcula-Precio" DataSetColumn="Calcula-Precio" />
+              <Mapping SourceColumn="Nombre-Tarjeta" DataSetColumn="Nombre-Tarjeta" />
+              <Mapping SourceColumn="tipo-atencion-rct" DataSetColumn="tipo-atencion-rct" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByEmpresaLista" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmpresaLista" GeneratorSourceName="FillByEmpresaLista" GetMethodModifier="Public" GetMethodName="GetDataByEmpresaLista" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmpresaLista" UserSourceName="FillByEmpresaLista">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "codigo-producto", "precio-base", "monto-coaseguro", "porcentaje-coaseguro", "cubre-congenitas", "edad-tope", "porcentaje-edad-tope", "cubre-preexistencias", "fecha-inicio", "numero-beneficiarios", 
+                         "nombre-plan", "dias-carencia-ambulatorio", "dias-reclamo", "dias-alcance", "empresa-numero", "sucursal-empresa", "edad-facturacion", "codigo-plan", "Codigo-Tarifario", "nivel-referencia", "version-plan", 
+                         region, "dias-carencia-hospitalario", "fecha-fin", "fecha-digitacion", "mat-nuevos-beneficios", "edad-dependientes", cobertura, "digitador-creacion", "fecha-modificacion", "digitador-modificacion", "hora-creacion", 
+                         "hora-modificacion", "prog-modificacion", "prog-creacion", "fecha-creacion", "monto-preexistencia", "cero-tramites", "codigo-homologacion", "Calcula-Precio", "Nombre-Tarjeta", "tipo-atencion-rct"
+FROM            PUB."pr02-planes"
+WHERE        ("empresa-numero" = ?) AND ("sucursal-empresa" = ?) AND ("fecha-fin" &gt; CURDATE()) 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="sucursal-empresa" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="sucursal_empresa" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByTipoProducto" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTipoProducto" GeneratorSourceName="FillByTipoProducto" GetMethodModifier="Public" GetMethodName="GetDataByTipoProducto" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTipoProducto" UserSourceName="FillByTipoProducto">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "codigo-producto", "precio-base", "monto-coaseguro", "porcentaje-coaseguro", "cubre-congenitas", "edad-tope", "porcentaje-edad-tope", "cubre-preexistencias", "fecha-inicio", "numero-beneficiarios", 
+                         "nombre-plan", "dias-carencia-ambulatorio", "dias-reclamo", "dias-alcance", "empresa-numero", "sucursal-empresa", "edad-facturacion", "codigo-plan", "Codigo-Tarifario", "nivel-referencia", "version-plan", 
+                         region, "dias-carencia-hospitalario", "fecha-fin", "fecha-digitacion", "mat-nuevos-beneficios", "edad-dependientes", cobertura, "digitador-creacion", "fecha-modificacion", "digitador-modificacion", "hora-creacion", 
+                         "hora-modificacion", "prog-modificacion", "prog-creacion", "fecha-creacion", "monto-preexistencia", "cero-tramites", "codigo-homologacion", "Calcula-Precio", "Nombre-Tarjeta", "tipo-atencion-rct"
+FROM            PUB."pr02-planes"
+WHERE        ("codigo-producto" = ?) AND ("empresa-numero" = ?) AND ("fecha-fin" &gt; CURDATE()) 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="codigo-producto" DataSourceName="salud.&quot;pr02-planes&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_producto" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="empresa-numero" DataSourceName="salud.&quot;pr02-planes&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPlanEmpresaSucursal" GetMethodModifier="Public" GetMethodName="GetDataByPlanEmpresaSucursal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPlanEmpresaSucursal" UserSourceName="GetDataByPlanEmpresaSucursal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "codigo-producto", "precio-base", "monto-coaseguro", "porcentaje-coaseguro", "cubre-congenitas", "edad-tope", "porcentaje-edad-tope", "cubre-preexistencias", "fecha-inicio", "numero-beneficiarios", "nombre-plan", "dias-carencia-ambulatorio", "dias-reclamo", "dias-alcance", "empresa-numero", "sucursal-empresa", "edad-facturacion", "codigo-plan", "Codigo-Tarifario", "nivel-referencia", "version-plan", "region", "dias-carencia-hospitalario", "fecha-fin", "fecha-digitacion", "mat-nuevos-beneficios", "edad-dependientes", "cobertura", "digitador-creacion", "fecha-modificacion", "digitador-modificacion", "hora-creacion", "hora-modificacion", "prog-modificacion", "prog-creacion", "fecha-creacion", "monto-preexistencia", "cero-tramites", "codigo-homologacion", "Calcula-Precio", "Nombre-Tarjeta", "tipo-atencion-rct" FROM "PUB"."pr02-planes"
+where  "codigo-plan"=? and  "empresa-numero" = ? and "sucursal-empresa"=? AND ("fecha-fin" &gt; CURDATE()) 
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="codigo-plan" DataSourceName="salud.&quot;pr02-planes&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_plan" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="empresa-numero" DataSourceName="salud.&quot;pr02-planes&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="sucursal-empresa" DataSourceName="salud.&quot;pr02-planes&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="sucursal_empresa" Precision="0" Scale="0" Size="0" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cl02-empresa-sucursalesTableAdapter" GeneratorDataComponentClassName="cl02_empresa_sucursalesTableAdapter" Name="cl02-empresa-sucursales" UserDataComponentName="cl02-empresa-sucursalesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "empresa-numero", "sucursal-empresa", "codigo-agente-venta", "sucursal-nombre", "codigo-ciudad", "sucursal-barrio", "sucursal-calle", "sucursal-zona", "sucursal-casilla", "sucursal-telefono", "sucursal-fax", 
+                         "sucursal-email", "representante-nombres-sucursal", "representante-apellidos-sucursal", "representante-cargo-sucursal", "representante-cedula-sucursal", "sucursal-region", garantia, "forma-pago", "tipo-cuenta", 
+                         moneda, "codigo-banco", "periodo-pago", "numero-cuenta", "num-contrato-debito", "nombre-duenio-cuenta", "facturar-a-cedula", "facturar-a-ruc", "numero-contratos", "fecha-inicio-sucursal", "fecha-fin-sucursal", 
+                         "unidad-responsable", "fecha-fin-tarjeta", "codigo-producto", "valor-tarjetas", "tarjetas-adicionales", "valor-tarjetas-adicionales", region, "hasta-ultimo-periodo", "meses-forma-pago", bloqueado, "fecha-bloqueo", 
+                         "sucursal-estado", "afecta-costo", "paga-comision", "tipo-transaccion", "porcentaje-comision-broker", "atencion-locales", "numero-odas", "codigo-unidad", "lista-telefono", "lista-fax", "digitador-creacion", 
+                         "fecha-creacion", "hora-creacion", "fecha-modificacion", "digitador-modificacion", "hora-modificacion", "fecha-anulacion", "digitador-anulacion", "hora-anulacion", "codigo-unidad-agente", "monto-mora", 
+                         "fecha-fin-original", "fecha-inicio-original", "cuenta-fronting", "codigo-motivo-bloqueo", "codigo-agente-contacto", "pago-inteligente", "email-rrhh", "email-broker", "bloquea-odas", "bloquea-reclamos", 
+                         "bloquea-cheques", "bloquea-creditos", "codigo-motivo", "admite-odas", "tipo-tarjeta", "medico-domicilio", "nombre-tarjeta", "atencion-biored", "referencia-envio", "por-servicios-adicionales", "tiene-tarjeta", 
+                         "contacto-doc-elec", "email-contacto-doc-elec", "email-broker-doc-elec", "email-sucursal-doc-elec", "cedula-pago-reclamos", "nombre-pago-reclamos", "tipo-lista", "ruc-pago-reclamos", "banco-pago-reclamo", 
+                         "tipo-cuenta-preclamo", "cuenta-pago-reclamo", Linea2, Linea3, Linea1, "tiene-retencion", "tipo-grupal", "porcentaje-descuento", "codigo-motivo-anulacion", transicion, "fecha-vigencia-inicio", "fecha-vigencia-fin", 
+                         "aplicado-transicion", "tipo-cobertura", "es-opcional", "sucursal-alias", "sucursal-configuracion"
+FROM            PUB."cl02-empresa-sucursales" </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="empresa-numero" DataSetColumn="empresa-numero" />
+              <Mapping SourceColumn="sucursal-empresa" DataSetColumn="sucursal-empresa" />
+              <Mapping SourceColumn="codigo-agente-venta" DataSetColumn="codigo-agente-venta" />
+              <Mapping SourceColumn="sucursal-nombre" DataSetColumn="sucursal-nombre" />
+              <Mapping SourceColumn="codigo-ciudad" DataSetColumn="codigo-ciudad" />
+              <Mapping SourceColumn="sucursal-barrio" DataSetColumn="sucursal-barrio" />
+              <Mapping SourceColumn="sucursal-calle" DataSetColumn="sucursal-calle" />
+              <Mapping SourceColumn="sucursal-zona" DataSetColumn="sucursal-zona" />
+              <Mapping SourceColumn="sucursal-casilla" DataSetColumn="sucursal-casilla" />
+              <Mapping SourceColumn="sucursal-telefono" DataSetColumn="sucursal-telefono" />
+              <Mapping SourceColumn="sucursal-fax" DataSetColumn="sucursal-fax" />
+              <Mapping SourceColumn="sucursal-email" DataSetColumn="sucursal-email" />
+              <Mapping SourceColumn="representante-nombres-sucursal" DataSetColumn="representante-nombres-sucursal" />
+              <Mapping SourceColumn="representante-apellidos-sucursal" DataSetColumn="representante-apellidos-sucursal" />
+              <Mapping SourceColumn="representante-cargo-sucursal" DataSetColumn="representante-cargo-sucursal" />
+              <Mapping SourceColumn="representante-cedula-sucursal" DataSetColumn="representante-cedula-sucursal" />
+              <Mapping SourceColumn="sucursal-region" DataSetColumn="sucursal-region" />
+              <Mapping SourceColumn="garantia" DataSetColumn="garantia" />
+              <Mapping SourceColumn="forma-pago" DataSetColumn="forma-pago" />
+              <Mapping SourceColumn="tipo-cuenta" DataSetColumn="tipo-cuenta" />
+              <Mapping SourceColumn="moneda" DataSetColumn="moneda" />
+              <Mapping SourceColumn="codigo-banco" DataSetColumn="codigo-banco" />
+              <Mapping SourceColumn="periodo-pago" DataSetColumn="periodo-pago" />
+              <Mapping SourceColumn="numero-cuenta" DataSetColumn="numero-cuenta" />
+              <Mapping SourceColumn="num-contrato-debito" DataSetColumn="num-contrato-debito" />
+              <Mapping SourceColumn="nombre-duenio-cuenta" DataSetColumn="nombre-duenio-cuenta" />
+              <Mapping SourceColumn="facturar-a-cedula" DataSetColumn="facturar-a-cedula" />
+              <Mapping SourceColumn="facturar-a-ruc" DataSetColumn="facturar-a-ruc" />
+              <Mapping SourceColumn="numero-contratos" DataSetColumn="numero-contratos" />
+              <Mapping SourceColumn="fecha-inicio-sucursal" DataSetColumn="fecha-inicio-sucursal" />
+              <Mapping SourceColumn="fecha-fin-sucursal" DataSetColumn="fecha-fin-sucursal" />
+              <Mapping SourceColumn="unidad-responsable" DataSetColumn="unidad-responsable" />
+              <Mapping SourceColumn="fecha-fin-tarjeta" DataSetColumn="fecha-fin-tarjeta" />
+              <Mapping SourceColumn="codigo-producto" DataSetColumn="codigo-producto" />
+              <Mapping SourceColumn="valor-tarjetas" DataSetColumn="valor-tarjetas" />
+              <Mapping SourceColumn="tarjetas-adicionales" DataSetColumn="tarjetas-adicionales" />
+              <Mapping SourceColumn="valor-tarjetas-adicionales" DataSetColumn="valor-tarjetas-adicionales" />
+              <Mapping SourceColumn="region" DataSetColumn="region" />
+              <Mapping SourceColumn="hasta-ultimo-periodo" DataSetColumn="hasta-ultimo-periodo" />
+              <Mapping SourceColumn="meses-forma-pago" DataSetColumn="meses-forma-pago" />
+              <Mapping SourceColumn="bloqueado" DataSetColumn="bloqueado" />
+              <Mapping SourceColumn="fecha-bloqueo" DataSetColumn="fecha-bloqueo" />
+              <Mapping SourceColumn="sucursal-estado" DataSetColumn="sucursal-estado" />
+              <Mapping SourceColumn="afecta-costo" DataSetColumn="afecta-costo" />
+              <Mapping SourceColumn="paga-comision" DataSetColumn="paga-comision" />
+              <Mapping SourceColumn="tipo-transaccion" DataSetColumn="tipo-transaccion" />
+              <Mapping SourceColumn="porcentaje-comision-broker" DataSetColumn="porcentaje-comision-broker" />
+              <Mapping SourceColumn="atencion-locales" DataSetColumn="atencion-locales" />
+              <Mapping SourceColumn="numero-odas" DataSetColumn="numero-odas" />
+              <Mapping SourceColumn="codigo-unidad" DataSetColumn="codigo-unidad" />
+              <Mapping SourceColumn="lista-telefono" DataSetColumn="lista-telefono" />
+              <Mapping SourceColumn="lista-fax" DataSetColumn="lista-fax" />
+              <Mapping SourceColumn="digitador-creacion" DataSetColumn="digitador-creacion" />
+              <Mapping SourceColumn="fecha-creacion" DataSetColumn="fecha-creacion" />
+              <Mapping SourceColumn="hora-creacion" DataSetColumn="hora-creacion" />
+              <Mapping SourceColumn="fecha-modificacion" DataSetColumn="fecha-modificacion" />
+              <Mapping SourceColumn="digitador-modificacion" DataSetColumn="digitador-modificacion" />
+              <Mapping SourceColumn="hora-modificacion" DataSetColumn="hora-modificacion" />
+              <Mapping SourceColumn="fecha-anulacion" DataSetColumn="fecha-anulacion" />
+              <Mapping SourceColumn="digitador-anulacion" DataSetColumn="digitador-anulacion" />
+              <Mapping SourceColumn="hora-anulacion" DataSetColumn="hora-anulacion" />
+              <Mapping SourceColumn="codigo-unidad-agente" DataSetColumn="codigo-unidad-agente" />
+              <Mapping SourceColumn="monto-mora" DataSetColumn="monto-mora" />
+              <Mapping SourceColumn="fecha-fin-original" DataSetColumn="fecha-fin-original" />
+              <Mapping SourceColumn="fecha-inicio-original" DataSetColumn="fecha-inicio-original" />
+              <Mapping SourceColumn="cuenta-fronting" DataSetColumn="cuenta-fronting" />
+              <Mapping SourceColumn="codigo-motivo-bloqueo" DataSetColumn="codigo-motivo-bloqueo" />
+              <Mapping SourceColumn="codigo-agente-contacto" DataSetColumn="codigo-agente-contacto" />
+              <Mapping SourceColumn="pago-inteligente" DataSetColumn="pago-inteligente" />
+              <Mapping SourceColumn="email-rrhh" DataSetColumn="email-rrhh" />
+              <Mapping SourceColumn="email-broker" DataSetColumn="email-broker" />
+              <Mapping SourceColumn="bloquea-odas" DataSetColumn="bloquea-odas" />
+              <Mapping SourceColumn="bloquea-reclamos" DataSetColumn="bloquea-reclamos" />
+              <Mapping SourceColumn="bloquea-cheques" DataSetColumn="bloquea-cheques" />
+              <Mapping SourceColumn="bloquea-creditos" DataSetColumn="bloquea-creditos" />
+              <Mapping SourceColumn="codigo-motivo" DataSetColumn="codigo-motivo" />
+              <Mapping SourceColumn="admite-odas" DataSetColumn="admite-odas" />
+              <Mapping SourceColumn="tipo-tarjeta" DataSetColumn="tipo-tarjeta" />
+              <Mapping SourceColumn="medico-domicilio" DataSetColumn="medico-domicilio" />
+              <Mapping SourceColumn="nombre-tarjeta" DataSetColumn="nombre-tarjeta" />
+              <Mapping SourceColumn="atencion-biored" DataSetColumn="atencion-biored" />
+              <Mapping SourceColumn="referencia-envio" DataSetColumn="referencia-envio" />
+              <Mapping SourceColumn="por-servicios-adicionales" DataSetColumn="por-servicios-adicionales" />
+              <Mapping SourceColumn="tiene-tarjeta" DataSetColumn="tiene-tarjeta" />
+              <Mapping SourceColumn="contacto-doc-elec" DataSetColumn="contacto-doc-elec" />
+              <Mapping SourceColumn="email-contacto-doc-elec" DataSetColumn="email-contacto-doc-elec" />
+              <Mapping SourceColumn="email-broker-doc-elec" DataSetColumn="email-broker-doc-elec" />
+              <Mapping SourceColumn="email-sucursal-doc-elec" DataSetColumn="email-sucursal-doc-elec" />
+              <Mapping SourceColumn="cedula-pago-reclamos" DataSetColumn="cedula-pago-reclamos" />
+              <Mapping SourceColumn="nombre-pago-reclamos" DataSetColumn="nombre-pago-reclamos" />
+              <Mapping SourceColumn="tipo-lista" DataSetColumn="tipo-lista" />
+              <Mapping SourceColumn="ruc-pago-reclamos" DataSetColumn="ruc-pago-reclamos" />
+              <Mapping SourceColumn="banco-pago-reclamo" DataSetColumn="banco-pago-reclamo" />
+              <Mapping SourceColumn="tipo-cuenta-preclamo" DataSetColumn="tipo-cuenta-preclamo" />
+              <Mapping SourceColumn="cuenta-pago-reclamo" DataSetColumn="cuenta-pago-reclamo" />
+              <Mapping SourceColumn="Linea2" DataSetColumn="Linea2" />
+              <Mapping SourceColumn="Linea3" DataSetColumn="Linea3" />
+              <Mapping SourceColumn="Linea1" DataSetColumn="Linea1" />
+              <Mapping SourceColumn="tiene-retencion" DataSetColumn="tiene-retencion" />
+              <Mapping SourceColumn="tipo-grupal" DataSetColumn="tipo-grupal" />
+              <Mapping SourceColumn="porcentaje-descuento" DataSetColumn="porcentaje-descuento" />
+              <Mapping SourceColumn="codigo-motivo-anulacion" DataSetColumn="codigo-motivo-anulacion" />
+              <Mapping SourceColumn="transicion" DataSetColumn="transicion" />
+              <Mapping SourceColumn="fecha-vigencia-inicio" DataSetColumn="fecha-vigencia-inicio" />
+              <Mapping SourceColumn="fecha-vigencia-fin" DataSetColumn="fecha-vigencia-fin" />
+              <Mapping SourceColumn="aplicado-transicion" DataSetColumn="aplicado-transicion" />
+              <Mapping SourceColumn="tipo-cobertura" DataSetColumn="tipo-cobertura" />
+              <Mapping SourceColumn="es-opcional" DataSetColumn="es-opcional" />
+              <Mapping SourceColumn="sucursal-alias" DataSetColumn="sucursal-alias" />
+              <Mapping SourceColumn="sucursal-configuracion" DataSetColumn="sucursal-configuracion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BloquearSucursalXNumero" Modifier="Public" Name="BloquearSucursalXNumero" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BloquearSucursalXNumero">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE 	PUB."cl02-empresa-sucursales" 
+SET 	"bloqueado" = 1
+where 	"empresa-numero" = ? and "sucursal-empresa" = ?</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="sucursal-empresa" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_sucursal_empresa" Precision="0" Scale="0" Size="0" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DesBloquearSucursalXNumero" Modifier="Public" Name="DesBloquearSucursalXNumero" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DesBloquearSucursalXNumero">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE 	PUB."cl02-empresa-sucursales" 
+SET 	"bloqueado" = 0
+where 	"empresa-numero" = ? and "sucursal-empresa" = ?</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="sucursal-empresa" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_sucursal_empresa" Precision="0" Scale="0" Size="0" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByEmpresa" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmpresa" GeneratorSourceName="FillByEmpresa" GetMethodModifier="Public" GetMethodName="GetDataByEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmpresa" UserSourceName="FillByEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "empresa-numero", "sucursal-empresa", "codigo-agente-venta", "sucursal-nombre", "codigo-ciudad", "sucursal-barrio", "sucursal-calle", "sucursal-zona", "sucursal-casilla", "sucursal-telefono", "sucursal-fax", 
+                         "sucursal-email", "representante-nombres-sucursal", "representante-apellidos-sucursal", "representante-cargo-sucursal", "representante-cedula-sucursal", "sucursal-region", garantia, "forma-pago", "tipo-cuenta", 
+                         moneda, "codigo-banco", "periodo-pago", "numero-cuenta", "num-contrato-debito", "nombre-duenio-cuenta", "facturar-a-cedula", "facturar-a-ruc", "numero-contratos", "fecha-inicio-sucursal", "fecha-fin-sucursal", 
+                         "unidad-responsable", "fecha-fin-tarjeta", "codigo-producto", "valor-tarjetas", "tarjetas-adicionales", "valor-tarjetas-adicionales", region, "hasta-ultimo-periodo", "meses-forma-pago", bloqueado, "fecha-bloqueo", 
+                         "sucursal-estado", "afecta-costo", "paga-comision", "tipo-transaccion", "porcentaje-comision-broker", "atencion-locales", "numero-odas", "codigo-unidad", "lista-telefono", "lista-fax", "digitador-creacion", 
+                         "fecha-creacion", "hora-creacion", "fecha-modificacion", "digitador-modificacion", "hora-modificacion", "fecha-anulacion", "digitador-anulacion", "hora-anulacion", "codigo-unidad-agente", "monto-mora", 
+                         "fecha-fin-original", "fecha-inicio-original", "cuenta-fronting", "codigo-motivo-bloqueo", "codigo-agente-contacto", "pago-inteligente", "email-rrhh", "email-broker", "bloquea-odas", "bloquea-reclamos", 
+                         "bloquea-cheques", "bloquea-creditos", "codigo-motivo", "admite-odas", "tipo-tarjeta", "medico-domicilio", "nombre-tarjeta", "atencion-biored", "referencia-envio", "por-servicios-adicionales", "tiene-tarjeta", 
+                         "contacto-doc-elec", "email-contacto-doc-elec", "email-broker-doc-elec", "email-sucursal-doc-elec", "cedula-pago-reclamos", "nombre-pago-reclamos", "tipo-lista", "ruc-pago-reclamos", "banco-pago-reclamo", 
+                         "tipo-cuenta-preclamo", "cuenta-pago-reclamo", Linea2, Linea3, Linea1, "tiene-retencion", "tipo-grupal", "porcentaje-descuento", "codigo-motivo-anulacion", transicion, "fecha-vigencia-inicio", "fecha-vigencia-fin", 
+                         "aplicado-transicion", "tipo-cobertura", "es-opcional", "sucursal-alias", "sucursal-configuracion"
+FROM            PUB."cl02-empresa-sucursales"
+WHERE        ("empresa-numero" = ?) AND ("bloqueado" = 0) AND ("fecha-fin-sucursal" &gt; CURDATE())  </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmpresaSucursal" GetMethodModifier="Public" GetMethodName="GetDataByEmpresaSucursal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEmpresaSucursal" UserSourceName="GetDataByEmpresaSucursal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        "empresa-numero", "sucursal-empresa", "codigo-agente-venta", "sucursal-nombre", "codigo-ciudad", "sucursal-barrio", "sucursal-calle", "sucursal-zona", "sucursal-casilla", "sucursal-telefono", "sucursal-fax", 
+                         "sucursal-email", "representante-nombres-sucursal", "representante-apellidos-sucursal", "representante-cargo-sucursal", "representante-cedula-sucursal", "sucursal-region", garantia, "forma-pago", "tipo-cuenta", 
+                         moneda, "codigo-banco", "periodo-pago", "numero-cuenta", "num-contrato-debito", "nombre-duenio-cuenta", "facturar-a-cedula", "facturar-a-ruc", "numero-contratos", "fecha-inicio-sucursal", "fecha-fin-sucursal", 
+                         "unidad-responsable", "fecha-fin-tarjeta", "codigo-producto", "valor-tarjetas", "tarjetas-adicionales", "valor-tarjetas-adicionales", region, "hasta-ultimo-periodo", "meses-forma-pago", bloqueado, "fecha-bloqueo", 
+                         "sucursal-estado", "afecta-costo", "paga-comision", "tipo-transaccion", "porcentaje-comision-broker", "atencion-locales", "numero-odas", "codigo-unidad", "lista-telefono", "lista-fax", "digitador-creacion", 
+                         "fecha-creacion", "hora-creacion", "fecha-modificacion", "digitador-modificacion", "hora-modificacion", "fecha-anulacion", "digitador-anulacion", "hora-anulacion", "codigo-unidad-agente", "monto-mora", 
+                         "fecha-fin-original", "fecha-inicio-original", "cuenta-fronting", "codigo-motivo-bloqueo", "codigo-agente-contacto", "pago-inteligente", "email-rrhh", "email-broker", "bloquea-odas", "bloquea-reclamos", 
+                         "bloquea-cheques", "bloquea-creditos", "codigo-motivo", "admite-odas", "tipo-tarjeta", "medico-domicilio", "nombre-tarjeta", "atencion-biored", "referencia-envio", "por-servicios-adicionales", "tiene-tarjeta", 
+                         "contacto-doc-elec", "email-contacto-doc-elec", "email-broker-doc-elec", "email-sucursal-doc-elec", "cedula-pago-reclamos", "nombre-pago-reclamos", "tipo-lista", "ruc-pago-reclamos", "banco-pago-reclamo", 
+                         "tipo-cuenta-preclamo", "cuenta-pago-reclamo", Linea2, Linea3, Linea1, "tiene-retencion", "tipo-grupal", "porcentaje-descuento", "codigo-motivo-anulacion", transicion, "fecha-vigencia-inicio", "fecha-vigencia-fin", 
+                         "aplicado-transicion", "tipo-cobertura", "es-opcional", "sucursal-alias", "sucursal-configuracion"
+                      FROM "PUB"."cl02-empresa-sucursales"
+                      where "empresa-numero" = ? and  "sucursal-empresa"=?  
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="sucursal-empresa" DataSourceName="salud.&quot;cl02-empresa-sucursales&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="sucursal_empresa" Precision="0" Scale="0" Size="0" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pr04coberturasTA" GeneratorDataComponentClassName="pr04coberturasTA" Name="pr04coberturas" UserDataComponentName="pr04coberturasTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "codigo-cobertura", "codigo-producto", "monto-cobertura", "tipo-cobertura", "meses-reposicion-cobertura", region, "codigo-plan", "version-plan", "fecha-digitacion", "codigo-subcobertura", maximo, 
+                         "fecha-inicio-cobertura", "fecha-fin-cobertura", "codigo-deducible", "fecha-modificacion", "digitador-modificacion", "hora-modificacion", "prog-modificacion", "codigo-secuencia", "aplica-red-privada", 
+                         "aplica-red-especifica", "aplica-otros-no-convenio", "aplica-red-convenio", "dias-carencia-amb", "dias-carencia-hosp"
+FROM            PUB."pr04-coberturas"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo-cobertura" DataSetColumn="codigo-cobertura" />
+              <Mapping SourceColumn="codigo-producto" DataSetColumn="codigo-producto" />
+              <Mapping SourceColumn="monto-cobertura" DataSetColumn="monto-cobertura" />
+              <Mapping SourceColumn="tipo-cobertura" DataSetColumn="tipo-cobertura" />
+              <Mapping SourceColumn="meses-reposicion-cobertura" DataSetColumn="meses-reposicion-cobertura" />
+              <Mapping SourceColumn="region" DataSetColumn="region" />
+              <Mapping SourceColumn="codigo-plan" DataSetColumn="codigo-plan" />
+              <Mapping SourceColumn="version-plan" DataSetColumn="version-plan" />
+              <Mapping SourceColumn="fecha-digitacion" DataSetColumn="fecha-digitacion" />
+              <Mapping SourceColumn="codigo-subcobertura" DataSetColumn="codigo-subcobertura" />
+              <Mapping SourceColumn="maximo" DataSetColumn="maximo" />
+              <Mapping SourceColumn="fecha-inicio-cobertura" DataSetColumn="fecha-inicio-cobertura" />
+              <Mapping SourceColumn="fecha-fin-cobertura" DataSetColumn="fecha-fin-cobertura" />
+              <Mapping SourceColumn="codigo-deducible" DataSetColumn="codigo-deducible" />
+              <Mapping SourceColumn="fecha-modificacion" DataSetColumn="fecha-modificacion" />
+              <Mapping SourceColumn="digitador-modificacion" DataSetColumn="digitador-modificacion" />
+              <Mapping SourceColumn="hora-modificacion" DataSetColumn="hora-modificacion" />
+              <Mapping SourceColumn="prog-modificacion" DataSetColumn="prog-modificacion" />
+              <Mapping SourceColumn="codigo-secuencia" DataSetColumn="codigo-secuencia" />
+              <Mapping SourceColumn="aplica-red-privada" DataSetColumn="aplica-red-privada" />
+              <Mapping SourceColumn="aplica-red-especifica" DataSetColumn="aplica-red-especifica" />
+              <Mapping SourceColumn="aplica-otros-no-convenio" DataSetColumn="aplica-otros-no-convenio" />
+              <Mapping SourceColumn="aplica-red-convenio" DataSetColumn="aplica-red-convenio" />
+              <Mapping SourceColumn="dias-carencia-amb" DataSetColumn="dias-carencia-amb" />
+              <Mapping SourceColumn="dias-carencia-hosp" DataSetColumn="dias-carencia-hosp" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="ObtenerMaternidad" GetMethodModifier="Public" GetMethodName="ObtenerMaternidad" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="ObtenerMaternidad" UserSourceName="ObtenerMaternidad">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "codigo-cobertura", "codigo-producto", "monto-cobertura", "tipo-cobertura", "meses-reposicion-cobertura", region, "codigo-plan", "version-plan", "fecha-digitacion", "codigo-subcobertura", maximo, 
+                         "fecha-inicio-cobertura", "fecha-fin-cobertura", "codigo-deducible", "fecha-modificacion", "digitador-modificacion", "hora-modificacion", "prog-modificacion", "codigo-secuencia", "aplica-red-privada", 
+                         "aplica-red-especifica", "aplica-otros-no-convenio", "aplica-red-convenio", "dias-carencia-amb", "dias-carencia-hosp"
+FROM     PUB."PR04-coberturas"
+WHERE   "codigo-plan" = ? AND "version-plan" = ? AND "codigo-producto"=? AND region =? AND
+"codigo-cobertura" like 'MAT%' 
+WITH(NOLOCK)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" ColumnName="codigo-plan" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="codigo-plan" Precision="0" Scale="0" Size="0" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" ColumnName="version-plan" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="version-plan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" ColumnName="codigo-producto" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="codigo-producto" Precision="0" Scale="0" Size="0" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" ColumnName="region" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" Scale="0" Size="0" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Sigmep" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Sigmep" msprop:Generator_UserDSName="Sigmep">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cl01-empresas" msprop:Generator_TableClassName="_cl01_empresasDataTable" msprop:Generator_TableVarName="_tablecl01_empresas" msprop:Generator_TablePropName="_cl01_empresas" msprop:Generator_RowDeletingName="_cl01_empresasRowDeleting" msprop:Generator_RowChangingName="_cl01_empresasRowChanging" msprop:Generator_RowEvHandlerName="_cl01_empresasRowChangeEventHandler" msprop:Generator_RowDeletedName="_cl01_empresasRowDeleted" msprop:Generator_UserTableName="cl01-empresas" msprop:Generator_RowChangedName="_cl01_empresasRowChanged" msprop:Generator_RowEvArgName="_cl01_empresasRowChangeEvent" msprop:Generator_RowClassName="_cl01_empresasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="empresa-numero" msprop:Generator_ColumnVarNameInTable="_columnempresa_numero" msprop:Generator_ColumnPropNameInRow="_empresa_numero" msprop:Generator_ColumnPropNameInTable="_empresa_numeroColumn" msprop:Generator_UserColumnName="empresa-numero" type="xs:int" />
+              <xs:element name="codigo-agente-venta" msprop:Generator_ColumnVarNameInTable="_columncodigo_agente_venta" msprop:Generator_ColumnPropNameInRow="_codigo_agente_venta" msprop:Generator_ColumnPropNameInTable="_codigo_agente_ventaColumn" msprop:Generator_UserColumnName="codigo-agente-venta" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-actividad" msprop:Generator_ColumnVarNameInTable="_columncodigo_actividad" msprop:Generator_ColumnPropNameInRow="_codigo_actividad" msprop:Generator_ColumnPropNameInTable="_codigo_actividadColumn" msprop:Generator_UserColumnName="codigo-actividad" type="xs:int" minOccurs="0" />
+              <xs:element name="razon-social" msprop:Generator_ColumnVarNameInTable="_columnrazon_social" msprop:Generator_ColumnPropNameInRow="_razon_social" msprop:Generator_ColumnPropNameInTable="_razon_socialColumn" msprop:Generator_UserColumnName="razon-social" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ruc-empresa" msprop:Generator_ColumnVarNameInTable="_columnruc_empresa" msprop:Generator_ColumnPropNameInRow="_ruc_empresa" msprop:Generator_ColumnPropNameInTable="_ruc_empresaColumn" msprop:Generator_UserColumnName="ruc-empresa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo-sociedad" msprop:Generator_ColumnVarNameInTable="_columntipo_sociedad" msprop:Generator_ColumnPropNameInRow="_tipo_sociedad" msprop:Generator_ColumnPropNameInTable="_tipo_sociedadColumn" msprop:Generator_UserColumnName="tipo-sociedad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre-grupo" msprop:Generator_ColumnVarNameInTable="_columnnombre_grupo" msprop:Generator_ColumnPropNameInRow="_nombre_grupo" msprop:Generator_ColumnPropNameInTable="_nombre_grupoColumn" msprop:Generator_UserColumnName="nombre-grupo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-ciudad" msprop:Generator_ColumnVarNameInTable="_columncodigo_ciudad" msprop:Generator_ColumnPropNameInRow="_codigo_ciudad" msprop:Generator_ColumnPropNameInTable="_codigo_ciudadColumn" msprop:Generator_UserColumnName="codigo-ciudad" type="xs:int" minOccurs="0" />
+              <xs:element name="empresa-barrio" msprop:Generator_ColumnVarNameInTable="_columnempresa_barrio" msprop:Generator_ColumnPropNameInRow="_empresa_barrio" msprop:Generator_ColumnPropNameInTable="_empresa_barrioColumn" msprop:Generator_UserColumnName="empresa-barrio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-calle" msprop:Generator_ColumnVarNameInTable="_columnempresa_calle" msprop:Generator_ColumnPropNameInRow="_empresa_calle" msprop:Generator_ColumnPropNameInTable="_empresa_calleColumn" msprop:Generator_UserColumnName="empresa-calle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="140" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-zona" msprop:Generator_ColumnVarNameInTable="_columnempresa_zona" msprop:Generator_ColumnPropNameInRow="_empresa_zona" msprop:Generator_ColumnPropNameInTable="_empresa_zonaColumn" msprop:Generator_UserColumnName="empresa-zona" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-casilla" msprop:Generator_ColumnVarNameInTable="_columnempresa_casilla" msprop:Generator_ColumnPropNameInRow="_empresa_casilla" msprop:Generator_ColumnPropNameInTable="_empresa_casillaColumn" msprop:Generator_UserColumnName="empresa-casilla" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-telefono" msprop:Generator_ColumnVarNameInTable="_columnempresa_telefono" msprop:Generator_ColumnPropNameInRow="_empresa_telefono" msprop:Generator_ColumnPropNameInTable="_empresa_telefonoColumn" msprop:Generator_UserColumnName="empresa-telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-fax" msprop:Generator_ColumnVarNameInTable="_columnempresa_fax" msprop:Generator_ColumnPropNameInRow="_empresa_fax" msprop:Generator_ColumnPropNameInTable="_empresa_faxColumn" msprop:Generator_UserColumnName="empresa-fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-email" msprop:Generator_ColumnVarNameInTable="_columnempresa_email" msprop:Generator_ColumnPropNameInRow="_empresa_email" msprop:Generator_ColumnPropNameInTable="_empresa_emailColumn" msprop:Generator_UserColumnName="empresa-email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-nombres" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_nombres" msprop:Generator_ColumnPropNameInRow="_representante_nombres" msprop:Generator_ColumnPropNameInTable="_representante_nombresColumn" msprop:Generator_UserColumnName="representante-nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-apellidos" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_apellidos" msprop:Generator_ColumnPropNameInRow="_representante_apellidos" msprop:Generator_ColumnPropNameInTable="_representante_apellidosColumn" msprop:Generator_UserColumnName="representante-apellidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-cargo" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_cargo" msprop:Generator_ColumnPropNameInRow="_representante_cargo" msprop:Generator_ColumnPropNameInTable="_representante_cargoColumn" msprop:Generator_UserColumnName="representante-cargo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-cedula" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_cedula" msprop:Generator_ColumnPropNameInRow="_representante_cedula" msprop:Generator_ColumnPropNameInTable="_representante_cedulaColumn" msprop:Generator_UserColumnName="representante-cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-relacion" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_relacion" msprop:Generator_ColumnPropNameInRow="_representante_relacion" msprop:Generator_ColumnPropNameInTable="_representante_relacionColumn" msprop:Generator_UserColumnName="representante-relacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="financiero-nombres" msprop:Generator_ColumnVarNameInTable="_columnfinanciero_nombres" msprop:Generator_ColumnPropNameInRow="_financiero_nombres" msprop:Generator_ColumnPropNameInTable="_financiero_nombresColumn" msprop:Generator_UserColumnName="financiero-nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="financiero-cargo" msprop:Generator_ColumnVarNameInTable="_columnfinanciero_cargo" msprop:Generator_ColumnPropNameInRow="_financiero_cargo" msprop:Generator_ColumnPropNameInTable="_financiero_cargoColumn" msprop:Generator_UserColumnName="financiero-cargo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="financiero-apellidos" msprop:Generator_ColumnVarNameInTable="_columnfinanciero_apellidos" msprop:Generator_ColumnPropNameInRow="_financiero_apellidos" msprop:Generator_ColumnPropNameInTable="_financiero_apellidosColumn" msprop:Generator_UserColumnName="financiero-apellidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="financiero-cedula" msprop:Generator_ColumnVarNameInTable="_columnfinanciero_cedula" msprop:Generator_ColumnPropNameInRow="_financiero_cedula" msprop:Generator_ColumnPropNameInTable="_financiero_cedulaColumn" msprop:Generator_UserColumnName="financiero-cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-digitacion-empresa" msprop:Generator_ColumnVarNameInTable="_columnfecha_digitacion_empresa" msprop:Generator_ColumnPropNameInRow="_fecha_digitacion_empresa" msprop:Generator_ColumnPropNameInTable="_fecha_digitacion_empresaColumn" msprop:Generator_UserColumnName="fecha-digitacion-empresa" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="porcentaje-comision-broker" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_comision_broker" msprop:Generator_ColumnPropNameInRow="_porcentaje_comision_broker" msprop:Generator_ColumnPropNameInTable="_porcentaje_comision_brokerColumn" msprop:Generator_UserColumnName="porcentaje-comision-broker" type="xs:decimal" minOccurs="0" />
+              <xs:element name="digitador" msprop:Generator_ColumnVarNameInTable="columndigitador" msprop:Generator_ColumnPropNameInRow="digitador" msprop:Generator_ColumnPropNameInTable="digitadorColumn" msprop:Generator_UserColumnName="digitador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="a-favor" msprop:Generator_ColumnVarNameInTable="_columna_favor" msprop:Generator_ColumnPropNameInRow="_a_favor" msprop:Generator_ColumnPropNameInTable="_a_favorColumn" msprop:Generator_UserColumnName="a-favor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-tecni" msprop:Generator_ColumnVarNameInTable="_columncodigo_tecni" msprop:Generator_ColumnPropNameInRow="_codigo_tecni" msprop:Generator_ColumnPropNameInTable="_codigo_tecniColumn" msprop:Generator_UserColumnName="codigo-tecni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pago-inteligente" msprop:Generator_ColumnVarNameInTable="_columnpago_inteligente" msprop:Generator_ColumnPropNameInRow="_pago_inteligente" msprop:Generator_ColumnPropNameInTable="_pago_inteligenteColumn" msprop:Generator_UserColumnName="pago-inteligente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="email-rrhh" msprop:Generator_ColumnVarNameInTable="_columnemail_rrhh" msprop:Generator_ColumnPropNameInRow="_email_rrhh" msprop:Generator_ColumnPropNameInTable="_email_rrhhColumn" msprop:Generator_UserColumnName="email-rrhh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email-broker" msprop:Generator_ColumnVarNameInTable="_columnemail_broker" msprop:Generator_ColumnPropNameInRow="_email_broker" msprop:Generator_ColumnPropNameInTable="_email_brokerColumn" msprop:Generator_UserColumnName="email-broker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="grupo-numero" msprop:Generator_ColumnVarNameInTable="_columngrupo_numero" msprop:Generator_ColumnPropNameInRow="_grupo_numero" msprop:Generator_ColumnPropNameInTable="_grupo_numeroColumn" msprop:Generator_UserColumnName="grupo-numero" type="xs:int" minOccurs="0" />
+              <xs:element name="pertenece-grupo" msprop:Generator_ColumnVarNameInTable="_columnpertenece_grupo" msprop:Generator_ColumnPropNameInRow="_pertenece_grupo" msprop:Generator_ColumnPropNameInTable="_pertenece_grupoColumn" msprop:Generator_UserColumnName="pertenece-grupo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="empresa-telefono1" msprop:Generator_ColumnVarNameInTable="_columnempresa_telefono1" msprop:Generator_ColumnPropNameInRow="_empresa_telefono1" msprop:Generator_ColumnPropNameInTable="_empresa_telefono1Column" msprop:Generator_UserColumnName="empresa-telefono1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-telefono2" msprop:Generator_ColumnVarNameInTable="_columnempresa_telefono2" msprop:Generator_ColumnPropNameInRow="_empresa_telefono2" msprop:Generator_ColumnPropNameInTable="_empresa_telefono2Column" msprop:Generator_UserColumnName="empresa-telefono2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-fax1" msprop:Generator_ColumnVarNameInTable="_columnempresa_fax1" msprop:Generator_ColumnPropNameInRow="_empresa_fax1" msprop:Generator_ColumnPropNameInTable="_empresa_fax1Column" msprop:Generator_UserColumnName="empresa-fax1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="digitador-creacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_creacion" msprop:Generator_ColumnPropNameInRow="_digitador_creacion" msprop:Generator_ColumnPropNameInTable="_digitador_creacionColumn" msprop:Generator_UserColumnName="digitador-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-creacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="_fecha_creacion" msprop:Generator_ColumnPropNameInTable="_fecha_creacionColumn" msprop:Generator_UserColumnName="fecha-creacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hora-creacion" msprop:Generator_ColumnVarNameInTable="_columnhora_creacion" msprop:Generator_ColumnPropNameInRow="_hora_creacion" msprop:Generator_ColumnPropNameInTable="_hora_creacionColumn" msprop:Generator_UserColumnName="hora-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-modificacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_modificacion" msprop:Generator_ColumnPropNameInRow="_fecha_modificacion" msprop:Generator_ColumnPropNameInTable="_fecha_modificacionColumn" msprop:Generator_UserColumnName="fecha-modificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="digitador-modificacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_modificacion" msprop:Generator_ColumnPropNameInRow="_digitador_modificacion" msprop:Generator_ColumnPropNameInTable="_digitador_modificacionColumn" msprop:Generator_UserColumnName="digitador-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-modificacion" msprop:Generator_ColumnVarNameInTable="_columnhora_modificacion" msprop:Generator_ColumnPropNameInRow="_hora_modificacion" msprop:Generator_ColumnPropNameInTable="_hora_modificacionColumn" msprop:Generator_UserColumnName="hora-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-anulacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_anulacion" msprop:Generator_ColumnPropNameInRow="_fecha_anulacion" msprop:Generator_ColumnPropNameInTable="_fecha_anulacionColumn" msprop:Generator_UserColumnName="fecha-anulacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="digitador-anulacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_anulacion" msprop:Generator_ColumnPropNameInRow="_digitador_anulacion" msprop:Generator_ColumnPropNameInTable="_digitador_anulacionColumn" msprop:Generator_UserColumnName="digitador-anulacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-anulacion" msprop:Generator_ColumnVarNameInTable="_columnhora_anulacion" msprop:Generator_ColumnPropNameInRow="_hora_anulacion" msprop:Generator_ColumnPropNameInTable="_hora_anulacionColumn" msprop:Generator_UserColumnName="hora-anulacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-unidad-agente" msprop:Generator_ColumnVarNameInTable="_columncodigo_unidad_agente" msprop:Generator_ColumnPropNameInRow="_codigo_unidad_agente" msprop:Generator_ColumnPropNameInTable="_codigo_unidad_agenteColumn" msprop:Generator_UserColumnName="codigo-unidad-agente" type="xs:int" minOccurs="0" />
+              <xs:element name="claveweb" msprop:Generator_ColumnVarNameInTable="columnclaveweb" msprop:Generator_ColumnPropNameInRow="claveweb" msprop:Generator_ColumnPropNameInTable="clavewebColumn" msprop:Generator_UserColumnName="claveweb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-agente-contacto" msprop:Generator_ColumnVarNameInTable="_columncodigo_agente_contacto" msprop:Generator_ColumnPropNameInRow="_codigo_agente_contacto" msprop:Generator_ColumnPropNameInTable="_codigo_agente_contactoColumn" msprop:Generator_UserColumnName="codigo-agente-contacto" type="xs:int" minOccurs="0" />
+              <xs:element name="pi-rrhh" msprop:Generator_ColumnVarNameInTable="_columnpi_rrhh" msprop:Generator_ColumnPropNameInRow="_pi_rrhh" msprop:Generator_ColumnPropNameInTable="_pi_rrhhColumn" msprop:Generator_UserColumnName="pi-rrhh" type="xs:boolean" minOccurs="0" />
+              <xs:element name="pi-broker" msprop:Generator_ColumnVarNameInTable="_columnpi_broker" msprop:Generator_ColumnPropNameInRow="_pi_broker" msprop:Generator_ColumnPropNameInTable="_pi_brokerColumn" msprop:Generator_UserColumnName="pi-broker" type="xs:boolean" minOccurs="0" />
+              <xs:element name="pi-contrato" msprop:Generator_ColumnVarNameInTable="_columnpi_contrato" msprop:Generator_ColumnPropNameInRow="_pi_contrato" msprop:Generator_ColumnPropNameInTable="_pi_contratoColumn" msprop:Generator_UserColumnName="pi-contrato" type="xs:boolean" minOccurs="0" />
+              <xs:element name="notificacion-copago" msprop:Generator_ColumnVarNameInTable="_columnnotificacion_copago" msprop:Generator_ColumnPropNameInRow="_notificacion_copago" msprop:Generator_ColumnPropNameInTable="_notificacion_copagoColumn" msprop:Generator_UserColumnName="notificacion-copago" type="xs:int" minOccurs="0" />
+              <xs:element name="notificacion-prefactura" msprop:Generator_ColumnVarNameInTable="_columnnotificacion_prefactura" msprop:Generator_ColumnPropNameInRow="_notificacion_prefactura" msprop:Generator_ColumnPropNameInTable="_notificacion_prefacturaColumn" msprop:Generator_UserColumnName="notificacion-prefactura" type="xs:int" minOccurs="0" />
+              <xs:element name="periodo-pago" msprop:Generator_ColumnVarNameInTable="_columnperiodo_pago" msprop:Generator_ColumnPropNameInRow="_periodo_pago" msprop:Generator_ColumnPropNameInTable="_periodo_pagoColumn" msprop:Generator_UserColumnName="periodo-pago" type="xs:int" minOccurs="0" />
+              <xs:element name="periodo-copago" msprop:Generator_ColumnVarNameInTable="_columnperiodo_copago" msprop:Generator_ColumnPropNameInRow="_periodo_copago" msprop:Generator_ColumnPropNameInTable="_periodo_copagoColumn" msprop:Generator_UserColumnName="periodo-copago" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pr02-planes" msprop:Generator_TableClassName="_pr02_planesDataTable" msprop:Generator_TableVarName="_tablepr02_planes" msprop:Generator_RowChangedName="_pr02_planesRowChanged" msprop:Generator_TablePropName="_pr02_planes" msprop:Generator_RowDeletingName="_pr02_planesRowDeleting" msprop:Generator_RowChangingName="_pr02_planesRowChanging" msprop:Generator_RowEvHandlerName="_pr02_planesRowChangeEventHandler" msprop:Generator_RowDeletedName="_pr02_planesRowDeleted" msprop:Generator_RowClassName="_pr02_planesRow" msprop:Generator_UserTableName="pr02-planes" msprop:Generator_RowEvArgName="_pr02_planesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo-producto" msprop:Generator_ColumnVarNameInTable="_columncodigo_producto" msprop:Generator_ColumnPropNameInRow="_codigo_producto" msprop:Generator_ColumnPropNameInTable="_codigo_productoColumn" msprop:Generator_UserColumnName="codigo-producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio-base" msprop:Generator_ColumnVarNameInTable="_columnprecio_base" msprop:Generator_ColumnPropNameInRow="_precio_base" msprop:Generator_ColumnPropNameInTable="_precio_baseColumn" msprop:Generator_UserColumnName="precio-base" type="xs:decimal" minOccurs="0" />
+              <xs:element name="monto-coaseguro" msprop:Generator_ColumnVarNameInTable="_columnmonto_coaseguro" msprop:Generator_ColumnPropNameInRow="_monto_coaseguro" msprop:Generator_ColumnPropNameInTable="_monto_coaseguroColumn" msprop:Generator_UserColumnName="monto-coaseguro" type="xs:decimal" minOccurs="0" />
+              <xs:element name="porcentaje-coaseguro" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_coaseguro" msprop:Generator_ColumnPropNameInRow="_porcentaje_coaseguro" msprop:Generator_ColumnPropNameInTable="_porcentaje_coaseguroColumn" msprop:Generator_UserColumnName="porcentaje-coaseguro" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cubre-congenitas" msprop:Generator_ColumnVarNameInTable="_columncubre_congenitas" msprop:Generator_ColumnPropNameInRow="_cubre_congenitas" msprop:Generator_ColumnPropNameInTable="_cubre_congenitasColumn" msprop:Generator_UserColumnName="cubre-congenitas" type="xs:boolean" minOccurs="0" />
+              <xs:element name="edad-tope" msprop:Generator_ColumnVarNameInTable="_columnedad_tope" msprop:Generator_ColumnPropNameInRow="_edad_tope" msprop:Generator_ColumnPropNameInTable="_edad_topeColumn" msprop:Generator_UserColumnName="edad-tope" type="xs:int" minOccurs="0" />
+              <xs:element name="porcentaje-edad-tope" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_edad_tope" msprop:Generator_ColumnPropNameInRow="_porcentaje_edad_tope" msprop:Generator_ColumnPropNameInTable="_porcentaje_edad_topeColumn" msprop:Generator_UserColumnName="porcentaje-edad-tope" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cubre-preexistencias" msprop:Generator_ColumnVarNameInTable="_columncubre_preexistencias" msprop:Generator_ColumnPropNameInRow="_cubre_preexistencias" msprop:Generator_ColumnPropNameInTable="_cubre_preexistenciasColumn" msprop:Generator_UserColumnName="cubre-preexistencias" type="xs:boolean" minOccurs="0" />
+              <xs:element name="fecha-inicio" msprop:Generator_ColumnVarNameInTable="_columnfecha_inicio" msprop:Generator_ColumnPropNameInRow="_fecha_inicio" msprop:Generator_ColumnPropNameInTable="_fecha_inicioColumn" msprop:Generator_UserColumnName="fecha-inicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="numero-beneficiarios" msprop:Generator_ColumnVarNameInTable="_columnnumero_beneficiarios" msprop:Generator_ColumnPropNameInRow="_numero_beneficiarios" msprop:Generator_ColumnPropNameInTable="_numero_beneficiariosColumn" msprop:Generator_UserColumnName="numero-beneficiarios" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre-plan" msprop:Generator_ColumnVarNameInTable="_columnnombre_plan" msprop:Generator_ColumnPropNameInRow="_nombre_plan" msprop:Generator_ColumnPropNameInTable="_nombre_planColumn" msprop:Generator_UserColumnName="nombre-plan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dias-carencia-ambulatorio" msprop:Generator_ColumnVarNameInTable="_columndias_carencia_ambulatorio" msprop:Generator_ColumnPropNameInRow="_dias_carencia_ambulatorio" msprop:Generator_ColumnPropNameInTable="_dias_carencia_ambulatorioColumn" msprop:Generator_UserColumnName="dias-carencia-ambulatorio" type="xs:int" minOccurs="0" />
+              <xs:element name="dias-reclamo" msprop:Generator_ColumnVarNameInTable="_columndias_reclamo" msprop:Generator_ColumnPropNameInRow="_dias_reclamo" msprop:Generator_ColumnPropNameInTable="_dias_reclamoColumn" msprop:Generator_UserColumnName="dias-reclamo" type="xs:int" minOccurs="0" />
+              <xs:element name="dias-alcance" msprop:Generator_ColumnVarNameInTable="_columndias_alcance" msprop:Generator_ColumnPropNameInRow="_dias_alcance" msprop:Generator_ColumnPropNameInTable="_dias_alcanceColumn" msprop:Generator_UserColumnName="dias-alcance" type="xs:int" minOccurs="0" />
+              <xs:element name="empresa-numero" msprop:Generator_ColumnVarNameInTable="_columnempresa_numero" msprop:Generator_ColumnPropNameInRow="_empresa_numero" msprop:Generator_ColumnPropNameInTable="_empresa_numeroColumn" msprop:Generator_UserColumnName="empresa-numero" type="xs:int" minOccurs="0" />
+              <xs:element name="sucursal-empresa" msprop:Generator_ColumnVarNameInTable="_columnsucursal_empresa" msprop:Generator_ColumnPropNameInRow="_sucursal_empresa" msprop:Generator_ColumnPropNameInTable="_sucursal_empresaColumn" msprop:Generator_UserColumnName="sucursal-empresa" type="xs:int" minOccurs="0" />
+              <xs:element name="edad-facturacion" msprop:Generator_ColumnVarNameInTable="_columnedad_facturacion" msprop:Generator_ColumnPropNameInRow="_edad_facturacion" msprop:Generator_ColumnPropNameInTable="_edad_facturacionColumn" msprop:Generator_UserColumnName="edad-facturacion" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-plan" msprop:Generator_ColumnVarNameInTable="_columncodigo_plan" msprop:Generator_ColumnPropNameInRow="_codigo_plan" msprop:Generator_ColumnPropNameInTable="_codigo_planColumn" msprop:Generator_UserColumnName="codigo-plan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo-Tarifario" msprop:Generator_ColumnVarNameInTable="_columnCodigo_Tarifario" msprop:Generator_ColumnPropNameInRow="_Codigo_Tarifario" msprop:Generator_ColumnPropNameInTable="_Codigo_TarifarioColumn" msprop:Generator_UserColumnName="Codigo-Tarifario" type="xs:int" minOccurs="0" />
+              <xs:element name="nivel-referencia" msprop:Generator_ColumnVarNameInTable="_columnnivel_referencia" msprop:Generator_ColumnPropNameInRow="_nivel_referencia" msprop:Generator_ColumnPropNameInTable="_nivel_referenciaColumn" msprop:Generator_UserColumnName="nivel-referencia" type="xs:int" minOccurs="0" />
+              <xs:element name="version-plan" msprop:Generator_ColumnVarNameInTable="_columnversion_plan" msprop:Generator_ColumnPropNameInRow="_version_plan" msprop:Generator_ColumnPropNameInTable="_version_planColumn" msprop:Generator_UserColumnName="version-plan" type="xs:int" />
+              <xs:element name="region" msprop:Generator_ColumnVarNameInTable="columnregion" msprop:Generator_ColumnPropNameInRow="region" msprop:Generator_ColumnPropNameInTable="regionColumn" msprop:Generator_UserColumnName="region">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dias-carencia-hospitalario" msprop:Generator_ColumnVarNameInTable="_columndias_carencia_hospitalario" msprop:Generator_ColumnPropNameInRow="_dias_carencia_hospitalario" msprop:Generator_ColumnPropNameInTable="_dias_carencia_hospitalarioColumn" msprop:Generator_UserColumnName="dias-carencia-hospitalario" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha-fin" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin" msprop:Generator_ColumnPropNameInRow="_fecha_fin" msprop:Generator_ColumnPropNameInTable="_fecha_finColumn" msprop:Generator_UserColumnName="fecha-fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-digitacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_digitacion" msprop:Generator_ColumnPropNameInRow="_fecha_digitacion" msprop:Generator_ColumnPropNameInTable="_fecha_digitacionColumn" msprop:Generator_UserColumnName="fecha-digitacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mat-nuevos-beneficios" msprop:Generator_ColumnVarNameInTable="_columnmat_nuevos_beneficios" msprop:Generator_ColumnPropNameInRow="_mat_nuevos_beneficios" msprop:Generator_ColumnPropNameInTable="_mat_nuevos_beneficiosColumn" msprop:Generator_UserColumnName="mat-nuevos-beneficios" type="xs:boolean" minOccurs="0" />
+              <xs:element name="edad-dependientes" msprop:Generator_ColumnVarNameInTable="_columnedad_dependientes" msprop:Generator_ColumnPropNameInRow="_edad_dependientes" msprop:Generator_ColumnPropNameInTable="_edad_dependientesColumn" msprop:Generator_UserColumnName="edad-dependientes" type="xs:int" minOccurs="0" />
+              <xs:element name="cobertura" msprop:Generator_ColumnVarNameInTable="columncobertura" msprop:Generator_ColumnPropNameInRow="cobertura" msprop:Generator_ColumnPropNameInTable="coberturaColumn" msprop:Generator_UserColumnName="cobertura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="digitador-creacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_creacion" msprop:Generator_ColumnPropNameInRow="_digitador_creacion" msprop:Generator_ColumnPropNameInTable="_digitador_creacionColumn" msprop:Generator_UserColumnName="digitador-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-modificacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_modificacion" msprop:Generator_ColumnPropNameInRow="_fecha_modificacion" msprop:Generator_ColumnPropNameInTable="_fecha_modificacionColumn" msprop:Generator_UserColumnName="fecha-modificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="digitador-modificacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_modificacion" msprop:Generator_ColumnPropNameInRow="_digitador_modificacion" msprop:Generator_ColumnPropNameInTable="_digitador_modificacionColumn" msprop:Generator_UserColumnName="digitador-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-creacion" msprop:Generator_ColumnVarNameInTable="_columnhora_creacion" msprop:Generator_ColumnPropNameInRow="_hora_creacion" msprop:Generator_ColumnPropNameInTable="_hora_creacionColumn" msprop:Generator_UserColumnName="hora-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-modificacion" msprop:Generator_ColumnVarNameInTable="_columnhora_modificacion" msprop:Generator_ColumnPropNameInRow="_hora_modificacion" msprop:Generator_ColumnPropNameInTable="_hora_modificacionColumn" msprop:Generator_UserColumnName="hora-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prog-modificacion" msprop:Generator_ColumnVarNameInTable="_columnprog_modificacion" msprop:Generator_ColumnPropNameInRow="_prog_modificacion" msprop:Generator_ColumnPropNameInTable="_prog_modificacionColumn" msprop:Generator_UserColumnName="prog-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prog-creacion" msprop:Generator_ColumnVarNameInTable="_columnprog_creacion" msprop:Generator_ColumnPropNameInRow="_prog_creacion" msprop:Generator_ColumnPropNameInTable="_prog_creacionColumn" msprop:Generator_UserColumnName="prog-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-creacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="_fecha_creacion" msprop:Generator_ColumnPropNameInTable="_fecha_creacionColumn" msprop:Generator_UserColumnName="fecha-creacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto-preexistencia" msprop:Generator_ColumnVarNameInTable="_columnmonto_preexistencia" msprop:Generator_ColumnPropNameInRow="_monto_preexistencia" msprop:Generator_ColumnPropNameInTable="_monto_preexistenciaColumn" msprop:Generator_UserColumnName="monto-preexistencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cero-tramites" msprop:Generator_ColumnVarNameInTable="_columncero_tramites" msprop:Generator_ColumnPropNameInRow="_cero_tramites" msprop:Generator_ColumnPropNameInTable="_cero_tramitesColumn" msprop:Generator_UserColumnName="cero-tramites" type="xs:boolean" />
+              <xs:element name="codigo-homologacion" msprop:Generator_ColumnVarNameInTable="_columncodigo_homologacion" msprop:Generator_ColumnPropNameInRow="_codigo_homologacion" msprop:Generator_ColumnPropNameInTable="_codigo_homologacionColumn" msprop:Generator_UserColumnName="codigo-homologacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Calcula-Precio" msprop:Generator_ColumnVarNameInTable="_columnCalcula_Precio" msprop:Generator_ColumnPropNameInRow="_Calcula_Precio" msprop:Generator_ColumnPropNameInTable="_Calcula_PrecioColumn" msprop:Generator_UserColumnName="Calcula-Precio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre-Tarjeta" msprop:Generator_ColumnVarNameInTable="_columnNombre_Tarjeta" msprop:Generator_ColumnPropNameInRow="_Nombre_Tarjeta" msprop:Generator_ColumnPropNameInTable="_Nombre_TarjetaColumn" msprop:Generator_UserColumnName="Nombre-Tarjeta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo-atencion-rct" msprop:Generator_ColumnVarNameInTable="_columntipo_atencion_rct" msprop:Generator_ColumnPropNameInRow="_tipo_atencion_rct" msprop:Generator_ColumnPropNameInTable="_tipo_atencion_rctColumn" msprop:Generator_UserColumnName="tipo-atencion-rct" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cl02-empresa-sucursales" msprop:Generator_TableClassName="_cl02_empresa_sucursalesDataTable" msprop:Generator_TableVarName="_tablecl02_empresa_sucursales" msprop:Generator_RowChangedName="_cl02_empresa_sucursalesRowChanged" msprop:Generator_TablePropName="_cl02_empresa_sucursales" msprop:Generator_RowDeletingName="_cl02_empresa_sucursalesRowDeleting" msprop:Generator_RowChangingName="_cl02_empresa_sucursalesRowChanging" msprop:Generator_RowEvHandlerName="_cl02_empresa_sucursalesRowChangeEventHandler" msprop:Generator_RowDeletedName="_cl02_empresa_sucursalesRowDeleted" msprop:Generator_RowClassName="_cl02_empresa_sucursalesRow" msprop:Generator_UserTableName="cl02-empresa-sucursales" msprop:Generator_RowEvArgName="_cl02_empresa_sucursalesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="empresa-numero" msprop:Generator_ColumnVarNameInTable="_columnempresa_numero" msprop:Generator_ColumnPropNameInRow="_empresa_numero" msprop:Generator_ColumnPropNameInTable="_empresa_numeroColumn" msprop:Generator_UserColumnName="empresa-numero" type="xs:int" />
+              <xs:element name="sucursal-empresa" msprop:Generator_ColumnVarNameInTable="_columnsucursal_empresa" msprop:Generator_ColumnPropNameInRow="_sucursal_empresa" msprop:Generator_ColumnPropNameInTable="_sucursal_empresaColumn" msprop:Generator_UserColumnName="sucursal-empresa" type="xs:int" />
+              <xs:element name="codigo-agente-venta" msprop:Generator_ColumnVarNameInTable="_columncodigo_agente_venta" msprop:Generator_ColumnPropNameInRow="_codigo_agente_venta" msprop:Generator_ColumnPropNameInTable="_codigo_agente_ventaColumn" msprop:Generator_UserColumnName="codigo-agente-venta" type="xs:int" minOccurs="0" />
+              <xs:element name="sucursal-nombre" msprop:Generator_ColumnVarNameInTable="_columnsucursal_nombre" msprop:Generator_ColumnPropNameInRow="_sucursal_nombre" msprop:Generator_ColumnPropNameInTable="_sucursal_nombreColumn" msprop:Generator_UserColumnName="sucursal-nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="166" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-ciudad" msprop:Generator_ColumnVarNameInTable="_columncodigo_ciudad" msprop:Generator_ColumnPropNameInRow="_codigo_ciudad" msprop:Generator_ColumnPropNameInTable="_codigo_ciudadColumn" msprop:Generator_UserColumnName="codigo-ciudad" type="xs:int" minOccurs="0" />
+              <xs:element name="sucursal-barrio" msprop:Generator_ColumnVarNameInTable="_columnsucursal_barrio" msprop:Generator_ColumnPropNameInRow="_sucursal_barrio" msprop:Generator_ColumnPropNameInTable="_sucursal_barrioColumn" msprop:Generator_UserColumnName="sucursal-barrio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-calle" msprop:Generator_ColumnVarNameInTable="_columnsucursal_calle" msprop:Generator_ColumnPropNameInRow="_sucursal_calle" msprop:Generator_ColumnPropNameInTable="_sucursal_calleColumn" msprop:Generator_UserColumnName="sucursal-calle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="140" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-zona" msprop:Generator_ColumnVarNameInTable="_columnsucursal_zona" msprop:Generator_ColumnPropNameInRow="_sucursal_zona" msprop:Generator_ColumnPropNameInTable="_sucursal_zonaColumn" msprop:Generator_UserColumnName="sucursal-zona" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-casilla" msprop:Generator_ColumnVarNameInTable="_columnsucursal_casilla" msprop:Generator_ColumnPropNameInRow="_sucursal_casilla" msprop:Generator_ColumnPropNameInTable="_sucursal_casillaColumn" msprop:Generator_UserColumnName="sucursal-casilla" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-telefono" msprop:Generator_ColumnVarNameInTable="_columnsucursal_telefono" msprop:Generator_ColumnPropNameInRow="_sucursal_telefono" msprop:Generator_ColumnPropNameInTable="_sucursal_telefonoColumn" msprop:Generator_UserColumnName="sucursal-telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-fax" msprop:Generator_ColumnVarNameInTable="_columnsucursal_fax" msprop:Generator_ColumnPropNameInRow="_sucursal_fax" msprop:Generator_ColumnPropNameInTable="_sucursal_faxColumn" msprop:Generator_UserColumnName="sucursal-fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-email" msprop:Generator_ColumnVarNameInTable="_columnsucursal_email" msprop:Generator_ColumnPropNameInRow="_sucursal_email" msprop:Generator_ColumnPropNameInTable="_sucursal_emailColumn" msprop:Generator_UserColumnName="sucursal-email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-nombres-sucursal" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_nombres_sucursal" msprop:Generator_ColumnPropNameInRow="_representante_nombres_sucursal" msprop:Generator_ColumnPropNameInTable="_representante_nombres_sucursalColumn" msprop:Generator_UserColumnName="representante-nombres-sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-apellidos-sucursal" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_apellidos_sucursal" msprop:Generator_ColumnPropNameInRow="_representante_apellidos_sucursal" msprop:Generator_ColumnPropNameInTable="_representante_apellidos_sucursalColumn" msprop:Generator_UserColumnName="representante-apellidos-sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-cargo-sucursal" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_cargo_sucursal" msprop:Generator_ColumnPropNameInRow="_representante_cargo_sucursal" msprop:Generator_ColumnPropNameInTable="_representante_cargo_sucursalColumn" msprop:Generator_UserColumnName="representante-cargo-sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="representante-cedula-sucursal" msprop:Generator_ColumnVarNameInTable="_columnrepresentante_cedula_sucursal" msprop:Generator_ColumnPropNameInRow="_representante_cedula_sucursal" msprop:Generator_ColumnPropNameInTable="_representante_cedula_sucursalColumn" msprop:Generator_UserColumnName="representante-cedula-sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-region" msprop:Generator_ColumnVarNameInTable="_columnsucursal_region" msprop:Generator_ColumnPropNameInRow="_sucursal_region" msprop:Generator_ColumnPropNameInTable="_sucursal_regionColumn" msprop:Generator_UserColumnName="sucursal-region" type="xs:int" minOccurs="0" />
+              <xs:element name="garantia" msprop:Generator_ColumnVarNameInTable="columngarantia" msprop:Generator_ColumnPropNameInRow="garantia" msprop:Generator_ColumnPropNameInTable="garantiaColumn" msprop:Generator_UserColumnName="garantia" type="xs:boolean" minOccurs="0" />
+              <xs:element name="forma-pago" msprop:Generator_ColumnVarNameInTable="_columnforma_pago" msprop:Generator_ColumnPropNameInRow="_forma_pago" msprop:Generator_ColumnPropNameInTable="_forma_pagoColumn" msprop:Generator_UserColumnName="forma-pago" type="xs:int" minOccurs="0" />
+              <xs:element name="tipo-cuenta" msprop:Generator_ColumnVarNameInTable="_columntipo_cuenta" msprop:Generator_ColumnPropNameInRow="_tipo_cuenta" msprop:Generator_ColumnPropNameInTable="_tipo_cuentaColumn" msprop:Generator_UserColumnName="tipo-cuenta" type="xs:int" minOccurs="0" />
+              <xs:element name="moneda" msprop:Generator_ColumnVarNameInTable="columnmoneda" msprop:Generator_ColumnPropNameInRow="moneda" msprop:Generator_ColumnPropNameInTable="monedaColumn" msprop:Generator_UserColumnName="moneda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-banco" msprop:Generator_ColumnVarNameInTable="_columncodigo_banco" msprop:Generator_ColumnPropNameInRow="_codigo_banco" msprop:Generator_ColumnPropNameInTable="_codigo_bancoColumn" msprop:Generator_UserColumnName="codigo-banco" type="xs:int" minOccurs="0" />
+              <xs:element name="periodo-pago" msprop:Generator_ColumnVarNameInTable="_columnperiodo_pago" msprop:Generator_ColumnPropNameInRow="_periodo_pago" msprop:Generator_ColumnPropNameInTable="_periodo_pagoColumn" msprop:Generator_UserColumnName="periodo-pago" type="xs:int" minOccurs="0" />
+              <xs:element name="numero-cuenta" msprop:Generator_ColumnVarNameInTable="_columnnumero_cuenta" msprop:Generator_ColumnPropNameInRow="_numero_cuenta" msprop:Generator_ColumnPropNameInTable="_numero_cuentaColumn" msprop:Generator_UserColumnName="numero-cuenta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="num-contrato-debito" msprop:Generator_ColumnVarNameInTable="_columnnum_contrato_debito" msprop:Generator_ColumnPropNameInRow="_num_contrato_debito" msprop:Generator_ColumnPropNameInTable="_num_contrato_debitoColumn" msprop:Generator_UserColumnName="num-contrato-debito" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre-duenio-cuenta" msprop:Generator_ColumnVarNameInTable="_columnnombre_duenio_cuenta" msprop:Generator_ColumnPropNameInRow="_nombre_duenio_cuenta" msprop:Generator_ColumnPropNameInTable="_nombre_duenio_cuentaColumn" msprop:Generator_UserColumnName="nombre-duenio-cuenta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="164" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="facturar-a-cedula" msprop:Generator_ColumnVarNameInTable="_columnfacturar_a_cedula" msprop:Generator_ColumnPropNameInRow="_facturar_a_cedula" msprop:Generator_ColumnPropNameInTable="_facturar_a_cedulaColumn" msprop:Generator_UserColumnName="facturar-a-cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="facturar-a-ruc" msprop:Generator_ColumnVarNameInTable="_columnfacturar_a_ruc" msprop:Generator_ColumnPropNameInRow="_facturar_a_ruc" msprop:Generator_ColumnPropNameInTable="_facturar_a_rucColumn" msprop:Generator_UserColumnName="facturar-a-ruc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numero-contratos" msprop:Generator_ColumnVarNameInTable="_columnnumero_contratos" msprop:Generator_ColumnPropNameInRow="_numero_contratos" msprop:Generator_ColumnPropNameInTable="_numero_contratosColumn" msprop:Generator_UserColumnName="numero-contratos" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha-inicio-sucursal" msprop:Generator_ColumnVarNameInTable="_columnfecha_inicio_sucursal" msprop:Generator_ColumnPropNameInRow="_fecha_inicio_sucursal" msprop:Generator_ColumnPropNameInTable="_fecha_inicio_sucursalColumn" msprop:Generator_UserColumnName="fecha-inicio-sucursal" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-fin-sucursal" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin_sucursal" msprop:Generator_ColumnPropNameInRow="_fecha_fin_sucursal" msprop:Generator_ColumnPropNameInTable="_fecha_fin_sucursalColumn" msprop:Generator_UserColumnName="fecha-fin-sucursal" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="unidad-responsable" msprop:Generator_ColumnVarNameInTable="_columnunidad_responsable" msprop:Generator_ColumnPropNameInRow="_unidad_responsable" msprop:Generator_ColumnPropNameInTable="_unidad_responsableColumn" msprop:Generator_UserColumnName="unidad-responsable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-fin-tarjeta" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin_tarjeta" msprop:Generator_ColumnPropNameInRow="_fecha_fin_tarjeta" msprop:Generator_ColumnPropNameInTable="_fecha_fin_tarjetaColumn" msprop:Generator_UserColumnName="fecha-fin-tarjeta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="codigo-producto" msprop:Generator_ColumnVarNameInTable="_columncodigo_producto" msprop:Generator_ColumnPropNameInRow="_codigo_producto" msprop:Generator_ColumnPropNameInTable="_codigo_productoColumn" msprop:Generator_UserColumnName="codigo-producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="valor-tarjetas" msprop:Generator_ColumnVarNameInTable="_columnvalor_tarjetas" msprop:Generator_ColumnPropNameInRow="_valor_tarjetas" msprop:Generator_ColumnPropNameInTable="_valor_tarjetasColumn" msprop:Generator_UserColumnName="valor-tarjetas" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tarjetas-adicionales" msprop:Generator_ColumnVarNameInTable="_columntarjetas_adicionales" msprop:Generator_ColumnPropNameInRow="_tarjetas_adicionales" msprop:Generator_ColumnPropNameInTable="_tarjetas_adicionalesColumn" msprop:Generator_UserColumnName="tarjetas-adicionales" type="xs:int" minOccurs="0" />
+              <xs:element name="valor-tarjetas-adicionales" msprop:Generator_ColumnVarNameInTable="_columnvalor_tarjetas_adicionales" msprop:Generator_ColumnPropNameInRow="_valor_tarjetas_adicionales" msprop:Generator_ColumnPropNameInTable="_valor_tarjetas_adicionalesColumn" msprop:Generator_UserColumnName="valor-tarjetas-adicionales" type="xs:decimal" minOccurs="0" />
+              <xs:element name="region" msprop:Generator_ColumnVarNameInTable="columnregion" msprop:Generator_ColumnPropNameInRow="region" msprop:Generator_ColumnPropNameInTable="regionColumn" msprop:Generator_UserColumnName="region" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hasta-ultimo-periodo" msprop:Generator_ColumnVarNameInTable="_columnhasta_ultimo_periodo" msprop:Generator_ColumnPropNameInRow="_hasta_ultimo_periodo" msprop:Generator_ColumnPropNameInTable="_hasta_ultimo_periodoColumn" msprop:Generator_UserColumnName="hasta-ultimo-periodo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="meses-forma-pago" msprop:Generator_ColumnVarNameInTable="_columnmeses_forma_pago" msprop:Generator_ColumnPropNameInRow="_meses_forma_pago" msprop:Generator_ColumnPropNameInTable="_meses_forma_pagoColumn" msprop:Generator_UserColumnName="meses-forma-pago" type="xs:int" minOccurs="0" />
+              <xs:element name="bloqueado" msprop:Generator_ColumnVarNameInTable="columnbloqueado" msprop:Generator_ColumnPropNameInRow="bloqueado" msprop:Generator_ColumnPropNameInTable="bloqueadoColumn" msprop:Generator_UserColumnName="bloqueado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="fecha-bloqueo" msprop:Generator_ColumnVarNameInTable="_columnfecha_bloqueo" msprop:Generator_ColumnPropNameInRow="_fecha_bloqueo" msprop:Generator_ColumnPropNameInTable="_fecha_bloqueoColumn" msprop:Generator_UserColumnName="fecha-bloqueo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sucursal-estado" msprop:Generator_ColumnVarNameInTable="_columnsucursal_estado" msprop:Generator_ColumnPropNameInRow="_sucursal_estado" msprop:Generator_ColumnPropNameInTable="_sucursal_estadoColumn" msprop:Generator_UserColumnName="sucursal-estado" type="xs:int" minOccurs="0" />
+              <xs:element name="afecta-costo" msprop:Generator_ColumnVarNameInTable="_columnafecta_costo" msprop:Generator_ColumnPropNameInRow="_afecta_costo" msprop:Generator_ColumnPropNameInTable="_afecta_costoColumn" msprop:Generator_UserColumnName="afecta-costo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paga-comision" msprop:Generator_ColumnVarNameInTable="_columnpaga_comision" msprop:Generator_ColumnPropNameInRow="_paga_comision" msprop:Generator_ColumnPropNameInTable="_paga_comisionColumn" msprop:Generator_UserColumnName="paga-comision" type="xs:boolean" minOccurs="0" />
+              <xs:element name="tipo-transaccion" msprop:Generator_ColumnVarNameInTable="_columntipo_transaccion" msprop:Generator_ColumnPropNameInRow="_tipo_transaccion" msprop:Generator_ColumnPropNameInTable="_tipo_transaccionColumn" msprop:Generator_UserColumnName="tipo-transaccion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="porcentaje-comision-broker" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_comision_broker" msprop:Generator_ColumnPropNameInRow="_porcentaje_comision_broker" msprop:Generator_ColumnPropNameInTable="_porcentaje_comision_brokerColumn" msprop:Generator_UserColumnName="porcentaje-comision-broker" type="xs:decimal" minOccurs="0" />
+              <xs:element name="atencion-locales" msprop:Generator_ColumnVarNameInTable="_columnatencion_locales" msprop:Generator_ColumnPropNameInRow="_atencion_locales" msprop:Generator_ColumnPropNameInTable="_atencion_localesColumn" msprop:Generator_UserColumnName="atencion-locales" type="xs:int" minOccurs="0" />
+              <xs:element name="numero-odas" msprop:Generator_ColumnVarNameInTable="_columnnumero_odas" msprop:Generator_ColumnPropNameInRow="_numero_odas" msprop:Generator_ColumnPropNameInTable="_numero_odasColumn" msprop:Generator_UserColumnName="numero-odas" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-unidad" msprop:Generator_ColumnVarNameInTable="_columncodigo_unidad" msprop:Generator_ColumnPropNameInRow="_codigo_unidad" msprop:Generator_ColumnPropNameInTable="_codigo_unidadColumn" msprop:Generator_UserColumnName="codigo-unidad" type="xs:int" minOccurs="0" />
+              <xs:element name="lista-telefono" msprop:Generator_ColumnVarNameInTable="_columnlista_telefono" msprop:Generator_ColumnPropNameInRow="_lista_telefono" msprop:Generator_ColumnPropNameInTable="_lista_telefonoColumn" msprop:Generator_UserColumnName="lista-telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lista-fax" msprop:Generator_ColumnVarNameInTable="_columnlista_fax" msprop:Generator_ColumnPropNameInRow="_lista_fax" msprop:Generator_ColumnPropNameInTable="_lista_faxColumn" msprop:Generator_UserColumnName="lista-fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="digitador-creacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_creacion" msprop:Generator_ColumnPropNameInRow="_digitador_creacion" msprop:Generator_ColumnPropNameInTable="_digitador_creacionColumn" msprop:Generator_UserColumnName="digitador-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-creacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="_fecha_creacion" msprop:Generator_ColumnPropNameInTable="_fecha_creacionColumn" msprop:Generator_UserColumnName="fecha-creacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hora-creacion" msprop:Generator_ColumnVarNameInTable="_columnhora_creacion" msprop:Generator_ColumnPropNameInRow="_hora_creacion" msprop:Generator_ColumnPropNameInTable="_hora_creacionColumn" msprop:Generator_UserColumnName="hora-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-modificacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_modificacion" msprop:Generator_ColumnPropNameInRow="_fecha_modificacion" msprop:Generator_ColumnPropNameInTable="_fecha_modificacionColumn" msprop:Generator_UserColumnName="fecha-modificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="digitador-modificacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_modificacion" msprop:Generator_ColumnPropNameInRow="_digitador_modificacion" msprop:Generator_ColumnPropNameInTable="_digitador_modificacionColumn" msprop:Generator_UserColumnName="digitador-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-modificacion" msprop:Generator_ColumnVarNameInTable="_columnhora_modificacion" msprop:Generator_ColumnPropNameInRow="_hora_modificacion" msprop:Generator_ColumnPropNameInTable="_hora_modificacionColumn" msprop:Generator_UserColumnName="hora-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-anulacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_anulacion" msprop:Generator_ColumnPropNameInRow="_fecha_anulacion" msprop:Generator_ColumnPropNameInTable="_fecha_anulacionColumn" msprop:Generator_UserColumnName="fecha-anulacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="digitador-anulacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_anulacion" msprop:Generator_ColumnPropNameInRow="_digitador_anulacion" msprop:Generator_ColumnPropNameInTable="_digitador_anulacionColumn" msprop:Generator_UserColumnName="digitador-anulacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-anulacion" msprop:Generator_ColumnVarNameInTable="_columnhora_anulacion" msprop:Generator_ColumnPropNameInRow="_hora_anulacion" msprop:Generator_ColumnPropNameInTable="_hora_anulacionColumn" msprop:Generator_UserColumnName="hora-anulacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-unidad-agente" msprop:Generator_ColumnVarNameInTable="_columncodigo_unidad_agente" msprop:Generator_ColumnPropNameInRow="_codigo_unidad_agente" msprop:Generator_ColumnPropNameInTable="_codigo_unidad_agenteColumn" msprop:Generator_UserColumnName="codigo-unidad-agente" type="xs:int" minOccurs="0" />
+              <xs:element name="monto-mora" msprop:Generator_ColumnVarNameInTable="_columnmonto_mora" msprop:Generator_ColumnPropNameInRow="_monto_mora" msprop:Generator_ColumnPropNameInTable="_monto_moraColumn" msprop:Generator_UserColumnName="monto-mora" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fecha-fin-original" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin_original" msprop:Generator_ColumnPropNameInRow="_fecha_fin_original" msprop:Generator_ColumnPropNameInTable="_fecha_fin_originalColumn" msprop:Generator_UserColumnName="fecha-fin-original" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-inicio-original" msprop:Generator_ColumnVarNameInTable="_columnfecha_inicio_original" msprop:Generator_ColumnPropNameInRow="_fecha_inicio_original" msprop:Generator_ColumnPropNameInTable="_fecha_inicio_originalColumn" msprop:Generator_UserColumnName="fecha-inicio-original" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cuenta-fronting" msprop:Generator_ColumnVarNameInTable="_columncuenta_fronting" msprop:Generator_ColumnPropNameInRow="_cuenta_fronting" msprop:Generator_ColumnPropNameInTable="_cuenta_frontingColumn" msprop:Generator_UserColumnName="cuenta-fronting" type="xs:boolean" minOccurs="0" />
+              <xs:element name="codigo-motivo-bloqueo" msprop:Generator_ColumnVarNameInTable="_columncodigo_motivo_bloqueo" msprop:Generator_ColumnPropNameInRow="_codigo_motivo_bloqueo" msprop:Generator_ColumnPropNameInTable="_codigo_motivo_bloqueoColumn" msprop:Generator_UserColumnName="codigo-motivo-bloqueo" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-agente-contacto" msprop:Generator_ColumnVarNameInTable="_columncodigo_agente_contacto" msprop:Generator_ColumnPropNameInRow="_codigo_agente_contacto" msprop:Generator_ColumnPropNameInTable="_codigo_agente_contactoColumn" msprop:Generator_UserColumnName="codigo-agente-contacto" type="xs:int" minOccurs="0" />
+              <xs:element name="pago-inteligente" msprop:Generator_ColumnVarNameInTable="_columnpago_inteligente" msprop:Generator_ColumnPropNameInRow="_pago_inteligente" msprop:Generator_ColumnPropNameInTable="_pago_inteligenteColumn" msprop:Generator_UserColumnName="pago-inteligente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="email-rrhh" msprop:Generator_ColumnVarNameInTable="_columnemail_rrhh" msprop:Generator_ColumnPropNameInRow="_email_rrhh" msprop:Generator_ColumnPropNameInTable="_email_rrhhColumn" msprop:Generator_UserColumnName="email-rrhh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email-broker" msprop:Generator_ColumnVarNameInTable="_columnemail_broker" msprop:Generator_ColumnPropNameInRow="_email_broker" msprop:Generator_ColumnPropNameInTable="_email_brokerColumn" msprop:Generator_UserColumnName="email-broker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bloquea-odas" msprop:Generator_ColumnVarNameInTable="_columnbloquea_odas" msprop:Generator_ColumnPropNameInRow="_bloquea_odas" msprop:Generator_ColumnPropNameInTable="_bloquea_odasColumn" msprop:Generator_UserColumnName="bloquea-odas" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bloquea-reclamos" msprop:Generator_ColumnVarNameInTable="_columnbloquea_reclamos" msprop:Generator_ColumnPropNameInRow="_bloquea_reclamos" msprop:Generator_ColumnPropNameInTable="_bloquea_reclamosColumn" msprop:Generator_UserColumnName="bloquea-reclamos" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bloquea-cheques" msprop:Generator_ColumnVarNameInTable="_columnbloquea_cheques" msprop:Generator_ColumnPropNameInRow="_bloquea_cheques" msprop:Generator_ColumnPropNameInTable="_bloquea_chequesColumn" msprop:Generator_UserColumnName="bloquea-cheques" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bloquea-creditos" msprop:Generator_ColumnVarNameInTable="_columnbloquea_creditos" msprop:Generator_ColumnPropNameInRow="_bloquea_creditos" msprop:Generator_ColumnPropNameInTable="_bloquea_creditosColumn" msprop:Generator_UserColumnName="bloquea-creditos" type="xs:boolean" minOccurs="0" />
+              <xs:element name="codigo-motivo" msprop:Generator_ColumnVarNameInTable="_columncodigo_motivo" msprop:Generator_ColumnPropNameInRow="_codigo_motivo" msprop:Generator_ColumnPropNameInTable="_codigo_motivoColumn" msprop:Generator_UserColumnName="codigo-motivo" type="xs:int" minOccurs="0" />
+              <xs:element name="admite-odas" msprop:Generator_ColumnVarNameInTable="_columnadmite_odas" msprop:Generator_ColumnPropNameInRow="_admite_odas" msprop:Generator_ColumnPropNameInTable="_admite_odasColumn" msprop:Generator_UserColumnName="admite-odas" type="xs:boolean" minOccurs="0" />
+              <xs:element name="tipo-tarjeta" msprop:Generator_ColumnVarNameInTable="_columntipo_tarjeta" msprop:Generator_ColumnPropNameInRow="_tipo_tarjeta" msprop:Generator_ColumnPropNameInTable="_tipo_tarjetaColumn" msprop:Generator_UserColumnName="tipo-tarjeta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medico-domicilio" msprop:Generator_ColumnVarNameInTable="_columnmedico_domicilio" msprop:Generator_ColumnPropNameInRow="_medico_domicilio" msprop:Generator_ColumnPropNameInTable="_medico_domicilioColumn" msprop:Generator_UserColumnName="medico-domicilio" type="xs:boolean" minOccurs="0" />
+              <xs:element name="nombre-tarjeta" msprop:Generator_ColumnVarNameInTable="_columnnombre_tarjeta" msprop:Generator_ColumnPropNameInRow="_nombre_tarjeta" msprop:Generator_ColumnPropNameInTable="_nombre_tarjetaColumn" msprop:Generator_UserColumnName="nombre-tarjeta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="atencion-biored" msprop:Generator_ColumnVarNameInTable="_columnatencion_biored" msprop:Generator_ColumnPropNameInRow="_atencion_biored" msprop:Generator_ColumnPropNameInTable="_atencion_bioredColumn" msprop:Generator_UserColumnName="atencion-biored" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="referencia-envio" msprop:Generator_ColumnVarNameInTable="_columnreferencia_envio" msprop:Generator_ColumnPropNameInRow="_referencia_envio" msprop:Generator_ColumnPropNameInTable="_referencia_envioColumn" msprop:Generator_UserColumnName="referencia-envio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="por-servicios-adicionales" msprop:Generator_ColumnVarNameInTable="_columnpor_servicios_adicionales" msprop:Generator_ColumnPropNameInRow="_por_servicios_adicionales" msprop:Generator_ColumnPropNameInTable="_por_servicios_adicionalesColumn" msprop:Generator_UserColumnName="por-servicios-adicionales" type="xs:boolean" minOccurs="0" />
+              <xs:element name="tiene-tarjeta" msprop:Generator_ColumnVarNameInTable="_columntiene_tarjeta" msprop:Generator_ColumnPropNameInRow="_tiene_tarjeta" msprop:Generator_ColumnPropNameInTable="_tiene_tarjetaColumn" msprop:Generator_UserColumnName="tiene-tarjeta" type="xs:boolean" minOccurs="0" />
+              <xs:element name="contacto-doc-elec" msprop:Generator_ColumnVarNameInTable="_columncontacto_doc_elec" msprop:Generator_ColumnPropNameInRow="_contacto_doc_elec" msprop:Generator_ColumnPropNameInTable="_contacto_doc_elecColumn" msprop:Generator_UserColumnName="contacto-doc-elec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email-contacto-doc-elec" msprop:Generator_ColumnVarNameInTable="_columnemail_contacto_doc_elec" msprop:Generator_ColumnPropNameInRow="_email_contacto_doc_elec" msprop:Generator_ColumnPropNameInTable="_email_contacto_doc_elecColumn" msprop:Generator_UserColumnName="email-contacto-doc-elec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email-broker-doc-elec" msprop:Generator_ColumnVarNameInTable="_columnemail_broker_doc_elec" msprop:Generator_ColumnPropNameInRow="_email_broker_doc_elec" msprop:Generator_ColumnPropNameInTable="_email_broker_doc_elecColumn" msprop:Generator_UserColumnName="email-broker-doc-elec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email-sucursal-doc-elec" msprop:Generator_ColumnVarNameInTable="_columnemail_sucursal_doc_elec" msprop:Generator_ColumnPropNameInRow="_email_sucursal_doc_elec" msprop:Generator_ColumnPropNameInTable="_email_sucursal_doc_elecColumn" msprop:Generator_UserColumnName="email-sucursal-doc-elec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cedula-pago-reclamos" msprop:Generator_ColumnVarNameInTable="_columncedula_pago_reclamos" msprop:Generator_ColumnPropNameInRow="_cedula_pago_reclamos" msprop:Generator_ColumnPropNameInTable="_cedula_pago_reclamosColumn" msprop:Generator_UserColumnName="cedula-pago-reclamos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre-pago-reclamos" msprop:Generator_ColumnVarNameInTable="_columnnombre_pago_reclamos" msprop:Generator_ColumnPropNameInRow="_nombre_pago_reclamos" msprop:Generator_ColumnPropNameInTable="_nombre_pago_reclamosColumn" msprop:Generator_UserColumnName="nombre-pago-reclamos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo-lista" msprop:Generator_ColumnVarNameInTable="_columntipo_lista" msprop:Generator_ColumnPropNameInRow="_tipo_lista" msprop:Generator_ColumnPropNameInTable="_tipo_listaColumn" msprop:Generator_UserColumnName="tipo-lista" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ruc-pago-reclamos" msprop:Generator_ColumnVarNameInTable="_columnruc_pago_reclamos" msprop:Generator_ColumnPropNameInRow="_ruc_pago_reclamos" msprop:Generator_ColumnPropNameInTable="_ruc_pago_reclamosColumn" msprop:Generator_UserColumnName="ruc-pago-reclamos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="26" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="banco-pago-reclamo" msprop:Generator_ColumnVarNameInTable="_columnbanco_pago_reclamo" msprop:Generator_ColumnPropNameInRow="_banco_pago_reclamo" msprop:Generator_ColumnPropNameInTable="_banco_pago_reclamoColumn" msprop:Generator_UserColumnName="banco-pago-reclamo" type="xs:int" minOccurs="0" />
+              <xs:element name="tipo-cuenta-preclamo" msprop:Generator_ColumnVarNameInTable="_columntipo_cuenta_preclamo" msprop:Generator_ColumnPropNameInRow="_tipo_cuenta_preclamo" msprop:Generator_ColumnPropNameInTable="_tipo_cuenta_preclamoColumn" msprop:Generator_UserColumnName="tipo-cuenta-preclamo" type="xs:int" minOccurs="0" />
+              <xs:element name="cuenta-pago-reclamo" msprop:Generator_ColumnVarNameInTable="_columncuenta_pago_reclamo" msprop:Generator_ColumnPropNameInRow="_cuenta_pago_reclamo" msprop:Generator_ColumnPropNameInTable="_cuenta_pago_reclamoColumn" msprop:Generator_UserColumnName="cuenta-pago-reclamo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Linea2" msprop:Generator_ColumnVarNameInTable="columnLinea2" msprop:Generator_ColumnPropNameInRow="Linea2" msprop:Generator_ColumnPropNameInTable="Linea2Column" msprop:Generator_UserColumnName="Linea2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Linea3" msprop:Generator_ColumnVarNameInTable="columnLinea3" msprop:Generator_ColumnPropNameInRow="Linea3" msprop:Generator_ColumnPropNameInTable="Linea3Column" msprop:Generator_UserColumnName="Linea3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Linea1" msprop:Generator_ColumnVarNameInTable="columnLinea1" msprop:Generator_ColumnPropNameInRow="Linea1" msprop:Generator_ColumnPropNameInTable="Linea1Column" msprop:Generator_UserColumnName="Linea1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiene-retencion" msprop:Generator_ColumnVarNameInTable="_columntiene_retencion" msprop:Generator_ColumnPropNameInRow="_tiene_retencion" msprop:Generator_ColumnPropNameInTable="_tiene_retencionColumn" msprop:Generator_UserColumnName="tiene-retencion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="tipo-grupal" msprop:Generator_ColumnVarNameInTable="_columntipo_grupal" msprop:Generator_ColumnPropNameInRow="_tipo_grupal" msprop:Generator_ColumnPropNameInTable="_tipo_grupalColumn" msprop:Generator_UserColumnName="tipo-grupal" type="xs:int" minOccurs="0" />
+              <xs:element name="porcentaje-descuento" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_descuento" msprop:Generator_ColumnPropNameInRow="_porcentaje_descuento" msprop:Generator_ColumnPropNameInTable="_porcentaje_descuentoColumn" msprop:Generator_UserColumnName="porcentaje-descuento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="codigo-motivo-anulacion" msprop:Generator_ColumnVarNameInTable="_columncodigo_motivo_anulacion" msprop:Generator_ColumnPropNameInRow="_codigo_motivo_anulacion" msprop:Generator_ColumnPropNameInTable="_codigo_motivo_anulacionColumn" msprop:Generator_UserColumnName="codigo-motivo-anulacion" type="xs:int" minOccurs="0" />
+              <xs:element name="transicion" msprop:Generator_ColumnVarNameInTable="columntransicion" msprop:Generator_ColumnPropNameInRow="transicion" msprop:Generator_ColumnPropNameInTable="transicionColumn" msprop:Generator_UserColumnName="transicion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="fecha-vigencia-inicio" msprop:Generator_ColumnVarNameInTable="_columnfecha_vigencia_inicio" msprop:Generator_ColumnPropNameInRow="_fecha_vigencia_inicio" msprop:Generator_ColumnPropNameInTable="_fecha_vigencia_inicioColumn" msprop:Generator_UserColumnName="fecha-vigencia-inicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-vigencia-fin" msprop:Generator_ColumnVarNameInTable="_columnfecha_vigencia_fin" msprop:Generator_ColumnPropNameInRow="_fecha_vigencia_fin" msprop:Generator_ColumnPropNameInTable="_fecha_vigencia_finColumn" msprop:Generator_UserColumnName="fecha-vigencia-fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="aplicado-transicion" msprop:Generator_ColumnVarNameInTable="_columnaplicado_transicion" msprop:Generator_ColumnPropNameInRow="_aplicado_transicion" msprop:Generator_ColumnPropNameInTable="_aplicado_transicionColumn" msprop:Generator_UserColumnName="aplicado-transicion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="tipo-cobertura" msprop:Generator_ColumnVarNameInTable="_columntipo_cobertura" msprop:Generator_ColumnPropNameInRow="_tipo_cobertura" msprop:Generator_ColumnPropNameInTable="_tipo_coberturaColumn" msprop:Generator_UserColumnName="tipo-cobertura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="es-opcional" msprop:Generator_ColumnVarNameInTable="_columnes_opcional" msprop:Generator_ColumnPropNameInRow="_es_opcional" msprop:Generator_ColumnPropNameInTable="_es_opcionalColumn" msprop:Generator_UserColumnName="es-opcional" type="xs:boolean" minOccurs="0" />
+              <xs:element name="sucursal-alias" msprop:Generator_ColumnVarNameInTable="_columnsucursal_alias" msprop:Generator_ColumnPropNameInRow="_sucursal_alias" msprop:Generator_ColumnPropNameInTable="_sucursal_aliasColumn" msprop:Generator_UserColumnName="sucursal-alias" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal-configuracion" msprop:Generator_ColumnVarNameInTable="_columnsucursal_configuracion" msprop:Generator_ColumnPropNameInRow="_sucursal_configuracion" msprop:Generator_ColumnPropNameInTable="_sucursal_configuracionColumn" msprop:Generator_UserColumnName="sucursal-configuracion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pr04coberturas" msprop:Generator_TableClassName="pr04coberturasDataTable" msprop:Generator_TableVarName="tablepr04coberturas" msprop:Generator_RowChangedName="pr04coberturasRowChanged" msprop:Generator_TablePropName="pr04coberturas" msprop:Generator_RowDeletingName="pr04coberturasRowDeleting" msprop:Generator_RowChangingName="pr04coberturasRowChanging" msprop:Generator_RowEvHandlerName="pr04coberturasRowChangeEventHandler" msprop:Generator_RowDeletedName="pr04coberturasRowDeleted" msprop:Generator_RowClassName="pr04coberturasRow" msprop:Generator_UserTableName="pr04coberturas" msprop:Generator_RowEvArgName="pr04coberturasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo-cobertura" msprop:Generator_ColumnVarNameInTable="_columncodigo_cobertura" msprop:Generator_ColumnPropNameInRow="_codigo_cobertura" msprop:Generator_ColumnPropNameInTable="_codigo_coberturaColumn" msprop:Generator_UserColumnName="codigo-cobertura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-producto" msprop:Generator_ColumnVarNameInTable="_columncodigo_producto" msprop:Generator_ColumnPropNameInRow="_codigo_producto" msprop:Generator_ColumnPropNameInTable="_codigo_productoColumn" msprop:Generator_UserColumnName="codigo-producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="monto-cobertura" msprop:Generator_ColumnVarNameInTable="_columnmonto_cobertura" msprop:Generator_ColumnPropNameInRow="_monto_cobertura" msprop:Generator_ColumnPropNameInTable="_monto_coberturaColumn" msprop:Generator_UserColumnName="monto-cobertura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tipo-cobertura" msprop:Generator_ColumnVarNameInTable="_columntipo_cobertura" msprop:Generator_ColumnPropNameInRow="_tipo_cobertura" msprop:Generator_ColumnPropNameInTable="_tipo_coberturaColumn" msprop:Generator_UserColumnName="tipo-cobertura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="meses-reposicion-cobertura" msprop:Generator_ColumnVarNameInTable="_columnmeses_reposicion_cobertura" msprop:Generator_ColumnPropNameInRow="_meses_reposicion_cobertura" msprop:Generator_ColumnPropNameInTable="_meses_reposicion_coberturaColumn" msprop:Generator_UserColumnName="meses-reposicion-cobertura" type="xs:int" minOccurs="0" />
+              <xs:element name="region" msprop:Generator_ColumnVarNameInTable="columnregion" msprop:Generator_ColumnPropNameInRow="region" msprop:Generator_ColumnPropNameInTable="regionColumn" msprop:Generator_UserColumnName="region">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-plan" msprop:Generator_ColumnVarNameInTable="_columncodigo_plan" msprop:Generator_ColumnPropNameInRow="_codigo_plan" msprop:Generator_ColumnPropNameInTable="_codigo_planColumn" msprop:Generator_UserColumnName="codigo-plan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="version-plan" msprop:Generator_ColumnVarNameInTable="_columnversion_plan" msprop:Generator_ColumnPropNameInRow="_version_plan" msprop:Generator_ColumnPropNameInTable="_version_planColumn" msprop:Generator_UserColumnName="version-plan" type="xs:int" />
+              <xs:element name="fecha-digitacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_digitacion" msprop:Generator_ColumnPropNameInRow="_fecha_digitacion" msprop:Generator_ColumnPropNameInTable="_fecha_digitacionColumn" msprop:Generator_UserColumnName="fecha-digitacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="codigo-subcobertura" msprop:Generator_ColumnVarNameInTable="_columncodigo_subcobertura" msprop:Generator_ColumnPropNameInRow="_codigo_subcobertura" msprop:Generator_ColumnPropNameInTable="_codigo_subcoberturaColumn" msprop:Generator_UserColumnName="codigo-subcobertura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maximo" msprop:Generator_ColumnVarNameInTable="columnmaximo" msprop:Generator_ColumnPropNameInRow="maximo" msprop:Generator_ColumnPropNameInTable="maximoColumn" msprop:Generator_UserColumnName="maximo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="fecha-inicio-cobertura" msprop:Generator_ColumnVarNameInTable="_columnfecha_inicio_cobertura" msprop:Generator_ColumnPropNameInRow="_fecha_inicio_cobertura" msprop:Generator_ColumnPropNameInTable="_fecha_inicio_coberturaColumn" msprop:Generator_UserColumnName="fecha-inicio-cobertura" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-fin-cobertura" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin_cobertura" msprop:Generator_ColumnPropNameInRow="_fecha_fin_cobertura" msprop:Generator_ColumnPropNameInTable="_fecha_fin_coberturaColumn" msprop:Generator_UserColumnName="fecha-fin-cobertura" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="codigo-deducible" msprop:Generator_ColumnVarNameInTable="_columncodigo_deducible" msprop:Generator_ColumnPropNameInRow="_codigo_deducible" msprop:Generator_ColumnPropNameInTable="_codigo_deducibleColumn" msprop:Generator_UserColumnName="codigo-deducible" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-modificacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_modificacion" msprop:Generator_ColumnPropNameInRow="_fecha_modificacion" msprop:Generator_ColumnPropNameInTable="_fecha_modificacionColumn" msprop:Generator_UserColumnName="fecha-modificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="digitador-modificacion" msprop:Generator_ColumnVarNameInTable="_columndigitador_modificacion" msprop:Generator_ColumnPropNameInRow="_digitador_modificacion" msprop:Generator_ColumnPropNameInTable="_digitador_modificacionColumn" msprop:Generator_UserColumnName="digitador-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora-modificacion" msprop:Generator_ColumnVarNameInTable="_columnhora_modificacion" msprop:Generator_ColumnPropNameInRow="_hora_modificacion" msprop:Generator_ColumnPropNameInTable="_hora_modificacionColumn" msprop:Generator_UserColumnName="hora-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prog-modificacion" msprop:Generator_ColumnVarNameInTable="_columnprog_modificacion" msprop:Generator_ColumnPropNameInRow="_prog_modificacion" msprop:Generator_ColumnPropNameInTable="_prog_modificacionColumn" msprop:Generator_UserColumnName="prog-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-secuencia" msprop:Generator_ColumnVarNameInTable="_columncodigo_secuencia" msprop:Generator_ColumnPropNameInRow="_codigo_secuencia" msprop:Generator_ColumnPropNameInTable="_codigo_secuenciaColumn" msprop:Generator_UserColumnName="codigo-secuencia" type="xs:int" minOccurs="0" />
+              <xs:element name="aplica-red-privada" msprop:Generator_ColumnVarNameInTable="_columnaplica_red_privada" msprop:Generator_ColumnPropNameInRow="_aplica_red_privada" msprop:Generator_ColumnPropNameInTable="_aplica_red_privadaColumn" msprop:Generator_UserColumnName="aplica-red-privada" type="xs:boolean" minOccurs="0" />
+              <xs:element name="aplica-red-especifica" msprop:Generator_ColumnVarNameInTable="_columnaplica_red_especifica" msprop:Generator_ColumnPropNameInRow="_aplica_red_especifica" msprop:Generator_ColumnPropNameInTable="_aplica_red_especificaColumn" msprop:Generator_UserColumnName="aplica-red-especifica" type="xs:boolean" minOccurs="0" />
+              <xs:element name="aplica-otros-no-convenio" msprop:Generator_ColumnVarNameInTable="_columnaplica_otros_no_convenio" msprop:Generator_ColumnPropNameInRow="_aplica_otros_no_convenio" msprop:Generator_ColumnPropNameInTable="_aplica_otros_no_convenioColumn" msprop:Generator_UserColumnName="aplica-otros-no-convenio" type="xs:boolean" minOccurs="0" />
+              <xs:element name="aplica-red-convenio" msprop:Generator_ColumnVarNameInTable="_columnaplica_red_convenio" msprop:Generator_ColumnPropNameInRow="_aplica_red_convenio" msprop:Generator_ColumnPropNameInTable="_aplica_red_convenioColumn" msprop:Generator_UserColumnName="aplica-red-convenio" type="xs:boolean" minOccurs="0" />
+              <xs:element name="dias-carencia-amb" msprop:Generator_ColumnVarNameInTable="_columndias_carencia_amb" msprop:Generator_ColumnPropNameInRow="_dias_carencia_amb" msprop:Generator_ColumnPropNameInTable="_dias_carencia_ambColumn" msprop:Generator_UserColumnName="dias-carencia-amb" type="xs:int" minOccurs="0" />
+              <xs:element name="dias-carencia-hosp" msprop:Generator_ColumnVarNameInTable="_columndias_carencia_hosp" msprop:Generator_ColumnPropNameInRow="_dias_carencia_hosp" msprop:Generator_ColumnPropNameInTable="_dias_carencia_hospColumn" msprop:Generator_UserColumnName="dias-carencia-hosp" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cl01-empresas" />
+      <xs:field xpath="mstns:empresa-numero" />
+    </xs:unique>
+    <xs:unique name="pr02-planes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pr02-planes" />
+      <xs:field xpath="mstns:codigo-producto" />
+      <xs:field xpath="mstns:codigo-plan" />
+      <xs:field xpath="mstns:version-plan" />
+      <xs:field xpath="mstns:region" />
+    </xs:unique>
+    <xs:unique name="cl02-empresa-sucursales_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cl02-empresa-sucursales" />
+      <xs:field xpath="mstns:empresa-numero" />
+      <xs:field xpath="mstns:sucursal-empresa" />
+    </xs:unique>
+    <xs:unique name="pr04coberturas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pr04coberturas" />
+      <xs:field xpath="mstns:codigo-cobertura" />
+      <xs:field xpath="mstns:codigo-producto" />
+      <xs:field xpath="mstns:tipo-cobertura" />
+      <xs:field xpath="mstns:region" />
+      <xs:field xpath="mstns:codigo-plan" />
+      <xs:field xpath="mstns:version-plan" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="clienteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ciudad">
+          <Key>
+            <PropertyRef Name="codigo_ciudad" />
+          </Key>
+          <Property Name="codigo_ciudad" Type="int" Nullable="false" />
+          <Property Name="codigo_provincia" Type="int" />
+          <Property Name="nombre_ciudad" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Persona_n">
+          <Key>
+            <PropertyRef Name="persona_cedula" />
+            <PropertyRef Name="persona_pasaporte" />
+            <PropertyRef Name="persona_tipo_documento" />
+            <PropertyRef Name="persona_numero" />
+          </Key>
+          <Property Name="persona_cedula" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="persona_pasaporte" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="persona_tipo_documento" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="persona_numero" Type="int" Nullable="false" />
+          <Property Name="persona_nombres" Type="nvarchar" MaxLength="60" />
+          <Property Name="persona_apellido_pater" Type="nvarchar" MaxLength="40" />
+          <Property Name="persona_apellido_mater" Type="nvarchar" MaxLength="40" />
+          <Property Name="persona_sexo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="persona_fecha_nacimiento" Type="datetime" />
+          <Property Name="persona_estado_civil" Type="nvarchar" MaxLength="15" />
+          <Property Name="domicilio_ciudad" Type="int" />
+          <Property Name="domicilio_principal" Type="nvarchar" MaxLength="300" />
+          <Property Name="domicilio_transversal" Type="nvarchar" MaxLength="60" />
+          <Property Name="domiciliio_numero" Type="nvarchar" MaxLength="30" />
+          <Property Name="domicilio_referencia" Type="nvarchar" MaxLength="60" />
+          <Property Name="domicilio_latitud" Type="nvarchar" MaxLength="50" />
+          <Property Name="domicilio_longitud" Type="nvarchar" MaxLength="50" />
+          <Property Name="domicilio_georeferenciada" Type="bit" />
+          <Property Name="domicilio_email" Type="nvarchar" MaxLength="60" />
+          <Property Name="domicilio_telefono" Type="nchar" MaxLength="15" />
+          <Property Name="celular" Type="nvarchar" MaxLength="15" />
+          <Property Name="nom_emp_trabajo" Type="nvarchar" MaxLength="50" />
+          <Property Name="trabajo_email" Type="nvarchar" MaxLength="60" />
+          <Property Name="trabajo_telefono" Type="nchar" MaxLength="15" />
+          <Property Name="trabajo_ciudad" Type="int" />
+          <Property Name="trabajo_principal" Type="nvarchar" MaxLength="150" />
+          <Property Name="trabajo_transversal" Type="nvarchar" MaxLength="60" />
+          <Property Name="trabajo_numero_edificio" Type="nvarchar" MaxLength="30" />
+          <Property Name="trabajo_referencia" Type="nvarchar" MaxLength="60" />
+          <Property Name="trabajo_latitud" Type="nvarchar" MaxLength="50" />
+          <Property Name="trabajo_longitud" Type="nvarchar" MaxLength="50" />
+          <Property Name="trabajo_georeferenciada" Type="bit" />
+          <Property Name="contacto_nombres" Type="nvarchar" MaxLength="50" />
+          <Property Name="contacto_telefono" Type="nchar" MaxLength="15" />
+          <Property Name="fecha_modificacion" Type="datetime" />
+          <Property Name="hora_modificacion" Type="nvarchar" MaxLength="20" />
+          <Property Name="usuario_modificacion" Type="nvarchar" MaxLength="20" />
+          <Property Name="persona_codigo" Type="int" />
+          <Property Name="cliente_salud" Type="int" />
+          <Property Name="registro_principal" Type="bit" Nullable="false" />
+          <Property Name="log_cambios" Type="xml" />
+          <Property Name="direccion_correspondencia" Type="nchar" MaxLength="2" />
+          <Property Name="operadora_celular" Type="nvarchar" MaxLength="25" />
+          <Property Name="hora_contacto" Type="datetime" />
+          <Property Name="telefono_alterno" Type="nchar" MaxLength="15" />
+          <Property Name="estado_modificacion" Type="int" />
+          <Property Name="rango_ingresos_anual" Type="nvarchar" MaxLength="30" />
+          <Property Name="ocupacion" Type="nvarchar" MaxLength="30" />
+          <Property Name="profesion" Type="nvarchar" MaxLength="30" />
+          <Property Name="vehiculo" Type="nvarchar" MaxLength="30" />
+          <Property Name="codicion_laboral" Type="nvarchar" MaxLength="13" />
+          <Property Name="antiguedad_laboral" Type="nvarchar" MaxLength="10" />
+          <Property Name="hobby" Type="nvarchar" MaxLength="20" />
+          <Property Name="domicilio_barrio" Type="nvarchar" MaxLength="60" />
+          <Property Name="trabajo_barrio" Type="nvarchar" MaxLength="60" />
+          <Property Name="nacionalidad" Type="nchar" MaxLength="20" />
+          <Property Name="migrado" Type="bit" />
+          <Property Name="persona_his" Type="int" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="codigo_provincia" />
+          </Key>
+          <Property Name="codigo_provincia" Type="int" Nullable="false" />
+          <Property Name="nombre_provincia" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Ciudad_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="codigo_provincia" />
+            </Principal>
+            <Dependent Role="Ciudad">
+              <PropertyRef Name="codigo_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="clienteModelStoreContainer">
+          <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Persona_n" EntityType="Self.Persona_n" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Ciudad_Provincia" Association="Self.FK_Ciudad_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Ciudad" EntitySet="Ciudad" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="clienteModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="Persona_n">
+          <Key>
+            <PropertyRef Name="persona_cedula" />
+            <PropertyRef Name="persona_pasaporte" />
+            <PropertyRef Name="persona_tipo_documento" />
+            <PropertyRef Name="persona_numero" />
+          </Key>
+          <Property Name="persona_cedula" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="persona_pasaporte" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="persona_tipo_documento" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="persona_numero" Type="Int32" Nullable="false" />
+          <Property Name="persona_nombres" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="persona_apellido_pater" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="persona_apellido_mater" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="persona_sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="persona_fecha_nacimiento" Type="DateTime" Precision="3" />
+          <Property Name="persona_estado_civil" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_ciudad" Type="Int32" />
+          <Property Name="domicilio_principal" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_transversal" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="domiciliio_numero" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_referencia" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_latitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_longitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_georeferenciada" Type="Boolean" />
+          <Property Name="domicilio_email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="celular" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="nom_emp_trabajo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="trabajo_ciudad" Type="Int32" />
+          <Property Name="trabajo_principal" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_transversal" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_numero_edificio" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_referencia" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_latitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_longitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_georeferenciada" Type="Boolean" />
+          <Property Name="contacto_nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contacto_telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="fecha_modificacion" Type="DateTime" Precision="3" />
+          <Property Name="hora_modificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="usuario_modificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="persona_codigo" Type="Int32" />
+          <Property Name="cliente_salud" Type="Int32" />
+          <Property Name="registro_principal" Type="Boolean" Nullable="false" />
+          <Property Name="log_cambios" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="direccion_correspondencia" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="operadora_celular" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="hora_contacto" Type="DateTime" Precision="3" />
+          <Property Name="telefono_alterno" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="estado_modificacion" Type="Int32" />
+          <Property Name="rango_ingresos_anual" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ocupacion" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="profesion" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="vehiculo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="codicion_laboral" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="antiguedad_laboral" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="hobby" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="domicilio_barrio" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="trabajo_barrio" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="nacionalidad" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="migrado" Type="Boolean" />
+          <Property Name="persona_his" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="clienteEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Persona_n" EntityType="Self.Persona_n" />
+          <EntitySet Name="Ciudad" EntityType="clienteModel.Ciudad" />
+          <EntitySet Name="Provincia" EntityType="clienteModel.Provincia" />
+          <AssociationSet Name="FK_Ciudad_Provincia" Association="clienteModel.FK_Ciudad_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Ciudad" EntitySet="Ciudad" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Ciudad">
+          <Key>
+            <PropertyRef Name="codigo_ciudad" />
+          </Key>
+          <Property Name="codigo_ciudad" Type="Int32" Nullable="false" />
+          <Property Name="codigo_provincia" Type="Int32" />
+          <Property Name="nombre_ciudad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Provincia" Relationship="clienteModel.FK_Ciudad_Provincia" FromRole="Ciudad" ToRole="Provincia" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="codigo_provincia" />
+          </Key>
+          <Property Name="codigo_provincia" Type="Int32" Nullable="false" />
+          <Property Name="nombre_provincia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Ciudad" Relationship="clienteModel.FK_Ciudad_Provincia" FromRole="Provincia" ToRole="Ciudad" />
+        </EntityType>
+        <Association Name="FK_Ciudad_Provincia">
+          <End Type="clienteModel.Provincia" Role="Provincia" Multiplicity="0..1" />
+          <End Type="clienteModel.Ciudad" Role="Ciudad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="codigo_provincia" />
+            </Principal>
+            <Dependent Role="Ciudad">
+              <PropertyRef Name="codigo_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="clienteModelStoreContainer" CdmEntityContainer="clienteEntities">
+          <EntitySetMapping Name="Persona_n">
+            <EntityTypeMapping TypeName="clienteModel.Persona_n">
+              <MappingFragment StoreEntitySet="Persona_n">
+                <ScalarProperty Name="persona_cedula" ColumnName="persona_cedula" />
+                <ScalarProperty Name="persona_pasaporte" ColumnName="persona_pasaporte" />
+                <ScalarProperty Name="persona_tipo_documento" ColumnName="persona_tipo_documento" />
+                <ScalarProperty Name="persona_numero" ColumnName="persona_numero" />
+                <ScalarProperty Name="persona_nombres" ColumnName="persona_nombres" />
+                <ScalarProperty Name="persona_apellido_pater" ColumnName="persona_apellido_pater" />
+                <ScalarProperty Name="persona_apellido_mater" ColumnName="persona_apellido_mater" />
+                <ScalarProperty Name="persona_sexo" ColumnName="persona_sexo" />
+                <ScalarProperty Name="persona_fecha_nacimiento" ColumnName="persona_fecha_nacimiento" />
+                <ScalarProperty Name="persona_estado_civil" ColumnName="persona_estado_civil" />
+                <ScalarProperty Name="domicilio_ciudad" ColumnName="domicilio_ciudad" />
+                <ScalarProperty Name="domicilio_principal" ColumnName="domicilio_principal" />
+                <ScalarProperty Name="domicilio_transversal" ColumnName="domicilio_transversal" />
+                <ScalarProperty Name="domiciliio_numero" ColumnName="domiciliio_numero" />
+                <ScalarProperty Name="domicilio_referencia" ColumnName="domicilio_referencia" />
+                <ScalarProperty Name="domicilio_latitud" ColumnName="domicilio_latitud" />
+                <ScalarProperty Name="domicilio_longitud" ColumnName="domicilio_longitud" />
+                <ScalarProperty Name="domicilio_georeferenciada" ColumnName="domicilio_georeferenciada" />
+                <ScalarProperty Name="domicilio_email" ColumnName="domicilio_email" />
+                <ScalarProperty Name="domicilio_telefono" ColumnName="domicilio_telefono" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="nom_emp_trabajo" ColumnName="nom_emp_trabajo" />
+                <ScalarProperty Name="trabajo_email" ColumnName="trabajo_email" />
+                <ScalarProperty Name="trabajo_telefono" ColumnName="trabajo_telefono" />
+                <ScalarProperty Name="trabajo_ciudad" ColumnName="trabajo_ciudad" />
+                <ScalarProperty Name="trabajo_principal" ColumnName="trabajo_principal" />
+                <ScalarProperty Name="trabajo_transversal" ColumnName="trabajo_transversal" />
+                <ScalarProperty Name="trabajo_numero_edificio" ColumnName="trabajo_numero_edificio" />
+                <ScalarProperty Name="trabajo_referencia" ColumnName="trabajo_referencia" />
+                <ScalarProperty Name="trabajo_latitud" ColumnName="trabajo_latitud" />
+                <ScalarProperty Name="trabajo_longitud" ColumnName="trabajo_longitud" />
+                <ScalarProperty Name="trabajo_georeferenciada" ColumnName="trabajo_georeferenciada" />
+                <ScalarProperty Name="contacto_nombres" ColumnName="contacto_nombres" />
+                <ScalarProperty Name="contacto_telefono" ColumnName="contacto_telefono" />
+                <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
+                <ScalarProperty Name="hora_modificacion" ColumnName="hora_modificacion" />
+                <ScalarProperty Name="usuario_modificacion" ColumnName="usuario_modificacion" />
+                <ScalarProperty Name="persona_codigo" ColumnName="persona_codigo" />
+                <ScalarProperty Name="cliente_salud" ColumnName="cliente_salud" />
+                <ScalarProperty Name="registro_principal" ColumnName="registro_principal" />
+                <ScalarProperty Name="log_cambios" ColumnName="log_cambios" />
+                <ScalarProperty Name="direccion_correspondencia" ColumnName="direccion_correspondencia" />
+                <ScalarProperty Name="operadora_celular" ColumnName="operadora_celular" />
+                <ScalarProperty Name="hora_contacto" ColumnName="hora_contacto" />
+                <ScalarProperty Name="telefono_alterno" ColumnName="telefono_alterno" />
+                <ScalarProperty Name="estado_modificacion" ColumnName="estado_modificacion" />
+                <ScalarProperty Name="rango_ingresos_anual" ColumnName="rango_ingresos_anual" />
+                <ScalarProperty Name="ocupacion" ColumnName="ocupacion" />
+                <ScalarProperty Name="profesion" ColumnName="profesion" />
+                <ScalarProperty Name="vehiculo" ColumnName="vehiculo" />
+                <ScalarProperty Name="codicion_laboral" ColumnName="codicion_laboral" />
+                <ScalarProperty Name="antiguedad_laboral" ColumnName="antiguedad_laboral" />
+                <ScalarProperty Name="hobby" ColumnName="hobby" />
+                <ScalarProperty Name="domicilio_barrio" ColumnName="domicilio_barrio" />
+                <ScalarProperty Name="trabajo_barrio" ColumnName="trabajo_barrio" />
+                <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+                <ScalarProperty Name="migrado" ColumnName="migrado" />
+                <ScalarProperty Name="persona_his" ColumnName="persona_his" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ciudad">
+            <EntityTypeMapping TypeName="clienteModel.Ciudad">
+              <MappingFragment StoreEntitySet="Ciudad">
+                <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
+                <ScalarProperty Name="codigo_provincia" ColumnName="codigo_provincia" />
+                <ScalarProperty Name="codigo_ciudad" ColumnName="codigo_ciudad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provincia">
+            <EntityTypeMapping TypeName="clienteModel.Provincia">
+              <MappingFragment StoreEntitySet="Provincia">
+                <ScalarProperty Name="nombre_provincia" ColumnName="nombre_provincia" />
+                <ScalarProperty Name="codigo_provincia" ColumnName="codigo_provincia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="false" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+  </edmx:Designer>
+</edmx:Edmx>

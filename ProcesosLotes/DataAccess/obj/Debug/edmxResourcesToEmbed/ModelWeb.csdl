@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdd_websaludsaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nro_cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido_paterno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="apellido_materno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Precision="0" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="estado_civil" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nacionalidad_ecuatoriana" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="direccion_calle" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion_calle_transversal" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion_numero" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion_piso" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="direccion_depto" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="id_ciudad" Type="Int32" Nullable="false" />
+    <Property Name="telefono_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_direccion_calle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_direccion_calle_transversal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_direccion_numero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_id_ciudad" Type="Int32" />
+    <Property Name="trabajo_telefono_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_telefono_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="trabajo_telefono_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="recibir_correspondencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cambiar_password" Type="Byte" Nullable="false" />
+    <Property Name="last_login" Type="DateTime" Precision="3" />
+    <Property Name="bloqueado" Type="Byte" />
+    <Property Name="intento_login" Type="Byte" />
+    <Property Name="logueado" Type="Byte" />
+    <Property Name="login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="verificar_datos" Type="Byte" Nullable="false" />
+    <Property Name="fecha_verificacion" Type="DateTime" Precision="3" />
+    <Property Name="datos_extra" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="token_activacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="estado_activacion" Type="Byte" />
+    <Property Name="tipo_documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="bdd_websaludsaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="usuario" EntityType="Self.usuario" />
+    <EntitySet Name="brk_broker" EntityType="bdd_websaludsaModel.brk_broker" />
+    <EntitySet Name="brk_usuario_broker" EntityType="bdd_websaludsaModel.brk_usuario_broker" />
+    <AssociationSet Name="FK_brk_usuario_broker_brk_broker" Association="bdd_websaludsaModel.FK_brk_usuario_broker_brk_broker">
+      <End Role="brk_broker" EntitySet="brk_broker" />
+      <End Role="brk_usuario_broker" EntitySet="brk_usuario_broker" />
+    </AssociationSet>
+    <EntitySet Name="legacy_contrato" EntityType="bdd_websaludsaModel.legacy_contrato" />
+    <EntitySet Name="legacy_usuario" EntityType="bdd_websaludsaModel.legacy_usuario" />
+  </EntityContainer>
+  <EntityType Name="brk_broker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cod_vendedor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cod_agente_venta" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ruc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_comercial" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="razon_social" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="region" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="texto_inicial" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="email_cc_ventas" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="brk_usuario_broker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="broker_id" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_brk_usuario_broker_brk_broker">
+    <End Type="bdd_websaludsaModel.brk_broker" Role="brk_broker" Multiplicity="1" />
+    <End Type="bdd_websaludsaModel.brk_usuario_broker" Role="brk_usuario_broker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="brk_broker">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="brk_usuario_broker">
+        <PropertyRef Name="broker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="legacy_contrato">
+    <Key>
+      <PropertyRef Name="nroContrato" />
+      <PropertyRef Name="nroPersona" />
+    </Key>
+    <Property Name="nroContrato" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nroPersona" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="region" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="codigoProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="duenioCuenta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="codBase64" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="fechaEnrolamientoCorp" Type="DateTime" Precision="3" />
+    <Property Name="EnrolamientoCorp" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="legacy_usuario">
+    <Key>
+      <PropertyRef Name="nroPersona" />
+    </Key>
+    <Property Name="nroPersona" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cliente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password_original" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

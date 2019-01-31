@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08c48b08-0036-4fac-a4e1-a063dc8ab6d6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiciosCliente1.wsdl" MetadataType="Wsdl" ID="a5aee9dc-ad44-4bbd-ac85-cc89052cfe0d" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?wsdl" />
+    <MetadataFile FileName="ServiciosCliente4.xsd" MetadataType="Schema" ID="b0d138be-a8f9-4cf1-8a67-98d5cf29d3f8" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiciosCliente41.xsd" MetadataType="Schema" ID="9c706368-7981-419e-9888-75b05af24881" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiciosCliente42.xsd" MetadataType="Schema" ID="ba270d84-f027-4610-84d5-3b677104cad0" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiciosCliente43.xsd" MetadataType="Schema" ID="f8f5c63c-8a5f-451b-b8ab-4f2ae7b9a544" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiciosCliente1.disco" MetadataType="Disco" ID="1fe39529-7cee-4dd5-84ff-fa5c49ac2dff" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c899f40-e7b4-4b2f-99d4-50eef1fb6168" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceVerificacionEmail/ServiciosValidacionEmail.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiciosValidacionEmail.xsd" MetadataType="Schema" ID="d0f42dd4-c226-42e6-bd67-d899146fa766" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceVerificacionEmail/ServiciosValidacionEmail.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiciosValidacionEmail.wsdl" MetadataType="Wsdl" ID="267fb6d7-52bc-4a88-89ff-48afb010d0dd" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceVerificacionEmail/ServiciosValidacionEmail.svc?wsdl" />
+    <MetadataFile FileName="ServiciosValidacionEmail1.xsd" MetadataType="Schema" ID="5495444c-3c56-416a-8e02-90c2f29502cc" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceVerificacionEmail/ServiciosValidacionEmail.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiciosValidacionEmail.disco" MetadataType="Disco" ID="67e3dadc-5ffc-42cf-887b-444e7e820763" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceVerificacionEmail/ServiciosValidacionEmail.svc?disco" />
+    <MetadataFile FileName="ServiciosValidacionEmail2.xsd" MetadataType="Schema" ID="cb0f378f-f3ef-4f8d-9671-91365347470a" SourceId="1" SourceUrl="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceVerificacionEmail/ServiciosValidacionEmail.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

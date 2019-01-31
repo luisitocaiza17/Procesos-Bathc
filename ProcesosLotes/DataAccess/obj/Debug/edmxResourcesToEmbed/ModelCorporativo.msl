@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SaludCorporativoModelStoreContainer" CdmEntityContainer="SaludCorporativoEntities">
+    <EntitySetMapping Name="Company">
+      <EntityTypeMapping TypeName="SaludCorporativoModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="BrokerID" ColumnName="BrokerID" />
+          <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="ManejaCOR" ColumnName="ManejaCOR" />
+          <ScalarProperty Name="ManejaDEN" ColumnName="ManejaDEN" />
+          <ScalarProperty Name="ManejaEXE" ColumnName="ManejaEXE" />
+          <ScalarProperty Name="ManejaCPO" ColumnName="ManejaCPO" />
+          <ScalarProperty Name="FechaMaximaInclusion" ColumnName="FechaMaximaInclusion" />
+          <ScalarProperty Name="FechaMaximaExclusion" ColumnName="FechaMaximaExclusion" />
+          <ScalarProperty Name="FechaMaximaCambioCobertura" ColumnName="FechaMaximaCambioCobertura" />
+          <ScalarProperty Name="ManejaUsuarioFinal" ColumnName="ManejaUsuarioFinal" />
+          <ScalarProperty Name="BrokerName" ColumnName="BrokerName" />
+          <ScalarProperty Name="EmpresaName" ColumnName="EmpresaName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mailing">
+      <EntityTypeMapping TypeName="SaludCorporativoModel.Mailing">
+        <MappingFragment StoreEntitySet="Mailing">
+          <ScalarProperty Name="MailingID" ColumnName="MailingID" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateShipping" ColumnName="DateShipping" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailingAttachment">
+      <EntityTypeMapping TypeName="SaludCorporativoModel.MailingAttachment">
+        <MappingFragment StoreEntitySet="MailingAttachment">
+          <ScalarProperty Name="MailingAttachmentID" ColumnName="MailingAttachmentID" />
+          <ScalarProperty Name="MailingID" ColumnName="MailingID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostalBox">
+      <EntityTypeMapping TypeName="SaludCorporativoModel.PostalBox">
+        <MappingFragment StoreEntitySet="PostalBox">
+          <ScalarProperty Name="PostalBoxID" ColumnName="PostalBoxID" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaction">
+      <EntityTypeMapping TypeName="SaludCorporativoModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="SaludCorporativoModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="BrokerId" ColumnName="BrokerId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="IsAuthorizator" ColumnName="IsAuthorizator" />
+          <ScalarProperty Name="IsSelfService" ColumnName="IsSelfService" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

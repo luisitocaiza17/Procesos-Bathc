@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Salud_SigmepModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CORP_ArchivoCentroCostos">
+          <Key>
+            <PropertyRef Name="IDArchivoCentroCostos" />
+          </Key>
+          <Property Name="IDArchivoCentroCostos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDEmpresa" Type="int" Nullable="false" />
+          <Property Name="NombreArchivo" Type="varchar" MaxLength="255" />
+          <Property Name="ContenidoCargado" Type="varbinary(max)" />
+          <Property Name="ContenidoProcesado" Type="varbinary(max)" />
+          <Property Name="MensajeError" Type="varchar" MaxLength="4000" />
+          <Property Name="FechaCarga" Type="datetime" />
+          <Property Name="UsuarioCarga" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="CORP_CopagoPendiente">
+          <Key>
+            <PropertyRef Name="CopagoPendienteID" />
+          </Key>
+          <Property Name="CopagoPendienteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumeroEmpresa" Type="int" />
+          <Property Name="NumeroSucursal" Type="int" />
+          <Property Name="NumeroContrato" Type="int" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CodigoProducto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaBloqueo" Type="datetime" />
+          <Property Name="FechaDesbloqueo" Type="datetime" />
+          <Property Name="TipoPendiente" Type="int" />
+          <Property Name="NombreSucursal" Type="varchar" MaxLength="100" />
+          <Property Name="NombreTitular" Type="varchar" MaxLength="100" />
+          <Property Name="IdentificacionTitular" Type="varchar" MaxLength="25" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="CORP_FileMasivos">
+          <Key>
+            <PropertyRef Name="FileMasivosID" />
+          </Key>
+          <Property Name="FileMasivosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDEmpresa" Type="int" Nullable="false" />
+          <Property Name="IDUsuario" Type="int" Nullable="false" />
+          <Property Name="FileContent" Type="varbinary(max)" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FileResult" Type="varbinary(max)" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="1000" />
+          <Property Name="EstadoProceso" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="varchar" MaxLength="100" />
+          <Property Name="PorcentajeAvance" Type="int" />
+        </EntityType>
+        <EntityType Name="CORP_GrupoNotificacion">
+          <Key>
+            <PropertyRef Name="IdGrupoNotificacion" />
+          </Key>
+          <Property Name="IdGrupoNotificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usuario" Type="varchar" MaxLength="100" />
+          <Property Name="FechaGeneracion" Type="datetime" />
+          <Property Name="FechaEnvio" Type="datetime" />
+          <Property Name="Listado" Type="varchar(max)" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="CORP_NotificacionMaternidad">
+          <Key>
+            <PropertyRef Name="IdNotificacionMaternidad" />
+          </Key>
+          <Property Name="IdNotificacionMaternidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdTitular" Type="int" />
+          <Property Name="NombreTitular" Type="varchar" MaxLength="250" />
+          <Property Name="IdentificacionTitular" Type="varchar" MaxLength="100" />
+          <Property Name="Tarifa" Type="varchar" MaxLength="50" />
+          <Property Name="IdLista" Type="varchar" MaxLength="100" />
+          <Property Name="AliasLista" Type="varchar" MaxLength="250" />
+          <Property Name="FechaFUM" Type="datetime" />
+          <Property Name="DocumentoAdjunto" Type="varbinary(max)" />
+          <Property Name="EnrolamientoBebeCompleto" Type="bit" />
+          <Property Name="FechaEnrolamientoBebe" Type="datetime" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="CORP_Registro">
+          <Key>
+            <PropertyRef Name="IdRegistro" />
+          </Key>
+          <Property Name="IdRegistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdArchivo" Type="int" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="TipoDocumento" Type="int" />
+          <Property Name="TipoMovimiento" Type="int" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="NumeroDocumento" Type="varchar" MaxLength="20" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="NombreProducto" Type="varchar" MaxLength="100" />
+          <Property Name="IdProducto" Type="varchar" MaxLength="20" />
+          <Property Name="IdCobertura" Type="varchar" MaxLength="20" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="1000" />
+          <Property Name="Datos" Type="varchar(max)" />
+          <Property Name="Resultado" Type="varchar(max)" />
+          <Property Name="RC_Celular" Type="varchar" MaxLength="50" />
+          <Property Name="RC_CondicionCedulado" Type="smallint" />
+          <Property Name="RC_EmailPersonal" Type="varchar" MaxLength="100" />
+          <Property Name="RC_EmailTrabajo" Type="varchar" MaxLength="100" />
+          <Property Name="RC_EstadoCivil" Type="smallint" />
+          <Property Name="RC_FechaNacimiento" Type="datetime" />
+          <Property Name="RC_Genero" Type="smallint" />
+          <Property Name="RC_TelefonoDomicilio" Type="varchar" MaxLength="25" />
+          <Property Name="RC_TelefonoTrabajo" Type="varchar" MaxLength="25" />
+          <Property Name="CompletadoEnrolamiento" Type="bit" />
+          <Property Name="BloqueadoServicio" Type="bit" />
+          <Property Name="FechaInclusion" Type="datetime" />
+          <Property Name="AceptaServiciosAdicionales" Type="bit" />
+          <Property Name="ServiciosAdicionales" Type="varchar" MaxLength="1000" />
+          <Property Name="ServicioAdicionalesFechaAceptacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CORP_SolicitudPrefactura">
+          <Key>
+            <PropertyRef Name="IDSolicitudPrefactura" />
+          </Key>
+          <Property Name="IDSolicitudPrefactura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="Listas" Type="varchar" MaxLength="2000" />
+          <Property Name="Usuario" Type="varchar" MaxLength="250" />
+          <Property Name="FechaSolicitud" Type="datetime" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="FechaProcesamiento" Type="datetime" />
+          <Property Name="MensajeError" Type="varchar" MaxLength="4000" />
+          <Property Name="IdUsuario" Type="int" />
+        </EntityType>
+        <EntityType Name="SEG_PermisoUsuario">
+          <Key>
+            <PropertyRef Name="IDPermiso" />
+            <PropertyRef Name="IDUsuario" />
+            <PropertyRef Name="IDEmpresa" />
+          </Key>
+          <Property Name="IDPermiso" Type="int" Nullable="false" />
+          <Property Name="IDUsuario" Type="int" Nullable="false" />
+          <Property Name="IDEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEG_Siniestralidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdGrupo" Type="int" />
+          <Property Name="IdSucursalEmpresa" Type="int" />
+          <Property Name="Mes" Type="varchar" MaxLength="50" />
+          <Property Name="Anio" Type="varchar" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="ValorBonificado" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TotalTarifa" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Siniestralidad" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SiniestralidadIBNR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Empresa" Type="varchar" MaxLength="50" />
+          <Property Name="Sucursal" Type="varchar" MaxLength="200" />
+          <Property Name="Ruc" Type="varchar" MaxLength="50" />
+          <Property Name="MesIBNR" Type="int" />
+          <Property Name="ValorIBNR" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="FechaVigencia" Type="datetime" />
+          <Property Name="ValorBonificadoIBNR" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="SEG_Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdGrupo" Type="int" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="50" />
+          <Property Name="NombreApellido" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="NombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="varchar" MaxLength="20" />
+          <Property Name="Extension" Type="varchar" MaxLength="10" />
+          <Property Name="RUCEmpresa" Type="varchar" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="TerminosCondicionesAprobado" Type="int" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="ADUsuario" Type="bit" />
+        </EntityType>
+        <EntityType Name="UsuarioRol">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="IdRol" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Salud_SIGMEP.dbo.UsuarioAdmin_VTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="UsuarioAdmin_VTA">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdGrupo" />
+            <PropertyRef Name="NombreUsuario" />
+            <PropertyRef Name="Contrasena" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdGrupo" Type="int" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="50" />
+          <Property Name="NombreApellido" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="NombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="varchar" MaxLength="20" />
+          <Property Name="Extension" Type="varchar" MaxLength="10" />
+          <Property Name="RUCEmpresa" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_CORP_FileMasivos_Usuario">
+          <End Role="SEG_Usuario" Type="Self.SEG_Usuario" Multiplicity="1" />
+          <End Role="CORP_FileMasivos" Type="Self.CORP_FileMasivos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEG_Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CORP_FileMasivos">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SEG_PermisoUsuario_SEG_Usuario">
+          <End Role="SEG_Usuario" Type="Self.SEG_Usuario" Multiplicity="1" />
+          <End Role="SEG_PermisoUsuario" Type="Self.SEG_PermisoUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEG_Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SEG_PermisoUsuario">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioRol_IdUsuario_Usuario_Id">
+          <End Role="SEG_Usuario" Type="Self.SEG_Usuario" Multiplicity="1" />
+          <End Role="UsuarioRol" Type="Self.UsuarioRol" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEG_Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsuarioRol">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Salud_SigmepModelStoreContainer">
+          <EntitySet Name="CORP_ArchivoCentroCostos" EntityType="Self.CORP_ArchivoCentroCostos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORP_CopagoPendiente" EntityType="Self.CORP_CopagoPendiente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORP_FileMasivos" EntityType="Self.CORP_FileMasivos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORP_GrupoNotificacion" EntityType="Self.CORP_GrupoNotificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORP_NotificacionMaternidad" EntityType="Self.CORP_NotificacionMaternidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORP_Registro" EntityType="Self.CORP_Registro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORP_SolicitudPrefactura" EntityType="Self.CORP_SolicitudPrefactura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEG_PermisoUsuario" EntityType="Self.SEG_PermisoUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEG_Siniestralidad" EntityType="Self.SEG_Siniestralidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEG_Usuario" EntityType="Self.SEG_Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioRol" EntityType="Self.UsuarioRol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioAdmin_VTA" EntityType="Self.UsuarioAdmin_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UsuarioAdmin_VTA].[Id] AS [Id], 
+    [UsuarioAdmin_VTA].[IdEmpresa] AS [IdEmpresa], 
+    [UsuarioAdmin_VTA].[IdGrupo] AS [IdGrupo], 
+    [UsuarioAdmin_VTA].[Cedula] AS [Cedula], 
+    [UsuarioAdmin_VTA].[NombreApellido] AS [NombreApellido], 
+    [UsuarioAdmin_VTA].[Email] AS [Email], 
+    [UsuarioAdmin_VTA].[Telefono] AS [Telefono], 
+    [UsuarioAdmin_VTA].[NombreUsuario] AS [NombreUsuario], 
+    [UsuarioAdmin_VTA].[Contrasena] AS [Contrasena], 
+    [UsuarioAdmin_VTA].[TelefonoFijo] AS [TelefonoFijo], 
+    [UsuarioAdmin_VTA].[Extension] AS [Extension], 
+    [UsuarioAdmin_VTA].[RUCEmpresa] AS [RUCEmpresa]
+    FROM [dbo].[UsuarioAdmin_VTA] AS [UsuarioAdmin_VTA]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CORP_FileMasivos_Usuario" Association="Self.FK_CORP_FileMasivos_Usuario">
+            <End Role="SEG_Usuario" EntitySet="SEG_Usuario" />
+            <End Role="CORP_FileMasivos" EntitySet="CORP_FileMasivos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SEG_PermisoUsuario_SEG_Usuario" Association="Self.FK_SEG_PermisoUsuario_SEG_Usuario">
+            <End Role="SEG_Usuario" EntitySet="SEG_Usuario" />
+            <End Role="SEG_PermisoUsuario" EntitySet="SEG_PermisoUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioRol_IdUsuario_Usuario_Id" Association="Self.FK_UsuarioRol_IdUsuario_Usuario_Id">
+            <End Role="SEG_Usuario" EntitySet="SEG_Usuario" />
+            <End Role="UsuarioRol" EntitySet="UsuarioRol" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Salud_SigmepModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CORP_Registro">
+          <Key>
+            <PropertyRef Name="IdRegistro" />
+          </Key>
+          <Property Name="IdRegistro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdArchivo" Type="Int32" />
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="TipoDocumento" Type="Int32" />
+          <Property Name="TipoMovimiento" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="NumeroDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreProducto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdProducto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IdCobertura" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Datos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Resultado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RC_Celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RC_CondicionCedulado" Type="Int16" />
+          <Property Name="RC_EmailPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RC_EmailTrabajo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RC_EstadoCivil" Type="Int16" />
+          <Property Name="RC_FechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="RC_Genero" Type="Int16" />
+          <Property Name="RC_TelefonoDomicilio" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="RC_TelefonoTrabajo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CompletadoEnrolamiento" Type="Boolean" />
+          <Property Name="BloqueadoServicio" Type="Boolean" />
+          <Property Name="FechaInclusion" Type="DateTime" Precision="3" />
+          <Property Name="AceptaServiciosAdicionales" Type="Boolean" />
+          <Property Name="ServiciosAdicionales" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ServicioAdicionalesFechaAceptacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SEG_Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+          <Property Name="Cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreApellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RUCEmpresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CORP_FileMasivos" Relationship="Salud_SigmepModel.FK_CORP_FileMasivos_Usuario" FromRole="SEG_Usuario" ToRole="CORP_FileMasivos" />
+          <NavigationProperty Name="SEG_PermisoUsuario" Relationship="Salud_SigmepModel.FK_SEG_PermisoUsuario_SEG_Usuario" FromRole="SEG_Usuario" ToRole="SEG_PermisoUsuario" />
+          <Property Name="TerminosCondicionesAprobado" Type="Int32" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADUsuario" Type="Boolean" />
+          <NavigationProperty Name="UsuarioRol" Relationship="Salud_SigmepModel.FK_UsuarioRol_IdUsuario_Usuario_Id" FromRole="SEG_Usuario" ToRole="UsuarioRol" />
+        </EntityType>
+        <EntityType Name="UsuarioAdmin_VTA">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdGrupo" />
+            <PropertyRef Name="NombreUsuario" />
+            <PropertyRef Name="Contrasena" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+          <Property Name="Cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreApellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RUCEmpresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PortalContratante" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CORP_Registro" EntityType="Self.CORP_Registro" />
+          <EntitySet Name="SEG_Usuario" EntityType="Self.SEG_Usuario" />
+          <EntitySet Name="UsuarioAdmin_VTA" EntityType="Self.UsuarioAdmin_VTA" />
+          <EntitySet Name="CORP_FileMasivos" EntityType="Salud_SigmepModel.CORP_FileMasivos" />
+          <AssociationSet Name="FK_CORP_FileMasivos_Usuario" Association="Salud_SigmepModel.FK_CORP_FileMasivos_Usuario">
+            <End Role="SEG_Usuario" EntitySet="SEG_Usuario" />
+            <End Role="CORP_FileMasivos" EntitySet="CORP_FileMasivos" />
+          </AssociationSet>
+          <EntitySet Name="CORP_ArchivoCentroCostos" EntityType="Salud_SigmepModel.CORP_ArchivoCentroCostos" />
+          <EntitySet Name="CORP_GrupoNotificacion" EntityType="Salud_SigmepModel.CORP_GrupoNotificacion" />
+          <EntitySet Name="CORP_SolicitudPrefactura" EntityType="Salud_SigmepModel.CORP_SolicitudPrefactura" />
+          <EntitySet Name="SEG_PermisoUsuario" EntityType="Salud_SigmepModel.SEG_PermisoUsuario" />
+          <AssociationSet Name="FK_SEG_PermisoUsuario_SEG_Usuario" Association="Salud_SigmepModel.FK_SEG_PermisoUsuario_SEG_Usuario">
+            <End Role="SEG_Usuario" EntitySet="SEG_Usuario" />
+            <End Role="SEG_PermisoUsuario" EntitySet="SEG_PermisoUsuario" />
+          </AssociationSet>
+          <EntitySet Name="CORP_NotificacionMaternidad" EntityType="Salud_SigmepModel.CORP_NotificacionMaternidad" />
+          <EntitySet Name="CORP_CopagoPendiente" EntityType="Salud_SigmepModel.CORP_CopagoPendiente" />
+          <EntitySet Name="UsuarioRol" EntityType="Salud_SigmepModel.UsuarioRol" />
+          <AssociationSet Name="FK_UsuarioRol_IdUsuario_Usuario_Id" Association="Salud_SigmepModel.FK_UsuarioRol_IdUsuario_Usuario_Id">
+            <End Role="SEG_Usuario" EntitySet="SEG_Usuario" />
+            <End Role="UsuarioRol" EntitySet="UsuarioRol" />
+          </AssociationSet>
+          <EntitySet Name="SEG_Siniestralidad" EntityType="Salud_SigmepModel.SEG_Siniestralidad" />
+        </EntityContainer>
+        <EntityType Name="CORP_FileMasivos">
+          <Key>
+            <PropertyRef Name="FileMasivosID" />
+          </Key>
+          <Property Name="FileMasivosID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IDUsuario" Type="Int32" Nullable="false" />
+          <Property Name="FileContent" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileResult" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoProceso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SEG_Usuario" Relationship="Salud_SigmepModel.FK_CORP_FileMasivos_Usuario" FromRole="CORP_FileMasivos" ToRole="SEG_Usuario" />
+          <Property Name="Tipo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PorcentajeAvance" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_CORP_FileMasivos_Usuario">
+          <End Type="Salud_SigmepModel.SEG_Usuario" Role="SEG_Usuario" Multiplicity="1" />
+          <End Type="Salud_SigmepModel.CORP_FileMasivos" Role="CORP_FileMasivos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEG_Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CORP_FileMasivos">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CORP_ArchivoCentroCostos">
+          <Key>
+            <PropertyRef Name="IDArchivoCentroCostos" />
+          </Key>
+          <Property Name="IDArchivoCentroCostos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="NombreArchivo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ContenidoCargado" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ContenidoProcesado" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="MensajeError" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCarga" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCarga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CORP_GrupoNotificacion">
+          <Key>
+            <PropertyRef Name="IdGrupoNotificacion" />
+          </Key>
+          <Property Name="IdGrupoNotificacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Listado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaGeneracion" Type="DateTime" Precision="3" />
+          <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CORP_SolicitudPrefactura">
+          <Key>
+            <PropertyRef Name="IDSolicitudPrefactura" />
+          </Key>
+          <Property Name="IDSolicitudPrefactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="Usuario" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="FechaSolicitud" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="FechaProcesamiento" Type="DateTime" Precision="3" />
+          <Property Name="MensajeError" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="Listas" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SEG_PermisoUsuario">
+          <Key>
+            <PropertyRef Name="IDPermiso" />
+            <PropertyRef Name="IDUsuario" />
+            <PropertyRef Name="IDEmpresa" />
+          </Key>
+          <Property Name="IDPermiso" Type="Int32" Nullable="false" />
+          <Property Name="IDUsuario" Type="Int32" Nullable="false" />
+          <Property Name="IDEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SEG_Usuario" Relationship="Salud_SigmepModel.FK_SEG_PermisoUsuario_SEG_Usuario" FromRole="SEG_PermisoUsuario" ToRole="SEG_Usuario" />
+        </EntityType>
+        <Association Name="FK_SEG_PermisoUsuario_SEG_Usuario">
+          <End Type="Salud_SigmepModel.SEG_Usuario" Role="SEG_Usuario" Multiplicity="1" />
+          <End Type="Salud_SigmepModel.SEG_PermisoUsuario" Role="SEG_PermisoUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEG_Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SEG_PermisoUsuario">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CORP_NotificacionMaternidad">
+          <Key>
+            <PropertyRef Name="IdNotificacionMaternidad" />
+          </Key>
+          <Property Name="IdNotificacionMaternidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdTitular" Type="Int32" />
+          <Property Name="NombreTitular" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IdentificacionTitular" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tarifa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdLista" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AliasLista" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="FechaFUM" Type="DateTime" Precision="3" />
+          <Property Name="DocumentoAdjunto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EnrolamientoBebeCompleto" Type="Boolean" />
+          <Property Name="FechaEnrolamientoBebe" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CORP_CopagoPendiente">
+          <Key>
+            <PropertyRef Name="CopagoPendienteID" />
+          </Key>
+          <Property Name="CopagoPendienteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroEmpresa" Type="Int32" />
+          <Property Name="NumeroSucursal" Type="Int32" />
+          <Property Name="NumeroContrato" Type="Int32" Nullable="false" />
+          <Property Name="Region" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaBloqueo" Type="DateTime" Precision="3" />
+          <Property Name="FechaDesbloqueo" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="TipoPendiente" Type="Int32" />
+          <Property Name="NombreSucursal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NombreTitular" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdentificacionTitular" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UsuarioRol">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="IdRol" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SEG_Usuario" Relationship="Salud_SigmepModel.FK_UsuarioRol_IdUsuario_Usuario_Id" FromRole="UsuarioRol" ToRole="SEG_Usuario" />
+        </EntityType>
+        <Association Name="FK_UsuarioRol_IdUsuario_Usuario_Id">
+          <End Type="Salud_SigmepModel.SEG_Usuario" Role="SEG_Usuario" Multiplicity="1" />
+          <End Type="Salud_SigmepModel.UsuarioRol" Role="UsuarioRol" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEG_Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsuarioRol">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SEG_Siniestralidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdGrupo" Type="Int32" />
+          <Property Name="IdSucursalEmpresa" Type="Int32" />
+          <Property Name="Mes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Anio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="ValorBonificado" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TotalTarifa" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Siniestralidad" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SiniestralidadIBNR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sucursal" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Ruc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MesIBNR" Type="Int32" />
+          <Property Name="ValorIBNR" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="FechaVigencia" Type="DateTime" Precision="3" />
+          <Property Name="ValorBonificadoIBNR" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Salud_SigmepModelStoreContainer" CdmEntityContainer="PortalContratante">
+          <EntitySetMapping Name="CORP_Registro">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_Registro">
+              <MappingFragment StoreEntitySet="CORP_Registro">
+                <ScalarProperty Name="ServicioAdicionalesFechaAceptacion" ColumnName="ServicioAdicionalesFechaAceptacion" />
+                <ScalarProperty Name="ServiciosAdicionales" ColumnName="ServiciosAdicionales" />
+                <ScalarProperty Name="AceptaServiciosAdicionales" ColumnName="AceptaServiciosAdicionales" />
+                <ScalarProperty Name="FechaInclusion" ColumnName="FechaInclusion" />
+                <ScalarProperty Name="IdRegistro" ColumnName="IdRegistro" />
+                <ScalarProperty Name="IdArchivo" ColumnName="IdArchivo" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="IdCobertura" ColumnName="IdCobertura" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Datos" ColumnName="Datos" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="RC_Celular" ColumnName="RC_Celular" />
+                <ScalarProperty Name="RC_CondicionCedulado" ColumnName="RC_CondicionCedulado" />
+                <ScalarProperty Name="RC_EmailPersonal" ColumnName="RC_EmailPersonal" />
+                <ScalarProperty Name="RC_EmailTrabajo" ColumnName="RC_EmailTrabajo" />
+                <ScalarProperty Name="RC_EstadoCivil" ColumnName="RC_EstadoCivil" />
+                <ScalarProperty Name="RC_FechaNacimiento" ColumnName="RC_FechaNacimiento" />
+                <ScalarProperty Name="RC_Genero" ColumnName="RC_Genero" />
+                <ScalarProperty Name="RC_TelefonoDomicilio" ColumnName="RC_TelefonoDomicilio" />
+                <ScalarProperty Name="RC_TelefonoTrabajo" ColumnName="RC_TelefonoTrabajo" />
+                <ScalarProperty Name="CompletadoEnrolamiento" ColumnName="CompletadoEnrolamiento" />
+                <ScalarProperty Name="BloqueadoServicio" ColumnName="BloqueadoServicio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEG_Usuario">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.SEG_Usuario">
+              <MappingFragment StoreEntitySet="SEG_Usuario">
+                <ScalarProperty Name="ADUsuario" ColumnName="ADUsuario" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="TerminosCondicionesAprobado" ColumnName="TerminosCondicionesAprobado" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="NombreApellido" ColumnName="NombreApellido" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="TelefonoFijo" ColumnName="TelefonoFijo" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="RUCEmpresa" ColumnName="RUCEmpresa" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioAdmin_VTA">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.UsuarioAdmin_VTA">
+              <MappingFragment StoreEntitySet="UsuarioAdmin_VTA">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="NombreApellido" ColumnName="NombreApellido" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="TelefonoFijo" ColumnName="TelefonoFijo" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="RUCEmpresa" ColumnName="RUCEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORP_FileMasivos">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_FileMasivos">
+              <MappingFragment StoreEntitySet="CORP_FileMasivos">
+                <ScalarProperty Name="PorcentajeAvance" ColumnName="PorcentajeAvance" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="FileResult" ColumnName="FileResult" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+                <ScalarProperty Name="FileMasivosID" ColumnName="FileMasivosID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORP_ArchivoCentroCostos">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_ArchivoCentroCostos">
+              <MappingFragment StoreEntitySet="CORP_ArchivoCentroCostos">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="UsuarioCarga" ColumnName="UsuarioCarga" />
+                <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+                <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+                <ScalarProperty Name="ContenidoProcesado" ColumnName="ContenidoProcesado" />
+                <ScalarProperty Name="ContenidoCargado" ColumnName="ContenidoCargado" />
+                <ScalarProperty Name="NombreArchivo" ColumnName="NombreArchivo" />
+                <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+                <ScalarProperty Name="IDArchivoCentroCostos" ColumnName="IDArchivoCentroCostos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORP_GrupoNotificacion">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_GrupoNotificacion">
+              <MappingFragment StoreEntitySet="CORP_GrupoNotificacion">
+                <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+                <ScalarProperty Name="FechaGeneracion" ColumnName="FechaGeneracion" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Listado" ColumnName="Listado" />
+                <ScalarProperty Name="IdGrupoNotificacion" ColumnName="IdGrupoNotificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORP_SolicitudPrefactura">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_SolicitudPrefactura">
+              <MappingFragment StoreEntitySet="CORP_SolicitudPrefactura">
+                <ScalarProperty Name="Listas" ColumnName="Listas" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+                <ScalarProperty Name="FechaProcesamiento" ColumnName="FechaProcesamiento" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IDSolicitudPrefactura" ColumnName="IDSolicitudPrefactura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEG_PermisoUsuario">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.SEG_PermisoUsuario">
+              <MappingFragment StoreEntitySet="SEG_PermisoUsuario">
+                <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="IDPermiso" ColumnName="IDPermiso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORP_NotificacionMaternidad">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_NotificacionMaternidad">
+              <MappingFragment StoreEntitySet="CORP_NotificacionMaternidad">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaEnrolamientoBebe" ColumnName="FechaEnrolamientoBebe" />
+                <ScalarProperty Name="EnrolamientoBebeCompleto" ColumnName="EnrolamientoBebeCompleto" />
+                <ScalarProperty Name="DocumentoAdjunto" ColumnName="DocumentoAdjunto" />
+                <ScalarProperty Name="FechaFUM" ColumnName="FechaFUM" />
+                <ScalarProperty Name="AliasLista" ColumnName="AliasLista" />
+                <ScalarProperty Name="IdLista" ColumnName="IdLista" />
+                <ScalarProperty Name="Tarifa" ColumnName="Tarifa" />
+                <ScalarProperty Name="IdentificacionTitular" ColumnName="IdentificacionTitular" />
+                <ScalarProperty Name="NombreTitular" ColumnName="NombreTitular" />
+                <ScalarProperty Name="IdTitular" ColumnName="IdTitular" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdNotificacionMaternidad" ColumnName="IdNotificacionMaternidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORP_CopagoPendiente">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.CORP_CopagoPendiente">
+              <MappingFragment StoreEntitySet="CORP_CopagoPendiente">
+                <ScalarProperty Name="IdentificacionTitular" ColumnName="IdentificacionTitular" />
+                <ScalarProperty Name="NombreTitular" ColumnName="NombreTitular" />
+                <ScalarProperty Name="NombreSucursal" ColumnName="NombreSucursal" />
+                <ScalarProperty Name="TipoPendiente" ColumnName="TipoPendiente" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaDesbloqueo" ColumnName="FechaDesbloqueo" />
+                <ScalarProperty Name="FechaBloqueo" ColumnName="FechaBloqueo" />
+                <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="NumeroContrato" ColumnName="NumeroContrato" />
+                <ScalarProperty Name="NumeroSucursal" ColumnName="NumeroSucursal" />
+                <ScalarProperty Name="NumeroEmpresa" ColumnName="NumeroEmpresa" />
+                <ScalarProperty Name="CopagoPendienteID" ColumnName="CopagoPendienteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioRol">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.UsuarioRol">
+              <MappingFragment StoreEntitySet="UsuarioRol">
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEG_Siniestralidad">
+            <EntityTypeMapping TypeName="Salud_SigmepModel.SEG_Siniestralidad">
+              <MappingFragment StoreEntitySet="SEG_Siniestralidad">
+                <ScalarProperty Name="ValorBonificadoIBNR" ColumnName="ValorBonificadoIBNR" />
+                <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+                <ScalarProperty Name="ValorIBNR" ColumnName="ValorIBNR" />
+                <ScalarProperty Name="MesIBNR" ColumnName="MesIBNR" />
+                <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+                <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+                <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+                <ScalarProperty Name="SiniestralidadIBNR" ColumnName="SiniestralidadIBNR" />
+                <ScalarProperty Name="Siniestralidad" ColumnName="Siniestralidad" />
+                <ScalarProperty Name="TotalTarifa" ColumnName="TotalTarifa" />
+                <ScalarProperty Name="ValorBonificado" ColumnName="ValorBonificado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Anio" ColumnName="Anio" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="IdSucursalEmpresa" ColumnName="IdSucursalEmpresa" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

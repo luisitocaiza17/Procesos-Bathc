@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="clienteModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityType Name="Persona_n">
+    <Key>
+      <PropertyRef Name="persona_cedula" />
+      <PropertyRef Name="persona_pasaporte" />
+      <PropertyRef Name="persona_tipo_documento" />
+      <PropertyRef Name="persona_numero" />
+    </Key>
+    <Property Name="persona_cedula" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="persona_pasaporte" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="persona_tipo_documento" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="persona_numero" Type="Int32" Nullable="false" />
+    <Property Name="persona_nombres" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="persona_apellido_pater" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="persona_apellido_mater" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="persona_sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="persona_fecha_nacimiento" Type="DateTime" Precision="3" />
+    <Property Name="persona_estado_civil" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_ciudad" Type="Int32" />
+    <Property Name="domicilio_principal" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_transversal" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="domiciliio_numero" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_referencia" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_latitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_longitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_georeferenciada" Type="Boolean" />
+    <Property Name="domicilio_email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="celular" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="nom_emp_trabajo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="trabajo_ciudad" Type="Int32" />
+    <Property Name="trabajo_principal" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_transversal" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_numero_edificio" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_referencia" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_latitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_longitud" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_georeferenciada" Type="Boolean" />
+    <Property Name="contacto_nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contacto_telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="fecha_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="hora_modificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="usuario_modificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="persona_codigo" Type="Int32" />
+    <Property Name="cliente_salud" Type="Int32" />
+    <Property Name="registro_principal" Type="Boolean" Nullable="false" />
+    <Property Name="log_cambios" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="direccion_correspondencia" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="operadora_celular" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hora_contacto" Type="DateTime" Precision="3" />
+    <Property Name="telefono_alterno" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="estado_modificacion" Type="Int32" />
+    <Property Name="rango_ingresos_anual" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ocupacion" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="profesion" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="vehiculo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="codicion_laboral" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="antiguedad_laboral" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="hobby" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="domicilio_barrio" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="trabajo_barrio" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="nacionalidad" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="migrado" Type="Boolean" />
+    <Property Name="persona_his" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="clienteEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="Persona_n" EntityType="Self.Persona_n" />
+    <EntitySet Name="Ciudad" EntityType="clienteModel.Ciudad" />
+    <EntitySet Name="Provincia" EntityType="clienteModel.Provincia" />
+    <AssociationSet Name="FK_Ciudad_Provincia" Association="clienteModel.FK_Ciudad_Provincia">
+      <End Role="Provincia" EntitySet="Provincia" />
+      <End Role="Ciudad" EntitySet="Ciudad" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="codigo_ciudad" />
+    </Key>
+    <Property Name="codigo_ciudad" Type="Int32" Nullable="false" />
+    <Property Name="codigo_provincia" Type="Int32" />
+    <Property Name="nombre_ciudad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Provincia" Relationship="clienteModel.FK_Ciudad_Provincia" FromRole="Ciudad" ToRole="Provincia" />
+  </EntityType>
+  <EntityType Name="Provincia">
+    <Key>
+      <PropertyRef Name="codigo_provincia" />
+    </Key>
+    <Property Name="codigo_provincia" Type="Int32" Nullable="false" />
+    <Property Name="nombre_provincia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ciudad" Relationship="clienteModel.FK_Ciudad_Provincia" FromRole="Provincia" ToRole="Ciudad" />
+  </EntityType>
+  <Association Name="FK_Ciudad_Provincia">
+    <End Type="clienteModel.Provincia" Role="Provincia" Multiplicity="0..1" />
+    <End Type="clienteModel.Ciudad" Role="Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="codigo_provincia" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="codigo_provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiciosCliente.Logica.Email" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiciosCliente.Logica.Email" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="VerificacionEmailChecker">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="additionalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddressChecked" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddressProvided" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddressSuggestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificacionEmailChecker" nillable="true" type="tns:VerificacionEmailChecker" />
+  <xs:complexType name="VerificacionEmailVerifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authentication_status" type="xs:int" />
+      <xs:element minOccurs="0" name="limit_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="limit_status" type="xs:int" />
+      <xs:element minOccurs="0" name="verify_status" type="xs:int" />
+      <xs:element minOccurs="0" name="verify_status_desc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificacionEmailVerifier" nillable="true" type="tns:VerificacionEmailVerifier" />
+</xs:schema>

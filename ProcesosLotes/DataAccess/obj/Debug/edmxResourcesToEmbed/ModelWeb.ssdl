@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdd_websaludsaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="brk_broker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cod_vendedor" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cod_agente_venta" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ruc" Type="varchar" MaxLength="100" />
+    <Property Name="nombre_comercial" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="razon_social" Type="varchar" MaxLength="200" />
+    <Property Name="region" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="200" />
+    <Property Name="tipo" Type="varchar" MaxLength="50" />
+    <Property Name="texto_inicial" Type="varchar" MaxLength="1000" />
+    <Property Name="email_cc_ventas" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="brk_usuario_broker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="broker_id" Type="int" Nullable="false" />
+    <Property Name="id_usuario" Type="int" />
+  </EntityType>
+  <EntityType Name="legacy_contrato">
+    <Key>
+      <PropertyRef Name="nroContrato" />
+      <PropertyRef Name="nroPersona" />
+    </Key>
+    <Property Name="nroContrato" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nroPersona" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="region" Type="varchar" MaxLength="20" />
+    <Property Name="codigoProducto" Type="varchar" MaxLength="50" />
+    <Property Name="duenioCuenta" Type="varchar" MaxLength="20" />
+    <Property Name="cedula" Type="varchar" MaxLength="20" />
+    <Property Name="codBase64" Type="varchar" MaxLength="500" />
+    <Property Name="fechaEnrolamientoCorp" Type="datetime" />
+    <Property Name="EnrolamientoCorp" Type="bit" />
+  </EntityType>
+  <EntityType Name="legacy_usuario">
+    <Key>
+      <PropertyRef Name="nroPersona" />
+    </Key>
+    <Property Name="nroPersona" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cliente" Type="varchar" MaxLength="100" />
+    <Property Name="cedula" Type="varchar" MaxLength="20" />
+    <Property Name="direccion" Type="varchar" MaxLength="250" />
+    <Property Name="celular" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="usuario" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="password_original" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nro_cedula" Type="varchar" MaxLength="20" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellido_paterno" Type="varchar" MaxLength="100" />
+    <Property Name="apellido_materno" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_nacimiento" Type="date" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="estado_civil" Type="varchar" MaxLength="20" />
+    <Property Name="nacionalidad_ecuatoriana" Type="char" MaxLength="1" />
+    <Property Name="email" Type="varchar" MaxLength="200" />
+    <Property Name="direccion_calle" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="direccion_calle_transversal" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="direccion_numero" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="direccion_piso" Type="varchar" MaxLength="5" />
+    <Property Name="direccion_depto" Type="varchar" MaxLength="5" />
+    <Property Name="id_ciudad" Type="int" Nullable="false" />
+    <Property Name="telefono_1" Type="varchar" MaxLength="50" />
+    <Property Name="telefono_2" Type="varchar" MaxLength="50" />
+    <Property Name="telefono_3" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_nombre" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_direccion_calle" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_direccion_calle_transversal" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_direccion_numero" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_id_ciudad" Type="int" />
+    <Property Name="trabajo_telefono_1" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_telefono_2" Type="varchar" MaxLength="50" />
+    <Property Name="trabajo_telefono_3" Type="varchar" MaxLength="50" />
+    <Property Name="recibir_correspondencia" Type="varchar" MaxLength="50" />
+    <Property Name="cambiar_password" Type="tinyint" Nullable="false" />
+    <Property Name="last_login" Type="datetime" />
+    <Property Name="bloqueado" Type="tinyint" />
+    <Property Name="intento_login" Type="tinyint" />
+    <Property Name="logueado" Type="tinyint" />
+    <Property Name="login" Type="varchar" MaxLength="100" />
+    <Property Name="verificar_datos" Type="tinyint" Nullable="false" />
+    <Property Name="fecha_verificacion" Type="datetime" />
+    <Property Name="datos_extra" Type="varchar" MaxLength="1000" />
+    <Property Name="token_activacion" Type="varchar" MaxLength="500" />
+    <Property Name="estado_activacion" Type="tinyint" />
+    <Property Name="tipo_documento" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_brk_usuario_broker_brk_broker">
+    <End Role="brk_broker" Type="Self.brk_broker" Multiplicity="1" />
+    <End Role="brk_usuario_broker" Type="Self.brk_usuario_broker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="brk_broker">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="brk_usuario_broker">
+        <PropertyRef Name="broker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdd_websaludsaModelStoreContainer">
+    <EntitySet Name="brk_broker" EntityType="Self.brk_broker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="brk_usuario_broker" EntityType="Self.brk_usuario_broker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="legacy_contrato" EntityType="Self.legacy_contrato" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="legacy_usuario" EntityType="Self.legacy_usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_brk_usuario_broker_brk_broker" Association="Self.FK_brk_usuario_broker_brk_broker">
+      <End Role="brk_broker" EntitySet="brk_broker" />
+      <End Role="brk_usuario_broker" EntitySet="brk_usuario_broker" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

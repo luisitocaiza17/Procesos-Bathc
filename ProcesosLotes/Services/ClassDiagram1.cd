@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical" MembersFormat="FullSignature">
+  <Class Name="SW.Salud.Services.Sigmep.Logic" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>K0iAAAmQxAAAAAIGS0AEDQSCIAEAQFAAxEASABBABIA=</HashCode>
+      <FileName>Sigmep\Catalogos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Persona" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAgAQAAIAYkAEIIAIIAAAgIBACAAAAAEAQQAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Inclusion" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAgAAAQAAAQAAAAIAAAAAAAAACABBEACAAAAY=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Banco" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Ciudad" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Dependiente" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAAAAAAEAEAAAAIQAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Exclusion" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEAEIAEIAAAAAAAAACAAQAAAAACAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.ExclusionReporte" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQBAAAAAAAAAQAAAAAAgAAAAgBAAAQAAAI=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Archivo" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAQAQAAAAAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Result" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAECgAMAAUAAAACAAAAAAAAAAAQCAAAAAgw=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.InclusionMasiva" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Cobertura" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.UserSession" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAAAAAAAQAAAAAAAAAgCAACEAAAICABAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.CompanyCorpo" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAFAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Sigmep.Utils" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sigmep\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Sigmep.Logging" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sigmep\Logging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Sigmep.GeneradorXml" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sigmep\GeneradorXML.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW.Salud.Services.Web.SecurityService" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="SW.Salud.Services.Web.SecurityService.Commom" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Web\Security.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web\Security.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="clienteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="codigo_ciudad" />
+    </Key>
+    <Property Name="codigo_ciudad" Type="int" Nullable="false" />
+    <Property Name="codigo_provincia" Type="int" />
+    <Property Name="nombre_ciudad" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Persona_n">
+    <Key>
+      <PropertyRef Name="persona_cedula" />
+      <PropertyRef Name="persona_pasaporte" />
+      <PropertyRef Name="persona_tipo_documento" />
+      <PropertyRef Name="persona_numero" />
+    </Key>
+    <Property Name="persona_cedula" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="persona_pasaporte" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="persona_tipo_documento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="persona_numero" Type="int" Nullable="false" />
+    <Property Name="persona_nombres" Type="nvarchar" MaxLength="60" />
+    <Property Name="persona_apellido_pater" Type="nvarchar" MaxLength="40" />
+    <Property Name="persona_apellido_mater" Type="nvarchar" MaxLength="40" />
+    <Property Name="persona_sexo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="persona_fecha_nacimiento" Type="datetime" />
+    <Property Name="persona_estado_civil" Type="nvarchar" MaxLength="15" />
+    <Property Name="domicilio_ciudad" Type="int" />
+    <Property Name="domicilio_principal" Type="nvarchar" MaxLength="300" />
+    <Property Name="domicilio_transversal" Type="nvarchar" MaxLength="60" />
+    <Property Name="domiciliio_numero" Type="nvarchar" MaxLength="30" />
+    <Property Name="domicilio_referencia" Type="nvarchar" MaxLength="60" />
+    <Property Name="domicilio_latitud" Type="nvarchar" MaxLength="50" />
+    <Property Name="domicilio_longitud" Type="nvarchar" MaxLength="50" />
+    <Property Name="domicilio_georeferenciada" Type="bit" />
+    <Property Name="domicilio_email" Type="nvarchar" MaxLength="60" />
+    <Property Name="domicilio_telefono" Type="nchar" MaxLength="15" />
+    <Property Name="celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="nom_emp_trabajo" Type="nvarchar" MaxLength="50" />
+    <Property Name="trabajo_email" Type="nvarchar" MaxLength="60" />
+    <Property Name="trabajo_telefono" Type="nchar" MaxLength="15" />
+    <Property Name="trabajo_ciudad" Type="int" />
+    <Property Name="trabajo_principal" Type="nvarchar" MaxLength="150" />
+    <Property Name="trabajo_transversal" Type="nvarchar" MaxLength="60" />
+    <Property Name="trabajo_numero_edificio" Type="nvarchar" MaxLength="30" />
+    <Property Name="trabajo_referencia" Type="nvarchar" MaxLength="60" />
+    <Property Name="trabajo_latitud" Type="nvarchar" MaxLength="50" />
+    <Property Name="trabajo_longitud" Type="nvarchar" MaxLength="50" />
+    <Property Name="trabajo_georeferenciada" Type="bit" />
+    <Property Name="contacto_nombres" Type="nvarchar" MaxLength="50" />
+    <Property Name="contacto_telefono" Type="nchar" MaxLength="15" />
+    <Property Name="fecha_modificacion" Type="datetime" />
+    <Property Name="hora_modificacion" Type="nvarchar" MaxLength="20" />
+    <Property Name="usuario_modificacion" Type="nvarchar" MaxLength="20" />
+    <Property Name="persona_codigo" Type="int" />
+    <Property Name="cliente_salud" Type="int" />
+    <Property Name="registro_principal" Type="bit" Nullable="false" />
+    <Property Name="log_cambios" Type="xml" />
+    <Property Name="direccion_correspondencia" Type="nchar" MaxLength="2" />
+    <Property Name="operadora_celular" Type="nvarchar" MaxLength="25" />
+    <Property Name="hora_contacto" Type="datetime" />
+    <Property Name="telefono_alterno" Type="nchar" MaxLength="15" />
+    <Property Name="estado_modificacion" Type="int" />
+    <Property Name="rango_ingresos_anual" Type="nvarchar" MaxLength="30" />
+    <Property Name="ocupacion" Type="nvarchar" MaxLength="30" />
+    <Property Name="profesion" Type="nvarchar" MaxLength="30" />
+    <Property Name="vehiculo" Type="nvarchar" MaxLength="30" />
+    <Property Name="codicion_laboral" Type="nvarchar" MaxLength="13" />
+    <Property Name="antiguedad_laboral" Type="nvarchar" MaxLength="10" />
+    <Property Name="hobby" Type="nvarchar" MaxLength="20" />
+    <Property Name="domicilio_barrio" Type="nvarchar" MaxLength="60" />
+    <Property Name="trabajo_barrio" Type="nvarchar" MaxLength="60" />
+    <Property Name="nacionalidad" Type="nchar" MaxLength="20" />
+    <Property Name="migrado" Type="bit" />
+    <Property Name="persona_his" Type="int" />
+  </EntityType>
+  <EntityType Name="Provincia">
+    <Key>
+      <PropertyRef Name="codigo_provincia" />
+    </Key>
+    <Property Name="codigo_provincia" Type="int" Nullable="false" />
+    <Property Name="nombre_provincia" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Ciudad_Provincia">
+    <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="codigo_provincia" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="codigo_provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="clienteModelStoreContainer">
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persona_n" EntityType="Self.Persona_n" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Ciudad_Provincia" Association="Self.FK_Ciudad_Provincia">
+      <End Role="Provincia" EntitySet="Provincia" />
+      <End Role="Ciudad" EntitySet="Ciudad" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

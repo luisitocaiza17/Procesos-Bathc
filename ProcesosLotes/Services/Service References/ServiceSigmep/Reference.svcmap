@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="728cec9b-48db-47cb-ac0e-36ccbd031118" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.10.40.150/WSCheckUserSigmep/CheckUserSigmep.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CheckUserSigmep.xsd" MetadataType="Schema" ID="43ed3a48-ae21-4042-9da6-f9c9afe694c1" SourceId="1" SourceUrl="http://10.10.40.150/WSCheckUserSigmep/CheckUserSigmep.svc?xsd=xsd0" />
+    <MetadataFile FileName="CheckUserSigmep.disco" MetadataType="Disco" ID="9eb11e4a-d4d9-4a56-955d-dcb0241e800d" SourceId="1" SourceUrl="http://10.10.40.150/WSCheckUserSigmep/CheckUserSigmep.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="7198d3a2-6481-480a-8b0a-d2eb0a129b84" SourceId="1" SourceUrl="http://10.10.40.150/WSCheckUserSigmep/CheckUserSigmep.svc?wsdl" />
+    <MetadataFile FileName="CheckUserSigmep1.xsd" MetadataType="Schema" ID="e3ddb762-662e-4f8e-998f-ce6031a4d66d" SourceId="1" SourceUrl="http://10.10.40.150/WSCheckUserSigmep/CheckUserSigmep.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SigmepPR22" targetNamespace="http://tempuri.org/SigmepPR22.xsd" xmlns:mstns="http://tempuri.org/SigmepPR22.xsd" xmlns="http://tempuri.org/SigmepPR22.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.SW.Salud.DataAccess.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PR22TableAdapter" GeneratorDataComponentClassName="PR22TableAdapter" Name="PR22" UserDataComponentName="PR22TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        region, "codigo-producto", "codigo-plan", "empresa-numero", "sucursal-empresa", "codigo-sisips", "secuencia-sisips", "secuencia-pr22", "convenio-principal", "fecha-creacion", "hora-creacion", 
+                         "usuario-creacion", "prog-creacion", "fecha-modificacion", "hora-modificacion", "usuario-modificacion", "prog-modificacion", "tiene-credito", estado, "fecha-inicio", "fecha-fin", "monto-fee", "porcentaje-credito", 
+                         observaciones, "valor-consulta"
+FROM            PUB."pr22-convenios-pmf" with (nolock)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="region" DataSetColumn="region" />
+              <Mapping SourceColumn="codigo-producto" DataSetColumn="codigo-producto" />
+              <Mapping SourceColumn="codigo-plan" DataSetColumn="codigo-plan" />
+              <Mapping SourceColumn="empresa-numero" DataSetColumn="empresa-numero" />
+              <Mapping SourceColumn="sucursal-empresa" DataSetColumn="sucursal-empresa" />
+              <Mapping SourceColumn="codigo-sisips" DataSetColumn="codigo-sisips" />
+              <Mapping SourceColumn="secuencia-sisips" DataSetColumn="secuencia-sisips" />
+              <Mapping SourceColumn="secuencia-pr22" DataSetColumn="secuencia-pr22" />
+              <Mapping SourceColumn="convenio-principal" DataSetColumn="convenio-principal" />
+              <Mapping SourceColumn="fecha-creacion" DataSetColumn="fecha-creacion" />
+              <Mapping SourceColumn="hora-creacion" DataSetColumn="hora-creacion" />
+              <Mapping SourceColumn="usuario-creacion" DataSetColumn="usuario-creacion" />
+              <Mapping SourceColumn="prog-creacion" DataSetColumn="prog-creacion" />
+              <Mapping SourceColumn="fecha-modificacion" DataSetColumn="fecha-modificacion" />
+              <Mapping SourceColumn="hora-modificacion" DataSetColumn="hora-modificacion" />
+              <Mapping SourceColumn="usuario-modificacion" DataSetColumn="usuario-modificacion" />
+              <Mapping SourceColumn="prog-modificacion" DataSetColumn="prog-modificacion" />
+              <Mapping SourceColumn="tiene-credito" DataSetColumn="tiene-credito" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="fecha-inicio" DataSetColumn="fecha-inicio" />
+              <Mapping SourceColumn="fecha-fin" DataSetColumn="fecha-fin" />
+              <Mapping SourceColumn="monto-fee" DataSetColumn="monto-fee" />
+              <Mapping SourceColumn="porcentaje-credito" DataSetColumn="porcentaje-credito" />
+              <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
+              <Mapping SourceColumn="valor-consulta" DataSetColumn="valor-consulta" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ObtenerSecuencia" Modifier="Public" Name="ObtenerSecuencia" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ObtenerSecuencia">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT MAX(PR22."secuencia-pr22")
+                      FROM PUB."pr22-convenios-pmf" as PR22
+                      WHERE PR22.region = ? and PR22."codigo-producto" = ? and PR22."empresa-numero" = ? and PR22."sucursal-empresa" = ? with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="region" DataSourceName="salud.&quot;pr22-convenios-pmf&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="codigo-producto" DataSourceName="salud.&quot;pr22-convenios-pmf&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_producto" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="empresa-numero" DataSourceName="salud.&quot;pr22-convenios-pmf&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="sucursal-empresa" DataSourceName="salud.&quot;pr22-convenios-pmf&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="sucursal_empresa" Precision="0" Scale="0" Size="0" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SigmepPR22" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SigmepPR22" msprop:Generator_UserDSName="SigmepPR22">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PR22" msprop:Generator_TableClassName="PR22DataTable" msprop:Generator_TableVarName="tablePR22" msprop:Generator_RowChangedName="PR22RowChanged" msprop:Generator_TablePropName="PR22" msprop:Generator_RowDeletingName="PR22RowDeleting" msprop:Generator_RowChangingName="PR22RowChanging" msprop:Generator_RowEvHandlerName="PR22RowChangeEventHandler" msprop:Generator_RowDeletedName="PR22RowDeleted" msprop:Generator_RowClassName="PR22Row" msprop:Generator_UserTableName="PR22" msprop:Generator_RowEvArgName="PR22RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="region" msprop:Generator_ColumnVarNameInTable="columnregion" msprop:Generator_ColumnPropNameInRow="region" msprop:Generator_ColumnPropNameInTable="regionColumn" msprop:Generator_UserColumnName="region" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-producto" msprop:Generator_ColumnVarNameInTable="_columncodigo_producto" msprop:Generator_ColumnPropNameInRow="_codigo_producto" msprop:Generator_ColumnPropNameInTable="_codigo_productoColumn" msprop:Generator_UserColumnName="codigo-producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-plan" msprop:Generator_ColumnVarNameInTable="_columncodigo_plan" msprop:Generator_ColumnPropNameInRow="_codigo_plan" msprop:Generator_ColumnPropNameInTable="_codigo_planColumn" msprop:Generator_UserColumnName="codigo-plan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa-numero" msprop:Generator_ColumnVarNameInTable="_columnempresa_numero" msprop:Generator_ColumnPropNameInRow="_empresa_numero" msprop:Generator_ColumnPropNameInTable="_empresa_numeroColumn" msprop:Generator_UserColumnName="empresa-numero" type="xs:int" minOccurs="0" />
+              <xs:element name="sucursal-empresa" msprop:Generator_ColumnVarNameInTable="_columnsucursal_empresa" msprop:Generator_ColumnPropNameInRow="_sucursal_empresa" msprop:Generator_ColumnPropNameInTable="_sucursal_empresaColumn" msprop:Generator_UserColumnName="sucursal-empresa" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-sisips" msprop:Generator_ColumnVarNameInTable="_columncodigo_sisips" msprop:Generator_ColumnPropNameInRow="_codigo_sisips" msprop:Generator_ColumnPropNameInTable="_codigo_sisipsColumn" msprop:Generator_UserColumnName="codigo-sisips" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="secuencia-sisips" msprop:Generator_ColumnVarNameInTable="_columnsecuencia_sisips" msprop:Generator_ColumnPropNameInRow="_secuencia_sisips" msprop:Generator_ColumnPropNameInTable="_secuencia_sisipsColumn" msprop:Generator_UserColumnName="secuencia-sisips" type="xs:int" minOccurs="0" />
+              <xs:element name="secuencia-pr22" msprop:Generator_ColumnVarNameInTable="_columnsecuencia_pr22" msprop:Generator_ColumnPropNameInRow="_secuencia_pr22" msprop:Generator_ColumnPropNameInTable="_secuencia_pr22Column" msprop:Generator_UserColumnName="secuencia-pr22" type="xs:int" />
+              <xs:element name="convenio-principal" msprop:Generator_ColumnVarNameInTable="_columnconvenio_principal" msprop:Generator_ColumnPropNameInRow="_convenio_principal" msprop:Generator_ColumnPropNameInTable="_convenio_principalColumn" msprop:Generator_UserColumnName="convenio-principal" type="xs:boolean" minOccurs="0" />
+              <xs:element name="fecha-creacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="_fecha_creacion" msprop:Generator_ColumnPropNameInTable="_fecha_creacionColumn" msprop:Generator_UserColumnName="fecha-creacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hora-creacion" msprop:Generator_ColumnVarNameInTable="_columnhora_creacion" msprop:Generator_ColumnPropNameInRow="_hora_creacion" msprop:Generator_ColumnPropNameInTable="_hora_creacionColumn" msprop:Generator_UserColumnName="hora-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario-creacion" msprop:Generator_ColumnVarNameInTable="_columnusuario_creacion" msprop:Generator_ColumnPropNameInRow="_usuario_creacion" msprop:Generator_ColumnPropNameInTable="_usuario_creacionColumn" msprop:Generator_UserColumnName="usuario-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prog-creacion" msprop:Generator_ColumnVarNameInTable="_columnprog_creacion" msprop:Generator_ColumnPropNameInRow="_prog_creacion" msprop:Generator_ColumnPropNameInTable="_prog_creacionColumn" msprop:Generator_UserColumnName="prog-creacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-modificacion" msprop:Generator_ColumnVarNameInTable="_columnfecha_modificacion" msprop:Generator_ColumnPropNameInRow="_fecha_modificacion" msprop:Generator_ColumnPropNameInTable="_fecha_modificacionColumn" msprop:Generator_UserColumnName="fecha-modificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hora-modificacion" msprop:Generator_ColumnVarNameInTable="_columnhora_modificacion" msprop:Generator_ColumnPropNameInRow="_hora_modificacion" msprop:Generator_ColumnPropNameInTable="_hora_modificacionColumn" msprop:Generator_UserColumnName="hora-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario-modificacion" msprop:Generator_ColumnVarNameInTable="_columnusuario_modificacion" msprop:Generator_ColumnPropNameInRow="_usuario_modificacion" msprop:Generator_ColumnPropNameInTable="_usuario_modificacionColumn" msprop:Generator_UserColumnName="usuario-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prog-modificacion" msprop:Generator_ColumnVarNameInTable="_columnprog_modificacion" msprop:Generator_ColumnPropNameInRow="_prog_modificacion" msprop:Generator_ColumnPropNameInTable="_prog_modificacionColumn" msprop:Generator_UserColumnName="prog-modificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiene-credito" msprop:Generator_ColumnVarNameInTable="_columntiene_credito" msprop:Generator_ColumnPropNameInRow="_tiene_credito" msprop:Generator_ColumnPropNameInTable="_tiene_creditoColumn" msprop:Generator_UserColumnName="tiene-credito" type="xs:boolean" minOccurs="0" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha-inicio" msprop:Generator_ColumnVarNameInTable="_columnfecha_inicio" msprop:Generator_ColumnPropNameInRow="_fecha_inicio" msprop:Generator_ColumnPropNameInTable="_fecha_inicioColumn" msprop:Generator_UserColumnName="fecha-inicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-fin" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin" msprop:Generator_ColumnPropNameInRow="_fecha_fin" msprop:Generator_ColumnPropNameInTable="_fecha_finColumn" msprop:Generator_UserColumnName="fecha-fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto-fee" msprop:Generator_ColumnVarNameInTable="_columnmonto_fee" msprop:Generator_ColumnPropNameInRow="_monto_fee" msprop:Generator_ColumnPropNameInTable="_monto_feeColumn" msprop:Generator_UserColumnName="monto-fee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="porcentaje-credito" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_credito" msprop:Generator_ColumnPropNameInRow="_porcentaje_credito" msprop:Generator_ColumnPropNameInTable="_porcentaje_creditoColumn" msprop:Generator_UserColumnName="porcentaje-credito" type="xs:decimal" minOccurs="0" />
+              <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="valor-consulta" msprop:Generator_ColumnVarNameInTable="_columnvalor_consulta" msprop:Generator_ColumnPropNameInRow="_valor_consulta" msprop:Generator_ColumnPropNameInTable="_valor_consultaColumn" msprop:Generator_UserColumnName="valor-consulta" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PR22" />
+      <xs:field xpath="mstns:secuencia-pr22" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

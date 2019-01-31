@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A212C447-0FD0-41BD-BAA5-F3A360A811BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SW.Salud.DataAccess</RootNamespace>
+    <AssemblyName>SW.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="brk_broker.cs">
+      <DependentUpon>ModelWeb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="brk_usuario_broker.cs">
+      <DependentUpon>ModelWeb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ciudad.cs">
+      <DependentUpon>ModelCliente.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_ArchivoCentroCostos.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_CopagoPendiente.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_FileMasivos.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_GrupoNotificacion.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_NotificacionMaternidad.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_Registro.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORP_SolicitudPrefactura.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="legacy_contrato.cs">
+      <DependentUpon>ModelWeb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="legacy_usuario.cs">
+      <DependentUpon>ModelWeb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mailing.cs">
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MailingAttachment.cs">
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCliente.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCliente.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCliente.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCorporativo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCorporativo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCorporativo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCorporativo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCorporativo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelWeb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelWeb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelWeb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelWeb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelWeb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelWeb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NOT_Categoria.cs">
+      <DependentUpon>PortalCorredores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOT_Destinatario.cs">
+      <DependentUpon>PortalCorredores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOT_Envio.cs">
+      <DependentUpon>PortalCorredores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOT_EnvioAdjuntos.cs">
+      <DependentUpon>PortalCorredores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_Usuario.cs">
+      <DependentUpon>PortalCorredores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persona_n.cs">
+      <DependentUpon>ModelCliente.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalContratante.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalContratante.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalContratante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalContratante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalContratante.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalCorredores.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalCorredores.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalCorredores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalCorredores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalCorredores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalCorredores.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PostalBox.cs">
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Provincia.cs">
+      <DependentUpon>ModelCliente.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEG_PermisoUsuario.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEG_Siniestralidad.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEG_Usuario.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SigmedCL21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SigmedCL21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SigmedReport.cs">
+      <DependentUpon>SigmedReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SigmedReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SigmedReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sigmep.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sigmep2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sigmep3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep4.cs">
+      <DependentUpon>Sigmep4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sigmep4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep5.cs">
+      <DependentUpon>Sigmep5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sigmep5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sigmep5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SigmepExclusiones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SigmepExclusiones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SigmepMotivo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SigmepMotivo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SigmepPortalCorp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SigmepPortalCorp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SigmepPR22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SigmepPR22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs">
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>ModelCorporativo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>ModelWeb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdmin_VTA.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioRol.cs">
+      <DependentUpon>PortalContratante.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModelCliente.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCliente.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataModel.xsc">
+      <DependentUpon>DataModel.xsd</DependentUpon>
+    </None>
+    <None Include="DataModel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataModel.xss">
+      <DependentUpon>DataModel.xsd</DependentUpon>
+    </None>
+    <None Include="ModelCliente.edmx.diagram">
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelWeb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelWeb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelCorporativo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCorporativo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelCorporativo.edmx.diagram">
+      <DependentUpon>ModelCorporativo.edmx</DependentUpon>
+    </None>
+    <None Include="ModelWeb.edmx.diagram">
+      <DependentUpon>ModelWeb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PortalContratante.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PortalContratante.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PortalContratante.edmx.diagram">
+      <DependentUpon>PortalContratante.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="PortalCorredores.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PortalCorredores.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PortalCorredores.edmx.diagram">
+      <DependentUpon>PortalCorredores.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmedCL21.xsc">
+      <DependentUpon>SigmedCL21.xsd</DependentUpon>
+    </None>
+    <None Include="SigmedCL21.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SigmedCL21.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmedCL21.xss">
+      <DependentUpon>SigmedCL21.xsd</DependentUpon>
+    </None>
+    <None Include="SigmedReport.xsc">
+      <DependentUpon>SigmedReport.xsd</DependentUpon>
+    </None>
+    <None Include="SigmedReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SigmedReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmedReport.xss">
+      <DependentUpon>SigmedReport.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep.xsc">
+      <DependentUpon>Sigmep.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sigmep1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sigmep.xss">
+      <DependentUpon>Sigmep.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep2.xsc">
+      <DependentUpon>Sigmep2.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sigmep2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sigmep2.xss">
+      <DependentUpon>Sigmep2.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep3.xsc">
+      <DependentUpon>Sigmep3.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sigmep3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sigmep3.xss">
+      <DependentUpon>Sigmep3.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep4.xsc">
+      <DependentUpon>Sigmep4.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sigmep4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sigmep4.xss">
+      <DependentUpon>Sigmep4.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep5.xsc">
+      <DependentUpon>Sigmep5.xsd</DependentUpon>
+    </None>
+    <None Include="Sigmep5.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sigmep5.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sigmep5.xss">
+      <DependentUpon>Sigmep5.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepExclusiones.xsc">
+      <DependentUpon>SigmepExclusiones.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepExclusiones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SigmepExclusiones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmepExclusiones.xss">
+      <DependentUpon>SigmepExclusiones.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepMotivo.xsc">
+      <DependentUpon>SigmepMotivo.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepMotivo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SigmepMotivo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmepMotivo.xss">
+      <DependentUpon>SigmepMotivo.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepPortalCorp.xsc">
+      <DependentUpon>SigmepPortalCorp.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepPortalCorp.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SigmepPortalCorp.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmepPortalCorp.xss">
+      <DependentUpon>SigmepPortalCorp.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepPR22.xsc">
+      <DependentUpon>SigmepPR22.xsd</DependentUpon>
+    </None>
+    <None Include="SigmepPR22.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SigmepPR22.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SigmepPR22.xss">
+      <DependentUpon>SigmepPR22.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelCliente.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+      <LastGenOutput>ModelCliente.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelCliente.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+      <LastGenOutput>ModelCliente.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelCorporativo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCorporativo.edmx</DependentUpon>
+      <LastGenOutput>ModelCorporativo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelCorporativo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCorporativo.edmx</DependentUpon>
+      <LastGenOutput>ModelCorporativo.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelWeb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelWeb.edmx</DependentUpon>
+      <LastGenOutput>ModelWeb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelWeb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelWeb.edmx</DependentUpon>
+      <LastGenOutput>ModelWeb.cs</LastGenOutput>
+    </Content>
+    <Content Include="PortalContratante.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PortalContratante.edmx</DependentUpon>
+      <LastGenOutput>PortalContratante.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PortalContratante.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PortalContratante.edmx</DependentUpon>
+      <LastGenOutput>PortalContratante.cs</LastGenOutput>
+    </Content>
+    <Content Include="PortalCorredores.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PortalCorredores.edmx</DependentUpon>
+      <LastGenOutput>PortalCorredores.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PortalCorredores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PortalCorredores.edmx</DependentUpon>
+      <LastGenOutput>PortalCorredores.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

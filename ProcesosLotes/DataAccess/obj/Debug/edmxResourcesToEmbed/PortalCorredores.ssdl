@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Salud_CorredoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NOT_Categoria">
+    <Key>
+      <PropertyRef Name="IDCategoria" />
+    </Key>
+    <Property Name="IDCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCategoria" Type="varchar" MaxLength="255" />
+    <Property Name="UsuarioMod" Type="int" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NOT_Destinatario">
+    <Key>
+      <PropertyRef Name="IDDestinatario" />
+    </Key>
+    <Property Name="IDDestinatario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEnvio" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="Mail" Type="varchar" MaxLength="255" />
+    <Property Name="NumIntentos" Type="int" />
+    <Property Name="Estado" Type="int" />
+  </EntityType>
+  <EntityType Name="NOT_Envio">
+    <Key>
+      <PropertyRef Name="IDEnvio" />
+    </Key>
+    <Property Name="IDEnvio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="255" />
+    <Property Name="Mensaje" Type="varchar(max)" />
+    <Property Name="IDCategoria" Type="int" />
+    <Property Name="FechaRegistro" Type="datetime" />
+    <Property Name="FechaEnvio" Type="datetime" />
+    <Property Name="UsuarioCreacion" Type="int" />
+    <Property Name="NumDestinatarios" Type="smallint" />
+    <Property Name="Estado" Type="int" />
+  </EntityType>
+  <EntityType Name="NOT_EnvioAdjuntos">
+    <Key>
+      <PropertyRef Name="IDArchivo" />
+    </Key>
+    <Property Name="IDArchivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEnvio" Type="int" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" />
+    <Property Name="Contenido" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="PC_Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCorredor" Type="int" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="50" />
+    <Property Name="NombreApellido" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TelefonoFijo" Type="varchar" MaxLength="20" />
+    <Property Name="Extension" Type="varchar" MaxLength="10" />
+    <Property Name="RUCEmpresa" Type="varchar" MaxLength="50" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="TerminosCondicionesAprobado" Type="int" />
+    <Property Name="Region" Type="varchar" MaxLength="50" />
+    <Property Name="PermisoPlan" Type="varchar" MaxLength="50" />
+    <Property Name="TipoDocumento" Type="varchar" MaxLength="50" />
+    <Property Name="fechaNacimiento" Type="datetime" />
+    <Property Name="fechaNacimiento2" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_NOT_Destinatario_NOT_Envio">
+    <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="1" />
+    <End Role="NOT_Destinatario" Type="Self.NOT_Destinatario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NOT_Envio">
+        <PropertyRef Name="IDEnvio" />
+      </Principal>
+      <Dependent Role="NOT_Destinatario">
+        <PropertyRef Name="IDEnvio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NOT_EnvioAdjuntos_NOT_Envio">
+    <End Role="NOT_Envio" Type="Self.NOT_Envio" Multiplicity="0..1" />
+    <End Role="NOT_EnvioAdjuntos" Type="Self.NOT_EnvioAdjuntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NOT_Envio">
+        <PropertyRef Name="IDEnvio" />
+      </Principal>
+      <Dependent Role="NOT_EnvioAdjuntos">
+        <PropertyRef Name="IDEnvio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Salud_CorredoresModelStoreContainer">
+    <EntitySet Name="NOT_Categoria" EntityType="Self.NOT_Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOT_Destinatario" EntityType="Self.NOT_Destinatario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOT_Envio" EntityType="Self.NOT_Envio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOT_EnvioAdjuntos" EntityType="Self.NOT_EnvioAdjuntos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PC_Usuario" EntityType="Self.PC_Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NOT_Destinatario_NOT_Envio" Association="Self.FK_NOT_Destinatario_NOT_Envio">
+      <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+      <End Role="NOT_Destinatario" EntitySet="NOT_Destinatario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NOT_EnvioAdjuntos_NOT_Envio" Association="Self.FK_NOT_EnvioAdjuntos_NOT_Envio">
+      <End Role="NOT_Envio" EntitySet="NOT_Envio" />
+      <End Role="NOT_EnvioAdjuntos" EntitySet="NOT_EnvioAdjuntos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

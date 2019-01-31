@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Sigmep3" targetNamespace="http://tempuri.org/Sigmep3.xsd" xmlns:mstns="http://tempuri.org/Sigmep3.xsd" xmlns="http://tempuri.org/Sigmep3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.SW.Salud.DataAccess.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cl04-contratosTableAdapter" GeneratorDataComponentClassName="cl04_contratosTableAdapter" Name="cl04-contratos" UserDataComponentName="cl04-contratosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        "codigo-contrato", "cambio-plan", "codigo-motivo-anulacion", digitador, "facturar-a-cedula", "fecha-digitacion-contrato", "monto-gastos-adm", "porcentaje-gastos-adm", "empresa-numero", "sucursal-empresa", 
+                         "persona-numero", "codigo-plan", "precio-base", "fecha-inicio-contrato", "fecha-fin-contrato", "tarjetas-adicionales", "codigo-estado-contrato", "version-plan", "codigo-producto", "tipo-tarjeta", region, 
+                         "codigo-agente-venta", "codigo-agente-contacto", "periodo-pago", moneda, "valor-tarjetas", "contrato-numero", "codigo-banco-credito", "numero-cuenta-credito", "tipo-cuenta-credito", "codigo-sucursal", 
+                         "nivel-referencia", "fecha-fin-original","numero-odas"
+FROM            PUB."cl04-contratos" </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo-contrato" DataSetColumn="codigo-contrato" />
+              <Mapping SourceColumn="cambio-plan" DataSetColumn="cambio-plan" />
+              <Mapping SourceColumn="codigo-motivo-anulacion" DataSetColumn="codigo-motivo-anulacion" />
+              <Mapping SourceColumn="digitador" DataSetColumn="digitador" />
+              <Mapping SourceColumn="facturar-a-cedula" DataSetColumn="facturar-a-cedula" />
+              <Mapping SourceColumn="fecha-digitacion-contrato" DataSetColumn="fecha-digitacion-contrato" />
+              <Mapping SourceColumn="monto-gastos-adm" DataSetColumn="monto-gastos-adm" />
+              <Mapping SourceColumn="porcentaje-gastos-adm" DataSetColumn="porcentaje-gastos-adm" />
+              <Mapping SourceColumn="empresa-numero" DataSetColumn="empresa-numero" />
+              <Mapping SourceColumn="sucursal-empresa" DataSetColumn="sucursal-empresa" />
+              <Mapping SourceColumn="persona-numero" DataSetColumn="persona-numero" />
+              <Mapping SourceColumn="codigo-plan" DataSetColumn="codigo-plan" />
+              <Mapping SourceColumn="precio-base" DataSetColumn="precio-base" />
+              <Mapping SourceColumn="fecha-inicio-contrato" DataSetColumn="fecha-inicio-contrato" />
+              <Mapping SourceColumn="fecha-fin-contrato" DataSetColumn="fecha-fin-contrato" />
+              <Mapping SourceColumn="tarjetas-adicionales" DataSetColumn="tarjetas-adicionales" />
+              <Mapping SourceColumn="codigo-estado-contrato" DataSetColumn="codigo-estado-contrato" />
+              <Mapping SourceColumn="version-plan" DataSetColumn="version-plan" />
+              <Mapping SourceColumn="codigo-producto" DataSetColumn="codigo-producto" />
+              <Mapping SourceColumn="tipo-tarjeta" DataSetColumn="tipo-tarjeta" />
+              <Mapping SourceColumn="region" DataSetColumn="region" />
+              <Mapping SourceColumn="codigo-agente-venta" DataSetColumn="codigo-agente-venta" />
+              <Mapping SourceColumn="codigo-agente-contacto" DataSetColumn="codigo-agente-contacto" />
+              <Mapping SourceColumn="periodo-pago" DataSetColumn="periodo-pago" />
+              <Mapping SourceColumn="moneda" DataSetColumn="moneda" />
+              <Mapping SourceColumn="valor-tarjetas" DataSetColumn="valor-tarjetas" />
+              <Mapping SourceColumn="contrato-numero" DataSetColumn="contrato-numero" />
+              <Mapping SourceColumn="codigo-banco-credito" DataSetColumn="codigo-banco-credito" />
+              <Mapping SourceColumn="numero-cuenta-credito" DataSetColumn="numero-cuenta-credito" />
+              <Mapping SourceColumn="tipo-cuenta-credito" DataSetColumn="tipo-cuenta-credito" />
+              <Mapping SourceColumn="codigo-sucursal" DataSetColumn="codigo-sucursal" />
+              <Mapping SourceColumn="nivel-referencia" DataSetColumn="nivel-referencia" />
+              <Mapping SourceColumn="fecha-fin-original" DataSetColumn="fecha-fin-original" />
+              <Mapping SourceColumn="numero-odas" DataSetColumn="numero-odas" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActualizarCiudad" Modifier="Public" Name="ActualizarCiudad" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActualizarCiudad">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      UPDATE       PUB."cl04-contratos"
+                      SET               "codigo-ciudad" = ?
+                      WHERE        ("contrato-numero" = ? and region=? and "codigo-producto"=?)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="codigo-ciudad" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="codigo_ciudad" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="codigo-ciudad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="contrato-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="region" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" ProviderType="VarChar" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param4" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="VarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActualizarPagoInteligente" Modifier="Public" Name="ActualizarPagoInteligente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ActualizarPagoInteligente">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      UPDATE       PUB."cl04-contratos"
+                      SET                "codigo-banco-credito" = ?, "numero-cuenta-credito" = ?, "tipo-cuenta-credito" = ?
+                      WHERE        ("contrato-numero" = ? and region = ? and "codigo-producto"=?)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="codigo-banco-credito" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="codigo_banco_credito" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="codigo-banco-credito" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="numero-cuenta-credito" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="numero_cuenta_credito" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="numero-cuenta-credito" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="tipo-cuenta-credito" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="tipo_cuenta_credito" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="tipo-cuenta-credito" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param4" ColumnName="contrato-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param5" ColumnName="region" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="region" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param6" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActualizarPlanContrato" Modifier="Public" Name="ActualizarPlanContrato" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ActualizarPlanContrato">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      UPDATE       PUB."cl04-contratos"
+                      SET                "cambio-plan" = 1, "codigo-plan" = ? , "version-plan"=?
+                      WHERE        ("contrato-numero" = ?) and ("codigo-producto" = ?) and (region = ?)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="codigo-plan" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_plan" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="version-plan" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="version_plan" Precision="0" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="contrato-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param4" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param5" ColumnName="region" DataSourceName="" DataTypeServer="unknown" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="region" Precision="0" ProviderType="Char" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BloquearContratoEnrolamiento" Modifier="Public" Name="BloquearContratoEnrolamiento" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="BloquearContratoEnrolamiento">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE 	PUB."cl04-contratos" 
+SET 	"moroso" = 1
+where 	"contrato-numero" = ? and "region" = ? and "codigo-producto" = ?
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="contrato-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_contrato_numero" Precision="0" Scale="0" Size="0" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="region" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="Original_region" Precision="0" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="codigo-producto" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="Original_codigo_producto" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DesbloquearContratoEnrolamiento" Modifier="Public" Name="DesbloquearContratoEnrolamiento" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="DesbloquearContratoEnrolamiento">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE 	PUB."cl04-contratos" 
+SET 	"moroso" = 0 
+where 	"contrato-numero" = ? and "region" = ? and "codigo-producto" = ?
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="contrato-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_contrato_numero" Precision="0" Scale="0" Size="0" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="region" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="Original_region" Precision="0" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="codigo-producto" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="Original_codigo_producto" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="EstaBloqueadoContrato" Modifier="Public" Name="EstaBloqueadoContrato" QueryType="Scalar" ScalarCallRetval="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="EstaBloqueadoContrato">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT 	COUNT("codigo-contrato")
+                      from 	"PUB"."cl04-contratos"
+                      where 	"contrato-numero" = ? and "region" = ? and "codigo-producto" = ?
+                      and moroso = 1
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="contrato-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" Scale="0" Size="0" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="region" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="codigo-producto" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_producto" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ExcluirContrato" Modifier="Public" Name="ExcluirContrato" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="ExcluirContrato">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      UPDATE       PUB."cl04-contratos"
+                      SET                "codigo-estado-contrato" = 2, "fecha-fin-contrato" = ?, "fecha-fin-original" = "fecha-fin-contrato", "codigo-motivo-anulacion" = ?
+                      WHERE        ("contrato-numero" = ?) and ("codigo-producto" = ?) and (region = ?)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="fecha-fin-contrato" DataSourceName="" DataTypeServer="unknown" DbType="DateTime" Direction="Input" ParameterName="fecha_fin_contrato" Precision="0" ProviderType="DateTime" Scale="0" Size="1024" SourceColumn="fecha-fin-contrato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="codigo-motivo-anulacion" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="codigo_motivo_anulacion" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="codigo-motivo-anulacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="contrato-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param4" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param5" ColumnName="region" DataSourceName="" DataTypeServer="unknown" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="region" Precision="0" ProviderType="Char" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEmpresaPersona" GeneratorSourceName="ExisteContratoCliente" Modifier="Public" Name="ExisteContratoCliente" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="ExisteContratoCliente">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT count("codigo-contrato")
+                      from "PUB"."cl04-contratos"
+                      where  "empresa-numero" = ? and "sucursal-empresa"=? and "persona-numero" = ?  and  "codigo-estado-contrato" = 1 and "fecha-fin-contrato" &gt; CURDATE() with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="codigo-sucursal" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_sucursal" Precision="0" Scale="0" Size="0" SourceColumn="codigo-sucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="persona-numero" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="persona_numero" Precision="0" Scale="0" Size="0" SourceColumn="persona-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetExisteContratoClienteEmpresa" GeneratorSourceName="ExisteContratoClienteEmpresa" Modifier="Public" Name="ExisteContratoClienteEmpresa" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="ExisteContratoClienteEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT count("codigo-contrato")
+                      from "PUB"."cl04-contratos"
+                      where  "empresa-numero" = ? and "persona-numero" = ? and "codigo-producto" = ? and  "codigo-estado-contrato" = 1 and "fecha-fin-contrato" &gt; CURDATE() with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="persona-numero" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="persona_numero" Precision="0" Scale="0" Size="0" SourceColumn="persona-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByClienteEmpresa" GetMethodModifier="Public" GetMethodName="GetDataByClienteEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByClienteEmpresa" UserSourceName="GetDataByClienteEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT "codigo-contrato","cambio-plan","codigo-motivo-anulacion","digitador","facturar-a-cedula","fecha-digitacion-contrato","monto-gastos-adm","porcentaje-gastos-adm","empresa-numero","sucursal-empresa","persona-numero","codigo-plan","precio-base","fecha-inicio-contrato","fecha-fin-contrato","tarjetas-adicionales","codigo-estado-contrato","version-plan","codigo-producto","tipo-tarjeta","region","codigo-agente-venta","codigo-agente-contacto","periodo-pago","moneda","valor-tarjetas","contrato-numero","codigo-banco-credito","numero-cuenta-credito","tipo-cuenta-credito","codigo-sucursal"
+                      from "PUB"."cl04-contratos" where "empresa-numero"=? and "persona-numero"=? and "codigo-estado-contrato" = 1 and "fecha-fin-contrato" &gt; CURDATE() and ("codigo-producto" = 'COR' OR "codigo-producto" = 'DEN' OR "codigo-producto" = 'EXE' OR "codigo-producto" = 'CPO' OR "codigo-producto" = 'TRA') with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="persona-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="persona_numero" Precision="0" Scale="0" Size="0" SourceColumn="persona-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByClienteInactivoEmpresa" GetMethodModifier="Public" GetMethodName="GetDataByClienteInactivoEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByClienteInactivoEmpresa" UserSourceName="GetDataByClienteInactivoEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT CL04."codigo-contrato",CL04."cambio-plan",CL04."codigo-motivo-anulacion",CL04."digitador",
+                      CL04."facturar-a-cedula",CL04."fecha-digitacion-contrato",CL04."monto-gastos-adm",
+                      CL04."porcentaje-gastos-adm",CL04."empresa-numero",CL04."sucursal-empresa",CL04."persona-numero",
+                      CL04."codigo-plan",CL04."precio-base",CL04."fecha-inicio-contrato",CL04."fecha-fin-contrato",
+                      CL04."tarjetas-adicionales",CL04."codigo-estado-contrato",CL04."version-plan",CL04."codigo-producto",
+                      CL04."tipo-tarjeta",CL04."region",CL04."codigo-agente-venta",CL04."codigo-agente-contacto",CL04."periodo-pago",
+                      CL04."moneda",CL04."valor-tarjetas",CL04."contrato-numero",CL04."codigo-banco-credito",CL04."numero-cuenta-credito",
+                      CL04."tipo-cuenta-credito",CL04."codigo-sucursal"
+                      from "PUB"."cl04-contratos" CL04, "pub"."pr02-planes" PR02
+                      where CL04."codigo-estado-contrato" = 2--ESTADO DE CONTRATO EXCLUIDO
+                      AND CL04."empresa-numero" =? --NUMERO DE EMPRESA
+                      AND CL04."persona-numero"=?
+                      AND (CL04."codigo-producto" = 'COR' OR CL04."codigo-producto" = 'DEN' OR CL04."codigo-producto" = 'EXE' OR CL04."codigo-producto" = 'CPO' OR CL04."codigo-producto" = 'TRA')
+                      AND (CL04."codigo-plan" = PR02."codigo-plan" AND CL04."version-plan" = PR02."version-plan")
+                      AND (PR02."fecha-fin" &gt; CURDATE())
+                      with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="persona-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="persona_numero" Precision="0" Scale="0" Size="0" SourceColumn="persona-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByContratoNumero" GetMethodModifier="Public" GetMethodName="GetDataByContratoNumero" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByContratoNumero" UserSourceName="GetDataByContratoNumero">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT "codigo-contrato","cambio-plan","codigo-motivo-anulacion","digitador","facturar-a-cedula","fecha-digitacion-contrato","monto-gastos-adm","porcentaje-gastos-adm","empresa-numero","sucursal-empresa","persona-numero","codigo-plan","precio-base","fecha-inicio-contrato","fecha-fin-contrato","tarjetas-adicionales","codigo-estado-contrato","version-plan","codigo-producto","tipo-tarjeta","region","codigo-agente-venta","codigo-agente-contacto","periodo-pago","moneda","valor-tarjetas","contrato-numero","codigo-banco-credito","numero-cuenta-credito","tipo-cuenta-credito","codigo-sucursal"
+                      from "PUB"."cl04-contratos" where "contrato-numero" = ? and region=? and "codigo-producto"=? with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="contrato-numero" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="region" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" ProviderType="VarChar" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      INSERT INTO "PUB"."cl04-contratos" (
+                      "codigo-contrato","cambio-plan","codigo-motivo-anulacion","digitador","facturar-a-cedula",
+                      "fecha-digitacion-contrato","monto-gastos-adm","porcentaje-gastos-adm","empresa-numero","sucursal-empresa",
+                      "persona-numero","codigo-plan","precio-base","fecha-inicio-contrato","fecha-fin-contrato",
+                      "tarjetas-adicionales","codigo-estado-contrato","version-plan","codigo-producto","tipo-tarjeta",
+                      "region","codigo-agente-venta","codigo-agente-contacto","periodo-pago","moneda",
+                      "valor-tarjetas","contrato-numero","codigo-banco-credito","numero-cuenta-credito","tipo-cuenta-credito",
+                      "codigo-sucursal","moroso","nivel-referencia","numero-odas")
+                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,?)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="codigo-contrato" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="codigo_contrato" Precision="17" Scale="2" Size="0" SourceColumn="codigo-contrato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="cambio-plan" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="cambio_plan" Precision="0" Scale="0" Size="0" SourceColumn="cambio-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="codigo-motivo-anulacion" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_motivo_anulacion" Precision="0" Scale="0" Size="0" SourceColumn="codigo-motivo-anulacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="digitador" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="digitador" Precision="0" Scale="0" Size="1024" SourceColumn="digitador" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="facturar-a-cedula" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="facturar_a_cedula" Precision="0" Scale="0" Size="1024" SourceColumn="facturar-a-cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param6" ColumnName="fecha-digitacion-contrato" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="fecha_digitacion_contrato" Precision="0" Scale="0" Size="0" SourceColumn="fecha-digitacion-contrato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param7" ColumnName="monto-gastos-adm" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="monto_gastos_adm" Precision="136" Scale="2" Size="0" SourceColumn="monto-gastos-adm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param8" ColumnName="porcentaje-gastos-adm" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="porcentaje_gastos_adm" Precision="87" Scale="2" Size="0" SourceColumn="porcentaje-gastos-adm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param9" ColumnName="empresa-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param10" ColumnName="sucursal-empresa" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="sucursal_empresa" Precision="0" Scale="0" Size="0" SourceColumn="sucursal-empresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param11" ColumnName="persona-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="persona_numero" Precision="0" Scale="0" Size="0" SourceColumn="persona-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param12" ColumnName="codigo-plan" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_plan" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param13" ColumnName="precio-base" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="precio_base" Precision="17" Scale="2" Size="0" SourceColumn="precio-base" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param14" ColumnName="fecha-inicio-contrato" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="fecha_inicio_contrato" Precision="0" Scale="0" Size="0" SourceColumn="fecha-inicio-contrato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param15" ColumnName="fecha-fin-contrato" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="fecha_fin_contrato" Precision="0" Scale="0" Size="0" SourceColumn="fecha-fin-contrato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param16" ColumnName="tarjetas-adicionales" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="tarjetas_adicionales" Precision="0" Scale="0" Size="0" SourceColumn="tarjetas-adicionales" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param17" ColumnName="codigo-estado-contrato" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_estado_contrato" Precision="0" Scale="0" Size="0" SourceColumn="codigo-estado-contrato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param18" ColumnName="version-plan" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="version_plan" Precision="0" Scale="0" Size="0" SourceColumn="version-plan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param19" ColumnName="codigo-producto" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="codigo_producto" Precision="0" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param20" ColumnName="tipo-tarjeta" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="tipo_tarjeta" Precision="0" Scale="0" Size="1024" SourceColumn="tipo-tarjeta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param21" ColumnName="region" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param22" ColumnName="codigo-agente-venta" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_agente_venta" Precision="0" Scale="0" Size="0" SourceColumn="codigo-agente-venta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param23" ColumnName="codigo-agente-contacto" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_agente_contacto" Precision="0" Scale="0" Size="0" SourceColumn="codigo-agente-contacto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param24" ColumnName="periodo-pago" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="periodo_pago" Precision="0" Scale="0" Size="0" SourceColumn="periodo-pago" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param25" ColumnName="moneda" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="moneda" Precision="0" Scale="0" Size="1024" SourceColumn="moneda" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param26" ColumnName="valor-tarjetas" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="valor_tarjetas" Precision="17" Scale="2" Size="0" SourceColumn="valor-tarjetas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param27" ColumnName="contrato-numero" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="contrato_numero" Precision="0" Scale="0" Size="0" SourceColumn="contrato-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param28" ColumnName="codigo-banco-credito" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_banco_credito" Precision="0" Scale="0" Size="0" SourceColumn="codigo-banco-credito" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param29" ColumnName="numero-cuenta-credito" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="numero_cuenta_credito" Precision="0" Scale="0" Size="1024" SourceColumn="numero-cuenta-credito" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param30" ColumnName="tipo-cuenta-credito" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="tipo_cuenta_credito" Precision="0" Scale="0" Size="0" SourceColumn="tipo-cuenta-credito" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param31" ColumnName="codigo-sucursal" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="codigo_sucursal" Precision="0" Scale="0" Size="0" SourceColumn="codigo-sucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param32" ColumnName="nivel-referencia" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="nivel_referencia" Precision="0" Scale="0" Size="0" SourceColumn="nivel-referencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param33" ColumnName="numero-odas" DataSourceName="salud.&quot;cl04-contratos&quot;" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="numero_odas" Precision="0" Scale="0" Size="0" SourceColumn="numero-odas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="ObtenerContratosExcluidosXIdentificacionEmpresa" GetMethodModifier="Public" GetMethodName="ObtenerContratosExcluidosXIdentificacionEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="ObtenerContratosExcluidosXIdentificacionEmpresa" UserSourceName="ObtenerContratosExcluidosXIdentificacionEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT CL04."codigo-contrato",CL04."cambio-plan",CL04."codigo-motivo-anulacion",CL04."digitador",
+                      CL04."facturar-a-cedula",CL04."fecha-digitacion-contrato",CL04."monto-gastos-adm",
+                      CL04."porcentaje-gastos-adm",CL04."empresa-numero",CL04."sucursal-empresa",CL04."persona-numero",
+                      CL04."codigo-plan",CL04."precio-base",CL04."fecha-inicio-contrato",CL04."fecha-fin-contrato",
+                      CL04."tarjetas-adicionales",CL04."codigo-estado-contrato",CL04."version-plan",CL04."codigo-producto",
+                      CL04."tipo-tarjeta",CL04."region",CL04."codigo-agente-venta",CL04."codigo-agente-contacto",CL04."periodo-pago",
+                      CL04."moneda",CL04."valor-tarjetas",CL04."contrato-numero",CL04."codigo-banco-credito",CL04."numero-cuenta-credito",
+                      CL04."tipo-cuenta-credito",CL04."codigo-sucursal"
+                      from "PUB"."cl04-contratos" CL04, "pub"."cl03-personas" CL03, "pub"."pr02-planes" PR02
+                      where CL04."codigo-estado-contrato" = 2--ESTADO DE CONTRATO EXCLUIDO
+                      AND CL04."empresa-numero" =? --NUMERO DE EMPRESA
+                      AND (CL04."codigo-producto" = 'COR' OR CL04."codigo-producto" = 'DEN' OR CL04."codigo-producto" = 'EXE' OR CL04."codigo-producto" = 'CPO'  OR CL04."codigo-producto" = 'TRA')
+                      AND (CL04."persona-numero" = CL03."persona-numero")
+                      AND (CL03."persona-cedula" = ? or CL03."persona-pasaporte" = ?)
+                      AND (CL04."codigo-plan" = PR02."codigo-plan" AND CL04."version-plan" = PR02."version-plan")
+                      AND (PR02."fecha-fin" &gt; CURDATE()) 
+       --AND (CL04."persona-numero" in (select CL03."persona-numero" from "pub"."cl03-personas" CL03 where CL03."persona-cedula" = ? or CL03."persona-pasaporte" = ?))
+        --and "persona-numero" =? --NUMERO DE PERSONA PUEDESN HABER VARIOS NUMEROS DE PERSONA PARA LA MISMA CÉDULA ???
+        -- and "fecha-fin-contrato" &gt; CURDATE()
+       with(nolock);</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="ObtenerPrimerContratoCliente" GetMethodModifier="Public" GetMethodName="ObtenerPrimerContratoCliente" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="ObtenerPrimerContratoCliente" UserSourceName="ObtenerPrimerContratoCliente">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT top 1 "codigo-contrato","cambio-plan","codigo-motivo-anulacion","digitador","facturar-a-cedula","fecha-digitacion-contrato","monto-gastos-adm","porcentaje-gastos-adm","empresa-numero","sucursal-empresa","persona-numero","codigo-plan","precio-base","fecha-inicio-contrato","fecha-fin-contrato","tarjetas-adicionales","codigo-estado-contrato","version-plan","codigo-producto","tipo-tarjeta","region","codigo-agente-venta","codigo-agente-contacto","periodo-pago","moneda","valor-tarjetas","contrato-numero","codigo-banco-credito","numero-cuenta-credito","tipo-cuenta-credito","codigo-sucursal"
+                      from "PUB"."cl04-contratos"
+                      where  "empresa-numero" = ? and "persona-numero" = ? and "codigo-producto" = ? and  "codigo-estado-contrato" = 1 and "fecha-fin-contrato" &gt; CURDATE()
+                      order by "fecha-fin-contrato" desc with (nolock)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="empresa-numero" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="empresa_numero" Precision="0" Scale="0" Size="0" SourceColumn="empresa-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="persona-numero" DataSourceName="" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="persona_numero" Precision="0" Scale="0" Size="0" SourceColumn="persona-numero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="codigo-producto" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="codigo_producto" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="codigo-producto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="ObtenerSecuencial" GeneratorSourceName="ObtenerSecuencialContrato" Modifier="Public" Name="ObtenerSecuencialContrato" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="ObtenerSecuencialContrato">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select max("codigo-contrato") + 1 from "PUB"."cl04-contratos" where region = ? with (nolock)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="region" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="region" Precision="0" Scale="0" Size="1024" SourceColumn="region" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ObtenerSecuencialCosta" Modifier="Public" Name="ObtenerSecuencialCosta" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="ObtenerSecuencialCosta">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select top 1 pub."Sec-contc".nextval from pub."cl04-contratos" with (nolock)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ObtenerSecuencialSierra" Modifier="Public" Name="ObtenerSecuencialSierra" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="ObtenerSecuencialSierra">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>  select top 1 pub."Sec-conts".nextval from pub."cl04-contratos" with (nolock)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Sigmep3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Sigmep3" msprop:Generator_UserDSName="Sigmep3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cl04-contratos" msprop:Generator_TableClassName="_cl04_contratosDataTable" msprop:Generator_TableVarName="_tablecl04_contratos" msprop:Generator_TablePropName="_cl04_contratos" msprop:Generator_RowDeletingName="_cl04_contratosRowDeleting" msprop:Generator_RowChangingName="_cl04_contratosRowChanging" msprop:Generator_RowEvHandlerName="_cl04_contratosRowChangeEventHandler" msprop:Generator_RowDeletedName="_cl04_contratosRowDeleted" msprop:Generator_UserTableName="cl04-contratos" msprop:Generator_RowChangedName="_cl04_contratosRowChanged" msprop:Generator_RowEvArgName="_cl04_contratosRowChangeEvent" msprop:Generator_RowClassName="_cl04_contratosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo-contrato" msprop:Generator_ColumnVarNameInTable="_columncodigo_contrato" msprop:Generator_ColumnPropNameInRow="_codigo_contrato" msprop:Generator_ColumnPropNameInTable="_codigo_contratoColumn" msprop:Generator_UserColumnName="codigo-contrato" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cambio-plan" msprop:Generator_ColumnVarNameInTable="_columncambio_plan" msprop:Generator_ColumnPropNameInRow="_cambio_plan" msprop:Generator_ColumnPropNameInTable="_cambio_planColumn" msprop:Generator_UserColumnName="cambio-plan" type="xs:boolean" minOccurs="0" />
+              <xs:element name="codigo-motivo-anulacion" msprop:Generator_ColumnVarNameInTable="_columncodigo_motivo_anulacion" msprop:Generator_ColumnPropNameInRow="_codigo_motivo_anulacion" msprop:Generator_ColumnPropNameInTable="_codigo_motivo_anulacionColumn" msprop:Generator_UserColumnName="codigo-motivo-anulacion" type="xs:int" minOccurs="0" />
+              <xs:element name="digitador" msprop:Generator_ColumnVarNameInTable="columndigitador" msprop:Generator_ColumnPropNameInRow="digitador" msprop:Generator_ColumnPropNameInTable="digitadorColumn" msprop:Generator_UserColumnName="digitador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="facturar-a-cedula" msprop:Generator_ColumnVarNameInTable="_columnfacturar_a_cedula" msprop:Generator_ColumnPropNameInRow="_facturar_a_cedula" msprop:Generator_ColumnPropNameInTable="_facturar_a_cedulaColumn" msprop:Generator_UserColumnName="facturar-a-cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="79" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha-digitacion-contrato" msprop:Generator_ColumnVarNameInTable="_columnfecha_digitacion_contrato" msprop:Generator_ColumnPropNameInRow="_fecha_digitacion_contrato" msprop:Generator_ColumnPropNameInTable="_fecha_digitacion_contratoColumn" msprop:Generator_UserColumnName="fecha-digitacion-contrato" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto-gastos-adm" msprop:Generator_ColumnVarNameInTable="_columnmonto_gastos_adm" msprop:Generator_ColumnPropNameInRow="_monto_gastos_adm" msprop:Generator_ColumnPropNameInTable="_monto_gastos_admColumn" msprop:Generator_UserColumnName="monto-gastos-adm" type="xs:decimal" minOccurs="0" />
+              <xs:element name="porcentaje-gastos-adm" msprop:Generator_ColumnVarNameInTable="_columnporcentaje_gastos_adm" msprop:Generator_ColumnPropNameInRow="_porcentaje_gastos_adm" msprop:Generator_ColumnPropNameInTable="_porcentaje_gastos_admColumn" msprop:Generator_UserColumnName="porcentaje-gastos-adm" type="xs:decimal" minOccurs="0" />
+              <xs:element name="empresa-numero" msprop:Generator_ColumnVarNameInTable="_columnempresa_numero" msprop:Generator_ColumnPropNameInRow="_empresa_numero" msprop:Generator_ColumnPropNameInTable="_empresa_numeroColumn" msprop:Generator_UserColumnName="empresa-numero" type="xs:int" minOccurs="0" />
+              <xs:element name="sucursal-empresa" msprop:Generator_ColumnVarNameInTable="_columnsucursal_empresa" msprop:Generator_ColumnPropNameInRow="_sucursal_empresa" msprop:Generator_ColumnPropNameInTable="_sucursal_empresaColumn" msprop:Generator_UserColumnName="sucursal-empresa" type="xs:int" minOccurs="0" />
+              <xs:element name="persona-numero" msprop:Generator_ColumnVarNameInTable="_columnpersona_numero" msprop:Generator_ColumnPropNameInRow="_persona_numero" msprop:Generator_ColumnPropNameInTable="_persona_numeroColumn" msprop:Generator_UserColumnName="persona-numero" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-plan" msprop:Generator_ColumnVarNameInTable="_columncodigo_plan" msprop:Generator_ColumnPropNameInRow="_codigo_plan" msprop:Generator_ColumnPropNameInTable="_codigo_planColumn" msprop:Generator_UserColumnName="codigo-plan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio-base" msprop:Generator_ColumnVarNameInTable="_columnprecio_base" msprop:Generator_ColumnPropNameInRow="_precio_base" msprop:Generator_ColumnPropNameInTable="_precio_baseColumn" msprop:Generator_UserColumnName="precio-base" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fecha-inicio-contrato" msprop:Generator_ColumnVarNameInTable="_columnfecha_inicio_contrato" msprop:Generator_ColumnPropNameInRow="_fecha_inicio_contrato" msprop:Generator_ColumnPropNameInTable="_fecha_inicio_contratoColumn" msprop:Generator_UserColumnName="fecha-inicio-contrato" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha-fin-contrato" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin_contrato" msprop:Generator_ColumnPropNameInRow="_fecha_fin_contrato" msprop:Generator_ColumnPropNameInTable="_fecha_fin_contratoColumn" msprop:Generator_UserColumnName="fecha-fin-contrato" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tarjetas-adicionales" msprop:Generator_ColumnVarNameInTable="_columntarjetas_adicionales" msprop:Generator_ColumnPropNameInRow="_tarjetas_adicionales" msprop:Generator_ColumnPropNameInTable="_tarjetas_adicionalesColumn" msprop:Generator_UserColumnName="tarjetas-adicionales" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-estado-contrato" msprop:Generator_ColumnVarNameInTable="_columncodigo_estado_contrato" msprop:Generator_ColumnPropNameInRow="_codigo_estado_contrato" msprop:Generator_ColumnPropNameInTable="_codigo_estado_contratoColumn" msprop:Generator_UserColumnName="codigo-estado-contrato" type="xs:int" minOccurs="0" />
+              <xs:element name="version-plan" msprop:Generator_ColumnVarNameInTable="_columnversion_plan" msprop:Generator_ColumnPropNameInRow="_version_plan" msprop:Generator_ColumnPropNameInTable="_version_planColumn" msprop:Generator_UserColumnName="version-plan" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-producto" msprop:Generator_ColumnVarNameInTable="_columncodigo_producto" msprop:Generator_ColumnPropNameInRow="_codigo_producto" msprop:Generator_ColumnPropNameInTable="_codigo_productoColumn" msprop:Generator_UserColumnName="codigo-producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo-tarjeta" msprop:Generator_ColumnVarNameInTable="_columntipo_tarjeta" msprop:Generator_ColumnPropNameInRow="_tipo_tarjeta" msprop:Generator_ColumnPropNameInTable="_tipo_tarjetaColumn" msprop:Generator_UserColumnName="tipo-tarjeta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="region" msprop:Generator_ColumnVarNameInTable="columnregion" msprop:Generator_ColumnPropNameInRow="region" msprop:Generator_ColumnPropNameInTable="regionColumn" msprop:Generator_UserColumnName="region">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo-agente-venta" msprop:Generator_ColumnVarNameInTable="_columncodigo_agente_venta" msprop:Generator_ColumnPropNameInRow="_codigo_agente_venta" msprop:Generator_ColumnPropNameInTable="_codigo_agente_ventaColumn" msprop:Generator_UserColumnName="codigo-agente-venta" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-agente-contacto" msprop:Generator_ColumnVarNameInTable="_columncodigo_agente_contacto" msprop:Generator_ColumnPropNameInRow="_codigo_agente_contacto" msprop:Generator_ColumnPropNameInTable="_codigo_agente_contactoColumn" msprop:Generator_UserColumnName="codigo-agente-contacto" type="xs:int" minOccurs="0" />
+              <xs:element name="periodo-pago" msprop:Generator_ColumnVarNameInTable="_columnperiodo_pago" msprop:Generator_ColumnPropNameInRow="_periodo_pago" msprop:Generator_ColumnPropNameInTable="_periodo_pagoColumn" msprop:Generator_UserColumnName="periodo-pago" type="xs:int" minOccurs="0" />
+              <xs:element name="moneda" msprop:Generator_ColumnVarNameInTable="columnmoneda" msprop:Generator_ColumnPropNameInRow="moneda" msprop:Generator_ColumnPropNameInTable="monedaColumn" msprop:Generator_UserColumnName="moneda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="valor-tarjetas" msprop:Generator_ColumnVarNameInTable="_columnvalor_tarjetas" msprop:Generator_ColumnPropNameInRow="_valor_tarjetas" msprop:Generator_ColumnPropNameInTable="_valor_tarjetasColumn" msprop:Generator_UserColumnName="valor-tarjetas" type="xs:decimal" minOccurs="0" />
+              <xs:element name="contrato-numero" msprop:Generator_ColumnVarNameInTable="_columncontrato_numero" msprop:Generator_ColumnPropNameInRow="_contrato_numero" msprop:Generator_ColumnPropNameInTable="_contrato_numeroColumn" msprop:Generator_UserColumnName="contrato-numero" type="xs:int" />
+              <xs:element name="codigo-banco-credito" msprop:Generator_ColumnVarNameInTable="_columncodigo_banco_credito" msprop:Generator_ColumnPropNameInRow="_codigo_banco_credito" msprop:Generator_ColumnPropNameInTable="_codigo_banco_creditoColumn" msprop:Generator_UserColumnName="codigo-banco-credito" type="xs:int" minOccurs="0" />
+              <xs:element name="numero-cuenta-credito" msprop:Generator_ColumnVarNameInTable="_columnnumero_cuenta_credito" msprop:Generator_ColumnPropNameInRow="_numero_cuenta_credito" msprop:Generator_ColumnPropNameInTable="_numero_cuenta_creditoColumn" msprop:Generator_UserColumnName="numero-cuenta-credito" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo-cuenta-credito" msprop:Generator_ColumnVarNameInTable="_columntipo_cuenta_credito" msprop:Generator_ColumnPropNameInRow="_tipo_cuenta_credito" msprop:Generator_ColumnPropNameInTable="_tipo_cuenta_creditoColumn" msprop:Generator_UserColumnName="tipo-cuenta-credito" type="xs:int" minOccurs="0" />
+              <xs:element name="codigo-sucursal" msprop:Generator_ColumnVarNameInTable="_columncodigo_sucursal" msprop:Generator_ColumnPropNameInRow="_codigo_sucursal" msprop:Generator_ColumnPropNameInTable="_codigo_sucursalColumn" msprop:Generator_UserColumnName="codigo-sucursal" type="xs:int" minOccurs="0" />
+              <xs:element name="nivel-referencia" msprop:Generator_ColumnVarNameInTable="_columnnivel_referencia" msprop:Generator_ColumnPropNameInRow="_nivel_referencia" msprop:Generator_ColumnPropNameInTable="_nivel_referenciaColumn" msprop:Generator_UserColumnName="nivel-referencia" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha-fin-original" msprop:Generator_ColumnVarNameInTable="_columnfecha_fin_original" msprop:Generator_ColumnPropNameInRow="_fecha_fin_original" msprop:Generator_ColumnPropNameInTable="_fecha_fin_originalColumn" msprop:Generator_UserColumnName="fecha-fin-original" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="numero-odas" msprop:Generator_ColumnVarNameInTable="_columnnumero_odas" msprop:Generator_ColumnPropNameInRow="_numero_odas" msprop:Generator_ColumnPropNameInTable="_numero_odasColumn" msprop:Generator_UserColumnName="numero-odas" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cl04-contratos" />
+      <xs:field xpath="mstns:codigo-producto" />
+      <xs:field xpath="mstns:region" />
+      <xs:field xpath="mstns:contrato-numero" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

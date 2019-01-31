@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiciosCliente" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IServiciosCliente_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiciosCliente.Entidades" />
+      <xsd:import schemaLocation="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ServiciosCliente.Servicios" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiciosCliente_ObtenerPersonaPorNumeroIdentificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPersonaPorNumeroIdentificacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerPersonaPorNumeroIdentificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPersonaPorNumeroIdentificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerClientePorIdCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorIdCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerClientePorIdCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorIdClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerClientePorNumeroIdentificacion_Rest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorNumeroIdentificacion_Rest" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerClientePorNumeroIdentificacion_Rest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorNumeroIdentificacion_RestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerClientePorNumeroIdentificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorNumeroIdentificacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerClientePorNumeroIdentificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorNumeroIdentificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerContactabilidadPorIdCliente_Rest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerContactabilidadPorIdCliente_Rest" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerContactabilidadPorIdCliente_Rest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerContactabilidadPorIdCliente_RestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerContactabilidadPorIdCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerContactabilidadPorIdCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ObtenerContactabilidadPorIdCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerContactabilidadPorIdClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_CrearCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_CrearCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ActualizarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ActualizarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_CrearMediosContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearMediosContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_CrearMediosContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearMediosContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ActualizarMediosContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMediosContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiciosCliente_ActualizarMediosContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMediosContactoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiciosCliente">
+    <wsdl:operation name="ObtenerPersonaPorNumeroIdentificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerPersonaPorNumeroIdentificacion" message="tns:IServiciosCliente_ObtenerPersonaPorNumeroIdentificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerPersonaPorNumeroIdentificacionResponse" message="tns:IServiciosCliente_ObtenerPersonaPorNumeroIdentificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorIdCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerClientePorIdCliente" message="tns:IServiciosCliente_ObtenerClientePorIdCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerClientePorIdClienteResponse" message="tns:IServiciosCliente_ObtenerClientePorIdCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorNumeroIdentificacion_Rest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion_Rest" message="tns:IServiciosCliente_ObtenerClientePorNumeroIdentificacion_Rest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion_RestResponse" message="tns:IServiciosCliente_ObtenerClientePorNumeroIdentificacion_Rest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorNumeroIdentificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion" message="tns:IServiciosCliente_ObtenerClientePorNumeroIdentificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacionResponse" message="tns:IServiciosCliente_ObtenerClientePorNumeroIdentificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerContactabilidadPorIdCliente_Rest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente_Rest" message="tns:IServiciosCliente_ObtenerContactabilidadPorIdCliente_Rest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente_RestResponse" message="tns:IServiciosCliente_ObtenerContactabilidadPorIdCliente_Rest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerContactabilidadPorIdCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente" message="tns:IServiciosCliente_ObtenerContactabilidadPorIdCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdClienteResponse" message="tns:IServiciosCliente_ObtenerContactabilidadPorIdCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/CrearCliente" message="tns:IServiciosCliente_CrearCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/CrearClienteResponse" message="tns:IServiciosCliente_CrearCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ActualizarCliente" message="tns:IServiciosCliente_ActualizarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ActualizarClienteResponse" message="tns:IServiciosCliente_ActualizarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearMediosContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/CrearMediosContacto" message="tns:IServiciosCliente_CrearMediosContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/CrearMediosContactoResponse" message="tns:IServiciosCliente_CrearMediosContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMediosContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiciosCliente/ActualizarMediosContacto" message="tns:IServiciosCliente_ActualizarMediosContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiciosCliente/ActualizarMediosContactoResponse" message="tns:IServiciosCliente_ActualizarMediosContacto_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiciosCliente" type="tns:IServiciosCliente">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerPersonaPorNumeroIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerPersonaPorNumeroIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorIdCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerClientePorIdCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorNumeroIdentificacion_Rest">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion_Rest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorNumeroIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerContactabilidadPorIdCliente_Rest">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente_Rest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerContactabilidadPorIdCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/CrearCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearMediosContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/CrearMediosContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMediosContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ActualizarMediosContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IServiciosCliente" type="tns:IServiciosCliente">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IServiciosCliente_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerPersonaPorNumeroIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerPersonaPorNumeroIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorIdCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerClientePorIdCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorNumeroIdentificacion_Rest">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion_Rest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorNumeroIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerClientePorNumeroIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerContactabilidadPorIdCliente_Rest">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente_Rest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerContactabilidadPorIdCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ObtenerContactabilidadPorIdCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/CrearCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearMediosContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/CrearMediosContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMediosContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiciosCliente/ActualizarMediosContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiciosCliente">
+    <wsdl:port name="BasicHttpBinding_IServiciosCliente" binding="tns:BasicHttpBinding_IServiciosCliente">
+      <soap:address location="http://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IServiciosCliente" binding="tns:BasicHttpsBinding_IServiciosCliente">
+      <soap:address location="https://pruebas.saludsasale.com/serviciosWebSOA/WebServiceCliente/ServiciosCliente.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
